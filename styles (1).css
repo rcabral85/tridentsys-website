@@ -1,0 +1,106 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #19202A;
+  background: #F9F9FC;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+header {
+  background: #004578;
+  color: #fff;
+  padding-bottom: 30px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #FF9E1B;
+}
+.hero {
+  text-align: center;
+  margin: 24px auto 0 auto;
+  max-width: 600px;
+}
+.cta-btn {
+  display: inline-block;
+  background: #FF9E1B;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 4px;
+  margin-top: 18px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background: #CC7A00;
+}
+footer {
+  background: #19202A;
+  color: #f9f9fc;
+  text-align: center;
+  padding: 24px 0;
+}
+section {
+  margin: 44px auto;
+  max-width: 760px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+}
+section h2 {
+  color: #004578;
+  margin-top: 0;
+}
+.logo-row {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 12px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 480px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #E0E0E0;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input:focus, textarea:focus {
+  border-color: #004578;
+  outline: none;
+}
+@media (max-width: 600px) {
+  .hero, section {
+    padding: 14px;
+    max-width: 99vw;
+    font-size: 1rem;
+  }
+  .logo-row { flex-direction: column; gap: 8px; }
+  nav ul { flex-direction: column; gap: 12px; }
+}
