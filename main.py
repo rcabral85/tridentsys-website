@@ -1,22 +1,30 @@
 from fastapi import FastAPI, HTTPException, Body
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
 import requests
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_MODEL = "gpt-4o-mini"
-
 app = FastAPI()
+
+# --- CORS setup (fixes browser request errors) ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace with ["https://tridentsys.ca"] for strict production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # --- AI Customer Support Chatbot ---
 class ChatRequest(BaseModel):
     question: str
-    role: str | None = "client"  # for possible expansion ("client", "contractor", etc)
-
+    role: str | None = "client"  # for possible expansion
 class ChatResponse(BaseModel):
     answer: str
 
 def chat_openai(question: str, role: str = "client") -> str:
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    OPENAI_MODEL = "gpt-4o-mini"
     if not OPENAI_API_KEY:
         raise HTTPException(status_code=500, detail="OPENAI_API_KEY not set")
     url = "https://api.openai.com/v1/chat/completions"
@@ -25,10 +33,10 @@ def chat_openai(question: str, role: str = "client") -> str:
         "Content-Type": "application/json",
     }
     system_message = (
-        "You are a friendly and professional fire hydrant testing support assistant for Trident Systems, Ontario."
-        " Provide accurate, plain-English answers about flow testing, scheduling, regulations, and business services as of 2025."
-        " If answering for non-clients, keep details generic; for Trident clients, explain service policies and local compliance requirements."
-        " Focus on answers relevant to the Ontario context (NFPA 291, OTM Book 7, municipal regulations)."
+        "You are a friendly and professional fire hydrant testing support assistant for Trident Systems, Ontario. "
+        "Provide accurate, plain-English answers about flow testing, scheduling, regulations, and business services as of 2025. "
+        "If answering for non-clients, keep details generic; for Trident clients, explain service policies and local compliance requirements. "
+        "Focus on answers relevant to the Ontario context (NFPA 291, OTM Book 7, municipal regulations)."
     )
     body = {
         "model": OPENAI_MODEL,
