@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fire Hydrant Data API Integration - Real-time access to hydrant status, inspection histories, and flow test results. Professional API services for municipalities and private clients." />
+  <meta name="keywords" content="fire hydrant API, hydrant data integration, municipal API, water infrastructure monitoring, fire hydrant status, NFPA 291 API, hydrant inspection API" />
+  <link rel="icon" type="image/png" href="trident-logo.png" />
+  <title>Fire Hydrant Data API Integration | Real-time Hydrant Management | Trident Systems</title>
+  <style>
+    * { box-sizing: border-box; }
+    body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .video-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -2; }
+    .video-background video { min-width: 100%; min-height: 100%; object-fit: cover; }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(0, 64, 128, 0.85); color: white; flex-wrap: wrap; }
+    .header-left { display: flex; align-items: center; gap: 20px; }
+    header img { height: 80px; }
+    .header-title { font-size: 1.8em; font-weight: bold; color: #e0f5ff; }
+    .right { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    .btn { display: inline-block; padding: 10px 20px; background: #007ACC; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; white-space: nowrap; transition: background-color 0.3s ease; }
+    .btn:hover { background: #005f99; }
+    .btn-primary { background: #ff6b35; }
+    .btn-primary:hover { background: #e55a2b; }
+    
+    section { margin-top: 100px; padding: 60px 20px; text-align: center; background-color: rgba(255, 255, 255, 0.95); position: relative; z-index: 5; }
+    
+    .hero-section { background: linear-gradient(135deg, #004080 0%, #007ACC 100%); color: white; padding: 80px 20px; }
+    .hero-content { max-width: 1200px; margin: 0 auto; }
+    .hero-section h1 { font-size: 3em; margin-bottom: 20px; }
+    .hero-section p { font-size: 1.3em; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    
+    .api-overview { background: #f8f9fa; padding: 50px 20px; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto 0; }
+    .feature-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; }
+    .feature-card h3 { color: #004080; margin-top: 0; font-size: 1.4em; }
+    .feature-icon { font-size: 3em; color: #007ACC; margin-bottom: 15px; }
+    
+    .code-demo { background: #2c3e50; color: #ecf0f1; padding: 40px 20px; }
+    .code-container { max-width: 1000px; margin: 0 auto; }
+    .code-tabs { display: flex; justify-content: center; margin-bottom: 20px; gap: 10px; }
+    .tab-btn { padding: 10px 20px; background: #34495e; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .tab-btn.active { background: #007ACC; }
+    .code-block { background: #1e2832; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; }
+    .code-content { display: none; }
+    .code-content.active { display: block; }
+    
+    .pricing-section { background: white; padding: 50px 20px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .pricing-card { border: 2px solid #e0e0e0; border-radius: 12px; padding: 30px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+    .pricing-card.featured { border-color: #007ACC; transform: scale(1.05); }
+    .pricing-card h3 { color: #004080; font-size: 1.5em; margin-bottom: 10px; }
+    .price { font-size: 2.5em; color: #007ACC; font-weight: bold; margin: 20px 0; }
+    .price-period { font-size: 0.4em; color: #666; }
+    .feature-list { text-align: left; margin: 20px 0; }
+    .feature-list li { margin: 8px 0; }
+    .checkmark { color: #28a745; font-weight: bold; }
+    
+    .integration-section { background: #f8f9fa; padding: 50px 20px; }
+    .integration-steps { max-width: 800px; margin: 0 auto; text-align: left; }
+    .step { display: flex; align-items: flex-start; margin: 30px 0; }
+    .step-number { background: #007ACC; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 20px; flex-shrink: 0; }
+    .step-content h4 { color: #004080; margin-top: 0; }
+    
+    .cta-section { background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 60px 20px; }
+    .cta-section h2 { font-size: 2.5em; margin-bottom: 20px; }
+    .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+    .cta-btn { padding: 15px 30px; font-size: 1.1em; border-radius: 8px; text-decoration: none; font-weight: bold; transition: transform 0.3s ease; }
+    .cta-btn:hover { transform: scale(1.05); }
+    .cta-btn-primary { background: white; color: #ff6b35; }
+    .cta-btn-secondary { background: transparent; color: white; border: 2px solid white; }
+    
+    footer { padding: 20px; background: #f0f0f0; text-align: center; }
+    
+    @media (max-width: 768px) {
+      header { padding: 15px 20px; flex-direction: column; align-items: flex-start; }
+      .header-left { gap: 15px; }
+      header img { height: 60px; }
+      .header-title { font-size: 1.4em; }
+      .right { width: 100%; margin-top: 10px; gap: 10px; justify-content: flex-start; }
+      .btn { padding: 8px 14px; font-size: 0.9em; }
+      section { margin-top: 90px; padding-left: 10px; padding-right: 10px; }
+      .hero-section h1 { font-size: 2em; }
+      .hero-section p { font-size: 1.1em; }
+      .features-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card.featured { transform: none; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .code-tabs { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://cdn.coverr.co/videos/coverr-water-bubbles-9554/1080p.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <img src="trident-logo.png" alt="Trident Systems Logo" />
+      <div class="header-title">Trident Systems</div>
+    </div>
+    <div class="right">
+      <a href="index.html" class="btn">Home</a>
+      <a href="#api-overview" class="btn">Features</a>
+      <a href="#demo" class="btn">API Demo</a>
+      <a href="#pricing" class="btn">Pricing</a>
+      <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Fire Hydrant Data API Integration</h1>
+      <p>Empower your municipality or organization with real-time access to fire hydrant status, inspection histories, and NFPA 291 compliant flow test results through our secure, professional API service.</p>
+      <div class="cta-buttons">
+        <a href="#demo" class="cta-btn cta-btn-primary">View API Demo</a>
+        <a href="#contact" class="cta-btn cta-btn-secondary">Request Access</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="api-overview" class="api-overview">
+    <h2>Professional API Services for Municipal & Private Clients</h2>
+    <p>Our Fire Hydrant Data API provides secure, RESTful access to comprehensive hydrant management data, enabling seamless integration with your existing emergency dispatch systems, maintenance management software, and municipal databases.</p>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <h3>Real-time Hydrant Status</h3>
+        <p>Access current operational status, location coordinates, last inspection dates, and maintenance schedules for all hydrants in your network. Perfect for emergency dispatch systems and fire department operations.</p>
+        <ul>
+          <li>Operational status (Active/Out of Service)</li>
+          <li>GPS coordinates and GIS mapping data</li>
+          <li>Last maintenance and inspection dates</li>
+          <li>Water pressure and flow capacity ratings</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>NFPA 291 Flow Test History</h3>
+        <p>Comprehensive database of all fire flow tests conducted following NFPA 291 standards, including detailed calculations, pressure measurements, and compliance assessments.</p>
+        <ul>
+          <li>Complete NFPA 291 test results</li>
+          <li>Static and residual pressure data</li>
+          <li>Calculated available flow at 20 PSI</li>
+          <li>Historical trend analysis</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>Maintenance & Inspection API</h3>
+        <p>Track maintenance schedules, inspection reports, and repair histories. Automated alerts for upcoming maintenance and compliance deadlines to ensure regulatory compliance.</p>
+        <ul>
+          <li>Inspection schedule management</li>
+          <li>Maintenance history tracking</li>
+          <li>Automated compliance alerts</li>
+          <li>Work order integration</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h3>GIS Mapping Integration</h3>
+        <p>Seamlessly integrate hydrant data with your GIS systems for enhanced spatial analysis, coverage assessments, and emergency planning visualization.</p>
+        <ul>
+          <li>GeoJSON and KML export formats</li>
+          <li>Coverage area analysis</li>
+          <li>Risk assessment mapping</li>
+          <li>Emergency route optimization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="code-demo">
+    <div class="code-container">
+      <h2 style="text-align: center; margin-bottom: 30px;">API Integration Examples</h2>
+      
+      <div class="code-tabs">
+        <button class="tab-btn active" onclick="showTab('rest')">REST API</button>
+        <button class="tab-btn" onclick="showTab('javascript')">JavaScript</button>
+        <button class="tab-btn" onclick="showTab('python')">Python</button>
+        <button class="tab-btn" onclick="showTab('response')">Response</button>
+      </div>
+      
+      <div id="rest-content" class="code-content active">
+        <div class="code-block">
+<pre>// Get hydrant status for specific location
+GET https://api.tridentsys.ca/v1/hydrants/{hydrant_id}
+
+// Headers
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+
+// Search hydrants by location
+GET https://api.tridentsys.ca/v1/hydrants/search?
+    lat=43.5186&lon=-79.8461&radius=1000&status=active
+
+// Get flow test history
+GET https://api.tridentsys.ca/v1/hydrants/{hydrant_id}/flow-tests?
+    start_date=2025-01-01&limit=10
+
+// Update maintenance status
+POST https://api.tridentsys.ca/v1/hydrants/{hydrant_id}/maintenance
+{
+  "status": "completed",
+  "maintenance_type": "annual_inspection",
+  "notes": "All systems operational",
+  "next_due_date": "2026-10-18"
+}</pre>
+        </div>
+      </div>
+      
+      <div id="javascript-content" class="code-content">
+        <div class="code-block">
+<pre>// JavaScript SDK Example
+const TridentAPI = require('@tridentsys/hydrant-api');
+
+const client = new TridentAPI({
+  apiKey: process.env.TRIDENT_API_KEY,
+  baseURL: 'https://api.tridentsys.ca/v1'
+});
+
+// Get nearby hydrants for emergency dispatch
+async function getNearbyHydrants(latitude, longitude) {
+  try {
+    const hydrants = await client.hydrants.search({
+      lat: latitude,
+      lon: longitude,
+      radius: 500, // meters
+      status: 'active'
+    });
+    
+    return hydrants.map(h => ({
+      id: h.id,
+      distance: h.distance,
+      flowCapacity: h.latest_flow_test.available_flow_20psi,
+      lastTested: h.latest_flow_test.test_date,
+      coordinates: [h.longitude, h.latitude]
+    }));
+  } catch (error) {
+    console.error('API Error:', error.message);
+    throw error;
+  }
+}
+
+// Real-time status monitoring
+client.hydrants.subscribe('status-updates', (update) => {
+  console.log(`Hydrant ${update.id} status changed to: ${update.status}`);
+  updateDispatchSystem(update);
+});</pre>
+        </div>
+      </div>
+      
+      <div id="python-content" class="code-content">
+        <div class="code-block">
+<pre># Python SDK Example
+import requests
+from datetime import datetime
+
+class TridentHydrantAPI:
+    def __init__(self, api_key):
+        self.api_key = api_key
+        self.base_url = 'https://api.tridentsys.ca/v1'
+        self.session = requests.Session()
+        self.session.headers.update({
+            'Authorization': f'Bearer {api_key}',
+            'Content-Type': 'application/json'
+        })
+    
+    def get_hydrant_status(self, hydrant_id):
+        """Get comprehensive status for a specific hydrant"""
+        response = self.session.get(f'{self.base_url}/hydrants/{hydrant_id}')
+        response.raise_for_status()
+        return response.json()
+    
+    def get_maintenance_due(self, municipality_id, days_ahead=30):
+        """Get hydrants requiring maintenance in next N days"""
+        params = {
+            'municipality_id': municipality_id,
+            'maintenance_due_within_days': days_ahead,
+            'status': 'active'
+        }
+        response = self.session.get(f'{self.base_url}/hydrants/maintenance-due', params=params)
+        return response.json()
+    
+    def submit_flow_test(self, hydrant_id, test_data):
+        """Submit new NFPA 291 flow test results"""
+        payload = {
+            'test_date': datetime.now().isoformat(),
+            'operator_license': test_data['operator_license'],
+            'static_pressure': test_data['static_pressure'],
+            'residual_pressure': test_data['residual_pressure'],
+            'flow_rate': test_data['flow_rate'],
+            'nfpa_compliant': True
+        }
+        response = self.session.post(f'{self.base_url}/hydrants/{hydrant_id}/flow-tests', json=payload)
+        return response.json()
+
+# Usage example
+api = TridentHydrantAPI(api_key='your_api_key_here')
+hydrant_data = api.get_hydrant_status('HYD-MLT-001')
+print(f"Hydrant flow capacity: {hydrant_data['flow_capacity_gpm']} GPM")</pre>
+        </div>
+      </div>
+      
+      <div id="response-content" class="code-content">
+        <div class="code-block">
+<pre>// Sample API Response - Hydrant Details
+{
+  "id": "HYD-MLT-001",
+  "municipality_id": "milton-on",
+  "location": {
+    "latitude": 43.5186,
+    "longitude": -79.8461,
+    "address": "123 Main Street, Milton, ON",
+    "intersection": "Main St & Commercial Ave"
+  },
+  "status": {
+    "operational": "active",
+    "last_updated": "2025-10-18T14:30:00Z",
+    "maintenance_required": false
+  },
+  "specifications": {
+    "manufacturer": "Mueller",
+    "model": "Centurion",
+    "installation_year": 2019,
+    "outlet_configuration": "2x2.5\" + 1x4.5\"",
+    "main_size_inches": 8
+  },
+  "latest_flow_test": {
+    "test_id": "TRI-2025-018",
+    "test_date": "2025-09-15",
+    "operator": "Licensed WDO - R.Cabral",
+    "static_pressure_psi": 72.3,
+    "residual_pressure_psi": 48.7,
+    "flow_rate_gpm": 1245,
+    "available_flow_20psi": 1842,
+    "nfpa_291_compliant": true,
+    "classification": "EXCELLENT",
+    "next_test_due": "2026-09-15"
+  },
+  "maintenance": {
+    "last_inspection": "2025-08-12",
+    "next_inspection_due": "2026-08-12",
+    "maintenance_history_count": 8,
+    "issues_reported": 0
+  },
+  "emergency_access": {
+    "accessibility_rating": "excellent",
+    "parking_restrictions": "none",
+    "traffic_control_required": "otm_book_7"
+  }
+}</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing-section">
+    <h2>API Service Plans</h2>
+    <p>Choose the right plan for your organization's hydrant management needs</p>
+    
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Municipal Starter</h3>
+        <div class="price">$299<span class="price-period">/month</span></div>
+        <div class="feature-list">
+          <ul>
+            <li><span class="checkmark">✓</span> Up to 100 hydrants</li>
+            <li><span class="checkmark">✓</span> Real-time status API</li>
+            <li><span class="checkmark">✓</span> Flow test history</li>
+            <li><span class="checkmark">✓</span> Basic maintenance tracking</li>
+            <li><span class="checkmark">✓</span> 1,000 API calls/month</li>
+            <li><span class="checkmark">✓</span> Email support</li>
+            <li><span class="checkmark">✓</span> Standard SLA</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+      </div>
+      
+      <div class="pricing-card featured">
+        <h3>Municipal Professional</h3>
+        <div class="price">$799<span class="price-period">/month</span></div>
+        <div class="feature-list">
+          <ul>
+            <li><span class="checkmark">✓</span> Up to 500 hydrants</li>
+            <li><span class="checkmark">✓</span> Real-time status & alerts</li>
+            <li><span class="checkmark">✓</span> Complete flow test database</li>
+            <li><span class="checkmark">✓</span> Advanced maintenance scheduling</li>
+            <li><span class="checkmark">✓</span> GIS integration & mapping</li>
+            <li><span class="checkmark">✓</span> 10,000 API calls/month</li>
+            <li><span class="checkmark">✓</span> Priority support</li>
+            <li><span class="checkmark">✓</span> 99.9% uptime SLA</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-primary">Most Popular</a>
+      </div>
+      
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom<span class="price-period"></span></div>
+        <div class="feature-list">
+          <ul>
+            <li><span class="checkmark">✓</span> Unlimited hydrants</li>
+            <li><span class="checkmark">✓</span> Full API access</li>
+            <li><span class="checkmark">✓</span> Custom integrations</li>
+            <li><span class="checkmark">✓</span> Dedicated support</li>
+            <li><span class="checkmark">✓</span> On-premise deployment</li>
+            <li><span class="checkmark">✓</span> Unlimited API calls</li>
+            <li><span class="checkmark">✓</span> 24/7 phone support</li>
+            <li><span class="checkmark">✓</span> 99.99% uptime SLA</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="integration" class="integration-section">
+    <h2>Quick Integration in 4 Steps</h2>
+    <div class="integration-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Request API Access</h4>
+          <p>Contact our team to set up your API credentials and choose your service plan. We'll provide you with secure authentication keys and access to our developer documentation.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Import Your Hydrant Data</h4>
+          <p>We'll help you import your existing hydrant inventory and historical data into our system. Our team provides data migration services to ensure a smooth transition.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Integrate with Your Systems</h4>
+          <p>Use our RESTful API, SDKs, or webhook integrations to connect with your existing emergency dispatch, GIS, or maintenance management systems.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>Go Live & Monitor</h4>
+          <p>Start receiving real-time hydrant data and begin leveraging our NFPA 291 compliant testing services to keep your data current and accurate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta-section">
+    <h2>Ready to Modernize Your Hydrant Management?</h2>
+    <p>Join municipalities across Ontario who are leveraging our API services to improve emergency response times and maintain regulatory compliance.</p>
+    <div class="cta-buttons">
+      <a href="mailto:api@tridentsys.ca?subject=Fire Hydrant API Integration Inquiry" class="cta-btn cta-btn-primary">Request Demo</a>
+      <a href="tel:+1-647-555-0123" class="cta-btn cta-btn-secondary">Call Sales</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Trident Systems. All rights reserved. | NFPA 291 Certified | Professional API Services</p>
+    <p><strong>API Support:</strong> <a href="mailto:api@tridentsys.ca">api@tridentsys.ca</a> | <strong>Documentation:</strong> <a href="https://docs.tridentsys.ca">docs.tridentsys.ca</a></p>
+    <p><strong>Service Areas:</strong> Greater Toronto Area, Hamilton, Niagara Region, Peel Region, Halton Region, Milton</p>
+  </footer>
+
+  <script>
+    function showTab(tabName) {
+      // Hide all content
+      document.querySelectorAll('.code-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      // Remove active class from all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Show selected content
+      document.getElementById(tabName + '-content').classList.add('active');
+      
+      // Add active class to clicked button
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
