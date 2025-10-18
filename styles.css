@@ -143,3 +143,10 @@ input:focus, textarea:focus {
   .slider-text { font-size: 1.1em; }
 }
 
+/* Ensure client logos are always full color (no grayscale) */
+.client-logos img {
+  filter: none !important;
+}
+.client-logos img:hover {
+  filter: none !important;
+}
