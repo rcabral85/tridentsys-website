@@ -3,367 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Meta Tags -->
   <link rel="canonical" href="https://tridentsys.ca/api-services.html" />
-  <meta name="description" content="Fire Hydrant Data API Integration - Real-time access to hydrant status, inspection histories, and NFPA 291 flow test results. Professional API services for municipalities and private clients in GTA, Hamilton, and Niagara regions." />
-  <meta name="keywords" content="fire hydrant API, hydrant data integration, municipal API, water infrastructure monitoring, fire hydrant status, NFPA 291 API, hydrant inspection API, GTA, Hamilton, Niagara, HydrantHub" />
-  <link rel="icon" type="image/png" href="trident-logo.png" />
-  <title>Fire Hydrant Data API Integration | Real-time Hydrant Management | Trident Systems</title>
-  
-  <style>
-    * { box-sizing: border-box; }
-    body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .video-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -2; }
-    .video-background video { min-width: 100%; min-height: 100%; object-fit: cover; }
-    header { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(0, 64, 128, 0.85); color: white; flex-wrap: wrap; }
-    .header-left { display: flex; align-items: center; gap: 20px; }
-    header img { height: 80px; }
-    .header-title { font-size: 1.8em; font-weight: bold; color: #e0f5ff; }
-    .right { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
-    .btn { display: inline-block; padding: 10px 20px; background: #007ACC; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; white-space: nowrap; transition: background-color 0.3s ease; }
-    .btn:hover { background: #005f99; }
-    .btn-primary { background: #ff6b35; }
-    .btn-primary:hover { background: #e55a2b; }
-    .btn-login { background: #28a745; }
-    .btn-login:hover { background: #1e7e34; }
-    
-    section { margin-top: 100px; padding: 60px 20px; text-align: center; background-color: rgba(255, 255, 255, 0.95); position: relative; z-index: 5; }
-    
-    .hero-section { background: linear-gradient(135deg, #004080 0%, #007ACC 100%); color: white; padding: 80px 20px; }
-    .hero-content { max-width: 1200px; margin: 0 auto; }
-    .hero-section h1 { font-size: 3em; margin-bottom: 20px; }
-    .hero-section p { font-size: 1.3em; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
-    
-    .api-overview { background: #f8f9fa; padding: 50px 20px; }
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto 0; }
-    .feature-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; }
-    .feature-card h3 { color: #004080; margin-top: 0; font-size: 1.4em; }
-    .feature-icon { font-size: 3em; color: #007ACC; margin-bottom: 15px; }
-    
-    .code-demo { background: #2c3e50; color: #ecf0f1; padding: 40px 20px; }
-    .code-container { max-width: 1000px; margin: 0 auto; }
-    .code-tabs { display: flex; justify-content: center; margin-bottom: 20px; gap: 10px; }
-    .tab-btn { padding: 10px 20px; background: #34495e; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    .tab-btn.active { background: #007ACC; }
-    .code-block { background: #1e2832; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; }
-    .code-content { display: none; }
-    .code-content.active { display: block; }
-    
-    .pricing-section { background: white; padding: 50px 20px; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
-    .pricing-card { border: 2px solid #e0e0e0; border-radius: 12px; padding: 30px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-    .pricing-card.featured { border-color: #007ACC; transform: scale(1.05); }
-    .pricing-card h3 { color: #004080; font-size: 1.5em; margin-bottom: 10px; }
-    .price { font-size: 2.5em; color: #007ACC; font-weight: bold; margin: 20px 0; }
-    .price-period { font-size: 0.4em; color: #666; }
-    .feature-list { text-align: left; margin: 20px 0; }
-    .feature-list li { margin: 8px 0; }
-    .checkmark { color: #28a745; font-weight: bold; }
-    
-    .integration-section { background: #f8f9fa; padding: 50px 20px; }
-    .integration-steps { max-width: 800px; margin: 0 auto; text-align: left; }
-    .step { display: flex; align-items: flex-start; margin: 30px 0; }
-    .step-number { background: #007ACC; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 20px; flex-shrink: 0; }
-    .step-content h4 { color: #004080; margin-top: 0; }
-    
-    .cta-section { background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 60px 20px; }
-    .cta-section h2 { font-size: 2.5em; margin-bottom: 20px; }
-    .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
-    .cta-btn { padding: 15px 30px; font-size: 1.1em; border-radius: 8px; text-decoration: none; font-weight: bold; transition: transform 0.3s ease; }
-    .cta-btn:hover { transform: scale(1.05); }
-    .cta-btn-primary { background: white; color: #ff6b35; }
-    .cta-btn-secondary { background: transparent; color: white; border: 2px solid white; }
-    
-    footer { padding: 20px; background: #f0f0f0; text-align: center; }
-    
-    @media (max-width: 768px) {
-      header { padding: 15px 20px; flex-direction: column; align-items: flex-start; }
-      .header-left { gap: 15px; }
-      header img { height: 60px; }
-      .header-title { font-size: 1.4em; }
-      .right { width: 100%; margin-top: 10px; gap: 10px; justify-content: flex-start; }
-      .btn { padding: 8px 14px; font-size: 0.9em; }
-      section { margin-top: 90px; padding-left: 10px; padding-right: 10px; }
-      .hero-section h1 { font-size: 2em; }
-      .hero-section p { font-size: 1.1em; }
-      .features-grid { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .pricing-card.featured { transform: none; }
-      .cta-buttons { flex-direction: column; align-items: center; }
-      .code-tabs { flex-wrap: wrap; }
-    }
-  </style>
+  <meta name="description" content="Fire Hydrant Data API Integration and HydrantHub demo access. NFPA 291 compliant hydrant testing and management platform for municipalities and property managers across the GTA, Hamilton, and Niagara." />
+  <title>HydrantHub Demo | API Integration | Trident Systems</title>
+  <!-- keep existing styles -->
 </head>
 <body>
-  <div class="video-background">
-    <video autoplay muted loop preload="metadata">
-      <source src="https://cdn.coverr.co/videos/coverr-water-bubbles-9554/1080p.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <header>
-    <div class="header-left">
-      <img src="trident-logo.png" alt="Trident Systems Logo" width="80" height="80" />
-      <div class="header-title">Trident Systems</div>
-    </div>
-    <div class="right">
-      <a href="https://app.tridentsys.ca/login" class="btn btn-login" target="_blank" rel="noopener noreferrer">Client Login</a>
-      <a href="index.html" class="btn">Home</a>
-      <a href="#api-overview" class="btn">Features</a>
-      <a href="#demo" class="btn">API Demo</a>
-      <a href="#pricing" class="btn">Pricing</a>
-      <a href="#contact" class="btn btn-primary">Get Started</a>
-      <a href="https://app.tridentsys.ca" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
-    </div>
-  </header>
+  <!-- existing header ... -->
 
   <section class="hero-section">
     <div class="hero-content">
-      <h1>Fire Hydrant Data API Integration</h1>
-      <p>Empower your municipality or organization with real-time access to fire hydrant status, inspection histories, and NFPA 291 compliant flow test results through our secure, professional API service.</p>
+      <h1>Launch the HydrantHub Demo</h1>
+      <p>Experience NFPA 291 compliant hydrant testing with a live demo account. Browse hydrants, view test results, and see how fast reporting can be.</p>
       <div class="cta-buttons">
-        <a href="#demo" class="cta-btn cta-btn-primary">View API Demo</a>
-        <a href="#contact" class="cta-btn cta-btn-secondary">Request Access</a>
-        <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
+        <a href="https://app.tridentsys.ca/login" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">Launch Demo</a>
+        <a href="#contact" class="cta-btn cta-btn-secondary">Request Pilot</a>
       </div>
+      <p style="margin-top:10px;opacity:0.85">Demo credentials are prefilled on the login page.</p>
     </div>
   </section>
 
-  <!-- API Overview Section -->
-  <section id="api-overview" class="api-overview">
-    <h2>Comprehensive Hydrant Data API</h2>
-    <p>Our RESTful API provides secure, real-time access to municipal fire hydrant data, inspection records, and NFPA 291 compliant flow test results.</p>
-    
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🔥</div>
-        <h3>Real-time Hydrant Status</h3>
-        <p>Access current operational status, GPS coordinates, installation dates, and maintenance schedules for all hydrants in your jurisdiction.</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>NFPA 291 Flow Test Data</h3>
-        <p>Complete historical database of flow tests with detailed calculations, pressure measurements, and compliance status according to NFPA 291 standards.</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">🗺️</div>
-        <h3>GIS Integration Ready</h3>
-        <p>Seamlessly integrate with your existing GIS systems using standard geospatial data formats for enhanced mapping and analysis.</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">🔧</div>
-        <h3>Maintenance Tracking</h3>
-        <p>Track inspection histories, maintenance schedules, and automated alerts for upcoming compliance deadlines and required testing.</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h3>Secure Authentication</h3>
-        <p>Enterprise-grade security with API key authentication, rate limiting, and audit logging for all data access and modifications.</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">📈</div>
-        <h3>Analytics & Reporting</h3>
-        <p>Generate compliance reports, trend analysis, and performance metrics to support infrastructure planning and regulatory requirements.</p>
-      </div>
-    </div>
+  <!-- Add a small FAQ strip promoting demo -->
+  <section class="api-overview">
+    <h2>What’s included in the demo?</h2>
+    <ul style="max-width:800px;margin:0 auto;text-align:left;line-height:1.8">
+      <li>Sample hydrants in Milton with GPS coordinates</li>
+      <li>NFPA 291 flow tests with automatic class and Q@20 psi</li>
+      <li>Basic dashboard and secure authentication</li>
+      <li>PDF reporting available in next update</li>
+    </ul>
   </section>
 
-  <!-- Code Demo Section -->
-  <section id="demo" class="code-demo">
-    <div class="code-container">
-      <h2>API Demo & Integration Examples</h2>
-      <p>Explore our API endpoints with live examples. All responses are formatted in JSON and include comprehensive hydrant data.</p>
-      
-      <div class="code-tabs">
-        <button class="tab-btn active" onclick="showTab('hydrants')">Get Hydrants</button>
-        <button class="tab-btn" onclick="showTab('flowtest')">Flow Test Results</button>
-        <button class="tab-btn" onclick="showTab('status')">Status Update</button>
-        <button class="tab-btn" onclick="showTab('integration')">Integration</button>
-      </div>
-      
-      <div id="hydrants" class="code-content active">
-        <h4>Get All Hydrants in Area</h4>
-        <div class="code-block">
-GET https://api.tridentsys.ca/v1/hydrants?bounds=43.51,-79.90,43.53,-79.86
-Authorization: Bearer YOUR_API_KEY
+  <!-- existing sections ... -->
 
-Response:
-{
-  "status": "success",
-  "data": [
-    {
-      "id": "HYD-MLT-2025-001",
-      "location": {
-        "lat": 43.5182,
-        "lng": -79.8774,
-        "address": "123 Main Street, Milton, ON"
-      },
-      "status": "operational",
-      "last_inspection": "2025-09-15T14:30:00Z",
-      "flow_test": {
-        "date": "2025-08-22T10:15:00Z",
-        "static_pressure_psi": 72.3,
-        "residual_pressure_psi": 51.6,
-        "flow_rate_gpm": 1445,
-        "available_flow_20psi": 2115,
-        "nfpa_classification": "EXCELLENT",
-        "compliance_status": "PASS"
-      }
-    }
-  ],
-  "total": 1,
-  "page": 1
-}
-        </div>
-      </div>
-      
-      <div id="flowtest" class="code-content">
-        <h4>NFPA 291 Flow Test Results</h4>
-        <div class="code-block">
-GET https://api.tridentsys.ca/v1/hydrants/HYD-MLT-2025-001/flow-tests
-Authorization: Bearer YOUR_API_KEY
-
-Response:
-{
-  "hydrant_id": "HYD-MLT-2025-001",
-  "tests": [
-    {
-      "test_id": "TRI-2025-007",
-      "date": "2025-08-22T10:15:00Z",
-      "operator": "Licensed WDO - Rich Cabral",
-      "measurements": {
-        "static_pressure_psi": 72.3,
-        "residual_pressure_psi": 51.6,
-        "pitot_pressure_psi": 28.8,
-        "flow_rate_gpm": 1445
-      },
-      "calculations": {
-        "available_flow_20psi": 2115,
-        "nfpa_classification": "EXCELLENT",
-        "coefficient": 0.9
-      },
-      "compliance": {
-        "nfpa_291_status": "PASS",
-        "otm_book7_compliant": true,
-        "next_test_due": "2026-08-22"
-      },
-      "report_url": "https://api.tridentsys.ca/v1/reports/TRI-2025-007.pdf"
-    }
-  ]
-}
-        </div>
-      </div>
-      
-      <div id="status" class="code-content">
-        <h4>Update Hydrant Status</h4>
-        <div class="code-block">
-PUT https://api.tridentsys.ca/v1/hydrants/HYD-MLT-2025-001/status
-Authorization: Bearer YOUR_API_KEY
-Content-Type: application/json
-
-{
-  "status": "out_of_service",
-  "reason": "Valve replacement scheduled",
-  "expected_return_date": "2025-11-15T09:00:00Z",
-  "updated_by": "maintenance_team"
-}
-
-Response:
-{
-  "status": "success",
-  "message": "Hydrant status updated successfully",
-  "data": {
-    "hydrant_id": "HYD-MLT-2025-001",
-    "status": "out_of_service",
-    "updated_at": "2025-10-30T15:23:47Z",
-    "notifications_sent": [
-      "fire_department",
-      "emergency_services"
-    ]
-  }
-}
-        </div>
-      </div>
-      
-      <div id="integration" class="code-content">
-        <h4>JavaScript Integration Example</h4>
-        <div class="code-block">
-// Initialize Trident Systems API Client
-const TridentAPI = {
-  baseURL: 'https://api.tridentsys.ca/v1',
-  apiKey: 'your_api_key_here',
-  
-  async getHydrants(bounds) {
-    const response = await fetch(`${this.baseURL}/hydrants?bounds=${bounds}`, {
-      headers: {
-        'Authorization': `Bearer ${this.apiKey}`,
-        'Content-Type': 'application/json'
-      }
-    });
-    return await response.json();
-  },
-  
-  async getFlowTests(hydrantId) {
-    const response = await fetch(`${this.baseURL}/hydrants/${hydrantId}/flow-tests`, {
-      headers: {
-        'Authorization': `Bearer ${this.apiKey}`,
-        'Content-Type': 'application/json'
-      }
-    });
-    return await response.json();
-  }
-};
-
-// Usage Example
-TridentAPI.getHydrants('43.51,-79.90,43.53,-79.86')
-  .then(data => {
-    console.log(`Found ${data.total} hydrants`);
-    data.data.forEach(hydrant => {
-      console.log(`Hydrant ${hydrant.id}: ${hydrant.status}`);
-    });
-  })
-  .catch(error => console.error('API Error:', error));
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rest of the page content remains the same -->
   <section id="contact" class="cta-section">
-    <h2>Ready to Integrate?</h2>
-    <p>Contact our team to get started with fire hydrant data API integration. We'll provide you with API credentials, documentation, and ongoing support.</p>
+    <h2>Start a Pilot in Milton, Halton, or Peel</h2>
+    <p>We’ll configure HydrantHub for your municipality and migrate your hydrant inventory. Pilot programs available for early adopters.</p>
     <div class="cta-buttons">
-      <a href="mailto:api@tridentsys.ca?subject=API Integration Request" class="cta-btn cta-btn-primary">Request API Access</a>
-      <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Try HydrantHub Platform</a>
+      <a href="mailto:sales@tridentsys.ca?subject=HydrantHub Pilot" class="cta-btn cta-btn-primary">Request Pilot</a>
+      <a href="https://app.tridentsys.ca/login" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Try the Demo</a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Trident Systems. All rights reserved. | Professional Fire Hydrant Data API | NFPA 291 Certified</p>
-    <p><strong>Email:</strong> <a href="mailto:api@tridentsys.ca">api@tridentsys.ca</a> | <strong>Main Site:</strong> <a href="index.html">tridentsys.ca</a></p>
+    <p>&copy; 2025 Trident Systems • HydrantHub NFPA 291 Platform</p>
   </footer>
-
-  <script>
-    function showTab(tabName) {
-      // Hide all code content
-      const contents = document.querySelectorAll('.code-content');
-      contents.forEach(content => content.classList.remove('active'));
-      
-      // Remove active class from all tabs
-      const tabs = document.querySelectorAll('.tab-btn');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      
-      // Show selected content and activate tab
-      document.getElementById(tabName).classList.add('active');
-      event.target.classList.add('active');
-    }
-  </script>
 </body>
 </html>
