@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fire Hydrant Data API Integration - Real-time access to hydrant status, inspection histories, and flow test results. Professional API services for municipalities and private clients." />
-  <meta name="keywords" content="fire hydrant API, hydrant data integration, municipal API, water infrastructure monitoring, fire hydrant status, NFPA 291 API, hydrant inspection API" />
+  
+  <!-- SEO Meta Tags -->
+  <link rel="canonical" href="https://tridentsys.ca/api-services.html" />
+  <meta name="description" content="Fire Hydrant Data API Integration - Real-time access to hydrant status, inspection histories, and NFPA 291 flow test results. Professional API services for municipalities and private clients in GTA, Hamilton, and Niagara regions." />
+  <meta name="keywords" content="fire hydrant API, hydrant data integration, municipal API, water infrastructure monitoring, fire hydrant status, NFPA 291 API, hydrant inspection API, GTA, Hamilton, Niagara, HydrantHub" />
   <link rel="icon" type="image/png" href="trident-logo.png" />
   <title>Fire Hydrant Data API Integration | Real-time Hydrant Management | Trident Systems</title>
+  
   <style>
     * { box-sizing: border-box; }
     body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
@@ -21,6 +25,8 @@
     .btn:hover { background: #005f99; }
     .btn-primary { background: #ff6b35; }
     .btn-primary:hover { background: #e55a2b; }
+    .btn-login { background: #28a745; }
+    .btn-login:hover { background: #1e7e34; }
     
     section { margin-top: 100px; padding: 60px 20px; text-align: center; background-color: rgba(255, 255, 255, 0.95); position: relative; z-index: 5; }
     
@@ -92,23 +98,24 @@
 </head>
 <body>
   <div class="video-background">
-    <video autoplay muted loop>
+    <video autoplay muted loop preload="metadata">
       <source src="https://cdn.coverr.co/videos/coverr-water-bubbles-9554/1080p.mp4" type="video/mp4">
     </video>
   </div>
 
   <header>
     <div class="header-left">
-      <img src="trident-logo.png" alt="Trident Systems Logo" />
+      <img src="trident-logo.png" alt="Trident Systems Logo" width="80" height="80" />
       <div class="header-title">Trident Systems</div>
     </div>
     <div class="right">
+      <a href="https://app.tridentsys.ca/login" class="btn btn-login" target="_blank" rel="noopener noreferrer">Client Login</a>
       <a href="index.html" class="btn">Home</a>
       <a href="#api-overview" class="btn">Features</a>
       <a href="#demo" class="btn">API Demo</a>
       <a href="#pricing" class="btn">Pricing</a>
       <a href="#contact" class="btn btn-primary">Get Started</a>
-      <a href="https://app.tridentsys.ca" class="btn btn-primary" target="_blank" rel="noopener">Launch HydrantHub</a>
+      <a href="https://app.tridentsys.ca" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
     </div>
   </header>
 
@@ -119,9 +126,244 @@
       <div class="cta-buttons">
         <a href="#demo" class="cta-btn cta-btn-primary">View API Demo</a>
         <a href="#contact" class="cta-btn cta-btn-secondary">Request Access</a>
-        <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-primary" target="_blank" rel="noopener">Launch HydrantHub</a>
+        <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
       </div>
     </div>
   </section>
 
-  <!-- rest of file unchanged below -->
+  <!-- API Overview Section -->
+  <section id="api-overview" class="api-overview">
+    <h2>Comprehensive Hydrant Data API</h2>
+    <p>Our RESTful API provides secure, real-time access to municipal fire hydrant data, inspection records, and NFPA 291 compliant flow test results.</p>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <h3>Real-time Hydrant Status</h3>
+        <p>Access current operational status, GPS coordinates, installation dates, and maintenance schedules for all hydrants in your jurisdiction.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>NFPA 291 Flow Test Data</h3>
+        <p>Complete historical database of flow tests with detailed calculations, pressure measurements, and compliance status according to NFPA 291 standards.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h3>GIS Integration Ready</h3>
+        <p>Seamlessly integrate with your existing GIS systems using standard geospatial data formats for enhanced mapping and analysis.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>Maintenance Tracking</h3>
+        <p>Track inspection histories, maintenance schedules, and automated alerts for upcoming compliance deadlines and required testing.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Secure Authentication</h3>
+        <p>Enterprise-grade security with API key authentication, rate limiting, and audit logging for all data access and modifications.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>Analytics & Reporting</h3>
+        <p>Generate compliance reports, trend analysis, and performance metrics to support infrastructure planning and regulatory requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Demo Section -->
+  <section id="demo" class="code-demo">
+    <div class="code-container">
+      <h2>API Demo & Integration Examples</h2>
+      <p>Explore our API endpoints with live examples. All responses are formatted in JSON and include comprehensive hydrant data.</p>
+      
+      <div class="code-tabs">
+        <button class="tab-btn active" onclick="showTab('hydrants')">Get Hydrants</button>
+        <button class="tab-btn" onclick="showTab('flowtest')">Flow Test Results</button>
+        <button class="tab-btn" onclick="showTab('status')">Status Update</button>
+        <button class="tab-btn" onclick="showTab('integration')">Integration</button>
+      </div>
+      
+      <div id="hydrants" class="code-content active">
+        <h4>Get All Hydrants in Area</h4>
+        <div class="code-block">
+GET https://api.tridentsys.ca/v1/hydrants?bounds=43.51,-79.90,43.53,-79.86
+Authorization: Bearer YOUR_API_KEY
+
+Response:
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "HYD-MLT-2025-001",
+      "location": {
+        "lat": 43.5182,
+        "lng": -79.8774,
+        "address": "123 Main Street, Milton, ON"
+      },
+      "status": "operational",
+      "last_inspection": "2025-09-15T14:30:00Z",
+      "flow_test": {
+        "date": "2025-08-22T10:15:00Z",
+        "static_pressure_psi": 72.3,
+        "residual_pressure_psi": 51.6,
+        "flow_rate_gpm": 1445,
+        "available_flow_20psi": 2115,
+        "nfpa_classification": "EXCELLENT",
+        "compliance_status": "PASS"
+      }
+    }
+  ],
+  "total": 1,
+  "page": 1
+}
+        </div>
+      </div>
+      
+      <div id="flowtest" class="code-content">
+        <h4>NFPA 291 Flow Test Results</h4>
+        <div class="code-block">
+GET https://api.tridentsys.ca/v1/hydrants/HYD-MLT-2025-001/flow-tests
+Authorization: Bearer YOUR_API_KEY
+
+Response:
+{
+  "hydrant_id": "HYD-MLT-2025-001",
+  "tests": [
+    {
+      "test_id": "TRI-2025-007",
+      "date": "2025-08-22T10:15:00Z",
+      "operator": "Licensed WDO - Rich Cabral",
+      "measurements": {
+        "static_pressure_psi": 72.3,
+        "residual_pressure_psi": 51.6,
+        "pitot_pressure_psi": 28.8,
+        "flow_rate_gpm": 1445
+      },
+      "calculations": {
+        "available_flow_20psi": 2115,
+        "nfpa_classification": "EXCELLENT",
+        "coefficient": 0.9
+      },
+      "compliance": {
+        "nfpa_291_status": "PASS",
+        "otm_book7_compliant": true,
+        "next_test_due": "2026-08-22"
+      },
+      "report_url": "https://api.tridentsys.ca/v1/reports/TRI-2025-007.pdf"
+    }
+  ]
+}
+        </div>
+      </div>
+      
+      <div id="status" class="code-content">
+        <h4>Update Hydrant Status</h4>
+        <div class="code-block">
+PUT https://api.tridentsys.ca/v1/hydrants/HYD-MLT-2025-001/status
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+
+{
+  "status": "out_of_service",
+  "reason": "Valve replacement scheduled",
+  "expected_return_date": "2025-11-15T09:00:00Z",
+  "updated_by": "maintenance_team"
+}
+
+Response:
+{
+  "status": "success",
+  "message": "Hydrant status updated successfully",
+  "data": {
+    "hydrant_id": "HYD-MLT-2025-001",
+    "status": "out_of_service",
+    "updated_at": "2025-10-30T15:23:47Z",
+    "notifications_sent": [
+      "fire_department",
+      "emergency_services"
+    ]
+  }
+}
+        </div>
+      </div>
+      
+      <div id="integration" class="code-content">
+        <h4>JavaScript Integration Example</h4>
+        <div class="code-block">
+// Initialize Trident Systems API Client
+const TridentAPI = {
+  baseURL: 'https://api.tridentsys.ca/v1',
+  apiKey: 'your_api_key_here',
+  
+  async getHydrants(bounds) {
+    const response = await fetch(`${this.baseURL}/hydrants?bounds=${bounds}`, {
+      headers: {
+        'Authorization': `Bearer ${this.apiKey}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    return await response.json();
+  },
+  
+  async getFlowTests(hydrantId) {
+    const response = await fetch(`${this.baseURL}/hydrants/${hydrantId}/flow-tests`, {
+      headers: {
+        'Authorization': `Bearer ${this.apiKey}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    return await response.json();
+  }
+};
+
+// Usage Example
+TridentAPI.getHydrants('43.51,-79.90,43.53,-79.86')
+  .then(data => {
+    console.log(`Found ${data.total} hydrants`);
+    data.data.forEach(hydrant => {
+      console.log(`Hydrant ${hydrant.id}: ${hydrant.status}`);
+    });
+  })
+  .catch(error => console.error('API Error:', error));
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rest of the page content remains the same -->
+  <section id="contact" class="cta-section">
+    <h2>Ready to Integrate?</h2>
+    <p>Contact our team to get started with fire hydrant data API integration. We'll provide you with API credentials, documentation, and ongoing support.</p>
+    <div class="cta-buttons">
+      <a href="mailto:api@tridentsys.ca?subject=API Integration Request" class="cta-btn cta-btn-primary">Request API Access</a>
+      <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Try HydrantHub Platform</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Trident Systems. All rights reserved. | Professional Fire Hydrant Data API | NFPA 291 Certified</p>
+    <p><strong>Email:</strong> <a href="mailto:api@tridentsys.ca">api@tridentsys.ca</a> | <strong>Main Site:</strong> <a href="index.html">tridentsys.ca</a></p>
+  </footer>
+
+  <script>
+    function showTab(tabName) {
+      // Hide all code content
+      const contents = document.querySelectorAll('.code-content');
+      contents.forEach(content => content.classList.remove('active'));
+      
+      // Remove active class from all tabs
+      const tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      
+      // Show selected content and activate tab
+      document.getElementById(tabName).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
