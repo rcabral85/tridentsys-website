@@ -1,12 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Certified fire flow testing for hydrants following NFPA 291 standards. Serving municipalities, property managers, and contractors across the GTA, Hamilton, and Niagara regions with professional water distribution expertise." />
-  <meta name="keywords" content="fire flow testing, hydrant testing, NFPA 291, water distribution, fire safety, municipal services, GTA, Hamilton, Niagara, certified operator, OTM Book 7, temporary traffic control, hydrant API, fire hydrant data integration" />
+  
+  <!-- SEO Meta Tags -->
+  <link rel="canonical" href="https://tridentsys.ca/" />
+  <meta name="description" content="Certified fire flow testing for hydrants following NFPA 291 standards. Serving municipalities, property managers, and contractors across the GTA, Hamilton, and Niagara regions with professional water distribution expertise and digital hydrant management solutions." />
+  <meta name="keywords" content="fire flow testing, hydrant testing, NFPA 291, water distribution, fire safety, municipal services, GTA, Hamilton, Niagara, certified operator, OTM Book 7, temporary traffic control, hydrant API, fire hydrant data integration, HydrantHub" />
+  <meta name="author" content="Trident Systems" />
+  <meta name="language" content="en-CA" />
+  <link rel="alternate" hreflang="en-CA" href="https://tridentsys.ca/" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Fire Flow Testing | NFPA 291 & OTM Book 7 Compliant | Trident Systems Ontario" />
+  <meta property="og:description" content="Professional fire flow testing and hydrant management services following NFPA 291 standards. Serving municipalities across Greater Toronto Area, Hamilton, and Niagara regions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tridentsys.ca/" />
+  <meta property="og:image" content="https://tridentsys.ca/trident-logo.png" />
+  <meta property="og:site_name" content="Trident Systems" />
+  <meta property="og:locale" content="en_CA" />
+  
+  <!-- Performance Optimization -->
+  <link rel="preconnect" href="https://app.tridentsys.ca" crossorigin />
+  <link rel="preconnect" href="https://hydrant-management-production.up.railway.app" crossorigin />
+  <link rel="preconnect" href="https://tridentsys-production.up.railway.app" crossorigin />
+  <link rel="preconnect" href="https://cdn.coverr.co" />
+  <link rel="preload" href="trident-logo.png" as="image" type="image/png" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  
   <link rel="icon" type="image/png" href="trident-logo.png" />
   <title>Fire Flow Testing | NFPA 291 & OTM Book 7 Compliant | Trident Systems Ontario</title>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://tridentsys.ca",
+    "name": "Trident Systems",
+    "image": "https://tridentsys.ca/trident-logo.png",
+    "url": "https://tridentsys.ca",
+    "email": "info@tridentsys.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Ontario",
+      "addressCountry": "CA",
+      "addressLocality": "Milton"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.5182",
+      "longitude": "-79.8774"
+    },
+    "areaServed": [
+      "Greater Toronto Area",
+      "Hamilton",
+      "Niagara Region",
+      "Peel Region",
+      "Halton Region",
+      "Milton",
+      "Oakville",
+      "Burlington",
+      "Mississauga",
+      "Brampton"
+    ],
+    "description": "Professional fire flow testing and hydrant management services following NFPA 291 standards. Certified Water Distribution Operator with 5+ years experience serving municipalities across Ontario.",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "sameAs": [
+      "https://app.tridentsys.ca"
+    ]
+  }
+  </script>
+  
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fire Flow Testing",
+    "description": "NFPA 291 compliant fire flow testing for municipal hydrants and water distribution systems with OTM Book 7 traffic control.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Trident Systems",
+      "url": "https://tridentsys.ca"
+    },
+    "serviceType": "Fire Flow Testing",
+    "areaServed": [
+      "Greater Toronto Area",
+      "Hamilton",
+      "Niagara Region"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "description": "Professional fire flow testing following NFPA 291 standards with detailed compliance reports."
+    }
+  }
+  </script>
+  
+  <!-- SoftwareApplication Schema for HydrantHub -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "HydrantHub",
+    "url": "https://app.tridentsys.ca",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    "description": "Professional fire hydrant management platform with NFPA 291 compliant flow testing, real-time hydrant status tracking, and municipal water distribution management tools.",
+    "author": {
+      "@type": "Organization",
+      "name": "Trident Systems",
+      "url": "https://tridentsys.ca"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    }
+  }
+  </script>
+  
   <style>
     * { box-sizing: border-box; }
     body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
@@ -21,6 +136,8 @@
     .btn:hover { background: #005f99; }
     .btn-api { background: #ff6b35; }
     .btn-api:hover { background: #e55a2b; }
+    .btn-login { background: #28a745; }
+    .btn-login:hover { background: #1e7e34; }
     section, .slider-section { margin-top: 100px; padding: 60px 20px; text-align: center; background-color: rgba(255, 255, 255, 0.95); position: relative; z-index: 5; }
     .badge { display:inline-block; padding:6px 12px; border-radius:18px; font-weight:bold; font-size:0.9em; margin:6px 6px 0 0; }
     .badge-nfpa { background:#ff6b35; color:#fff; }
@@ -32,7 +149,7 @@
     .cta { background: #004080; color: white; padding: 60px 20px; text-align: center; }
     .cta h2 { font-size: 2em; margin-bottom: 20px; }
     .cta p { font-size: 1.2em; margin-bottom: 30px; }
-    .cta .btn { background: #00bfff; color: white; padding: 12px 24px; font-size: 1.1em; text-decoration: none; border-radius: 4px; }
+    .cta .btn { background: #00bfff; color: white; padding: 12px 24px; font-size: 1.1em; text-decoration: none; border-radius: 4px; margin: 5px; }
     .results-section { background: #f8f9fa; padding: 50px 20px; }
     .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
     .result-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: left; }
@@ -52,31 +169,33 @@
     .digital-feature h3 { margin-top: 0; font-size: 1.3em; }
     .feature-icon { font-size: 2.5em; margin-bottom: 15px; }
     .api-cta { margin-top: 40px; }
-    .api-cta .btn { background: white; color: #ff6b35; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border-radius: 8px; }
+    .api-cta .btn { background: white; color: #ff6b35; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border-radius: 8px; margin: 5px; }
     .api-cta .btn:hover { background: #f0f0f0; }
-    footer { padding: 20px; background: #f0f0f0; text-align: center; }
+    .cta-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+    footer { padding: 30px 20px; background: #f0f0f0; text-align: center; }
+    .footer-links { margin-bottom: 15px; }
+    .footer-links a { color: #007ACC; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    .footer-links a:hover { text-decoration: underline; }
     form input, form textarea { display: block; width: 80%; max-width: 500px; margin: 10px auto; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 4px; resize: vertical; }
     form button { padding: 10px 20px; font-size: 1em; background-color: #007ACC; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease; }
     form button:hover { background-color: #005f99; }
-    @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; align-items: flex-start; } .header-left { gap: 15px; } header img { height: 60px; } .header-title { font-size: 1.4em; } .right { width: 100%; margin-top: 10px; gap: 10px; justify-content: flex-start; } .btn { padding: 8px 14px; font-size: 0.9em; } .slider { height: 250px; } .slider-text { font-size: 1.1em; } section, .slider-section { margin-top: 90px; padding-left: 10px; padding-right: 10px; } form input, form textarea { width: 95%; } .client-logos img { height: 40px; } .results-grid { grid-template-columns: 1fr; } .digital-features { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; align-items: flex-start; } .header-left { gap: 15px; } header img { height: 60px; } .header-title { font-size: 1.4em; } .right { width: 100%; margin-top: 10px; gap: 10px; justify-content: flex-start; } .btn { padding: 8px 14px; font-size: 0.9em; } .slider { height: 250px; } .slider-text { font-size: 1.1em; } section, .slider-section { margin-top: 90px; padding-left: 10px; padding-right: 10px; } form input, form textarea { width: 95%; } .client-logos img { height: 40px; } .results-grid { grid-template-columns: 1fr; } .digital-features { grid-template-columns: 1fr; } .cta-buttons { flex-direction: column; align-items: center; } }
   </style>
-  <script>
-    let current = 0; let slides; window.addEventListener("load", () => { slides = document.querySelectorAll(".slider img"); if (slides.length > 0) { slides[current].classList.add("active"); setInterval(() => { slides[current].classList.remove("active"); current = (current + 1) % slides.length; slides[current].classList.add("active"); }, 4000); } });
-  </script>
 </head>
 <body>
   <div class="video-background">
-    <video autoplay muted loop>
+    <video autoplay muted loop preload="metadata">
       <source src="https://cdn.coverr.co/videos/coverr-water-bubbles-9554/1080p.mp4" type="video/mp4">
     </video>
   </div>
 
   <header>
     <div class="header-left">
-      <img src="trident-logo.png" alt="Trident Systems Logo" />
+      <img src="trident-logo.png" alt="Trident Systems Logo" width="80" height="80" />
       <div class="header-title">Trident Systems</div>
     </div>
     <div class="right">
+      <a href="https://app.tridentsys.ca/login" class="btn btn-login" target="_blank" rel="noopener noreferrer">Client Login</a>
       <a href="#about" class="btn">About Us</a>
       <a href="#services" class="btn">Our Services</a>
       <a href="api-services.html" class="btn btn-api">API Services</a>
@@ -89,9 +208,9 @@
  <section class="slider-section">
   <div class="slider-text">NFPA 291 Certified Fire Flow Testing — OTM Book 7 Compliant Traffic Control</div>
   <div class="slider" id="slider">
-    <img src="slide1.jpg" alt="Professional Fire Flow Testing Equipment" loading="lazy">
-    <img src="slide2.jpg" alt="Municipal Hydrant Testing Service" loading="lazy">
-    <img src="slide3.webp" alt="Water Distribution System Analysis" loading="lazy">
+    <img src="slide1.jpg" alt="Professional Fire Flow Testing Equipment" loading="lazy" width="800" height="400">
+    <img src="slide2.jpg" alt="Municipal Hydrant Testing Service" loading="lazy" width="800" height="400">
+    <img src="slide3.webp" alt="Water Distribution System Analysis" loading="lazy" width="800" height="400">
   </div>
 </section>
 
@@ -102,7 +221,10 @@
     <span class="badge badge-nfpa">Licensed WDO</span>
     <span class="badge">5+ Years Experience</span>
     <p>Ensure your hydrant systems meet fire code and insurance requirements. We provide certified fire flow testing with detailed NFPA-compliant reports and traffic control that adheres to Ontario Traffic Manual (OTM) Book 7 temporary conditions.</p>
-    <a href="#contact" class="btn">Request a Free Quote</a>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn">Request a Free Quote</a>
+      <a href="https://app.tridentsys.ca" class="btn btn-api" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
+    </div>
   </section>
 
   <section id="about">
@@ -152,6 +274,7 @@
     
     <div class="api-cta">
       <a href="api-services.html" class="btn">Explore API Services</a>
+      <a href="https://app.tridentsys.ca" class="btn" target="_blank" rel="noopener noreferrer">Try HydrantHub</a>
     </div>
   </section>
 
@@ -252,11 +375,11 @@
     <h2>Municipal & Professional Experience</h2>
     <p>As a licensed Water Distribution Operator and firefighter, our team has hands-on experience with the following municipalities and organizations:</p>
     <div class="client-logos">
-      <img src="logo-town-of-milton.png" alt="Town of Milton - Municipal Water Experience" loading="lazy" />
-      <img src="logo-halton-region.png" alt="Halton Region - Water Distribution Systems" loading="lazy" />
-      <img src="logo-peel-region.png" alt="Peel Region - Current Water Distribution Employer" loading="lazy" />
-      <img src="logo-milton-fire.png" alt="Milton Fire Department - Part-time Firefighter" loading="lazy" />
-      <img src="nfpa-logo.png?v=2" alt="NFPA Logo" loading="lazy" style="height:60px; margin-left: 15px;" />
+      <img src="logo-town-of-milton.png" alt="Town of Milton - Municipal Water Experience" loading="lazy" width="150" height="60" />
+      <img src="logo-halton-region.png" alt="Halton Region - Water Distribution Systems" loading="lazy" width="150" height="60" />
+      <img src="logo-peel-region.png" alt="Peel Region - Current Water Distribution Employer" loading="lazy" width="150" height="60" />
+      <img src="logo-milton-fire.png" alt="Milton Fire Department - Part-time Firefighter" loading="lazy" width="150" height="60" />
+      <img src="nfpa-logo.png?v=2" alt="NFPA Logo" loading="lazy" style="height:60px; margin-left: 15px;" width="90" height="60" />
     </div>
   </section>
 
@@ -273,11 +396,18 @@
   </section>
 
   <footer>
+    <div class="footer-links">
+      <a href="https://app.tridentsys.ca/login" target="_blank" rel="noopener noreferrer">Client Login</a>
+      <a href="https://app.tridentsys.ca" target="_blank" rel="noopener noreferrer">HydrantHub Platform</a>
+      <a href="api-services.html">API Services</a>
+      <a href="data-portal.html">Data Portal</a>
+    </div>
     <p>&copy; 2025 Trident Systems. All rights reserved. | NFPA 291 Certified | OTM Book 7 Compliant</p>
     <p><strong>Service Areas:</strong> Greater Toronto Area, Hamilton, Niagara Region, Peel Region, Halton Region, Milton</p>
     <p><strong>Email:</strong> <a href="mailto:info@tridentsys.ca">info@tridentsys.ca</a> | <strong>API Services:</strong> <a href="mailto:api@tridentsys.ca">api@tridentsys.ca</a> | <strong>Website:</strong> <a href="https://tridentsys.ca">tridentsys.ca</a></p>
   </footer>
 
+  <!-- Deferred Scripts for Performance -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const slides = document.querySelectorAll(".slider img");
@@ -287,6 +417,7 @@
       setInterval(() => { current = (current + 1) % slides.length; showSlide(current); }, 4000);
     });
   </script>
+  
 <!-- TridentBot Chat Widget -->
 <div id="trident-chatbot" style="position:fixed;bottom:24px;right:24px;z-index:2000;">
   <button onclick="openBot()" style="padding:12px 20px;background:#007ACC;color:#fff;font-weight:bold;border:none;border-radius:26px;box-shadow:0 2px 10px #0002;">💬 Ask TridentBot</button>
@@ -299,7 +430,7 @@
     </form>
   </div>
 </div>
-<script>
+<script defer>
 function openBot() {
   const chatbox = document.getElementById('chatbox');
   chatbox.style.display = (chatbox.style.display === 'block' ? 'none' : 'block');
