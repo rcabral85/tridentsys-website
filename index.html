@@ -138,6 +138,8 @@
     .btn-api:hover { background: #e55a2b; }
     .btn-login { background: #28a745; }
     .btn-login:hover { background: #1e7e34; }
+    .btn-hydranthub { background: #10B981; }
+    .btn-hydranthub:hover { background: #059669; }
     section, .slider-section { margin-top: 100px; padding: 60px 20px; text-align: center; background-color: rgba(255, 255, 255, 0.95); position: relative; z-index: 5; }
     .badge { display:inline-block; padding:6px 12px; border-radius:18px; font-weight:bold; font-size:0.9em; margin:6px 6px 0 0; }
     .badge-nfpa { background:#ff6b35; color:#fff; }
@@ -160,6 +162,17 @@
     #clients { background-color: #f9f9f9; padding: 50px 20px; text-align: center; }
     .client-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px; }
     .client-logos img { height: 60px; max-width: 150px; object-fit: contain; }
+    /* HydrantHub Software Section */
+    .hydranthub-section { background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; padding: 60px 20px; }
+    .hydranthub-section h2 { font-size: 2.2em; margin-bottom: 20px; }
+    .hydranthub-section p { font-size: 1.2em; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .hydranthub-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto 0; }
+    .hydranthub-feature { background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px); }
+    .hydranthub-feature h3 { margin-top: 0; font-size: 1.3em; }
+    .feature-icon { font-size: 2.5em; margin-bottom: 15px; }
+    .hydranthub-cta { margin-top: 40px; }
+    .hydranthub-cta .btn { background: white; color: #10B981; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border-radius: 8px; margin: 5px; }
+    .hydranthub-cta .btn:hover { background: #f0f0f0; }
     /* Digital Services Section */
     .digital-services { background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 60px 20px; }
     .digital-services h2 { font-size: 2.2em; margin-bottom: 20px; }
@@ -167,7 +180,6 @@
     .digital-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto 0; }
     .digital-feature { background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px); }
     .digital-feature h3 { margin-top: 0; font-size: 1.3em; }
-    .feature-icon { font-size: 2.5em; margin-bottom: 15px; }
     .api-cta { margin-top: 40px; }
     .api-cta .btn { background: white; color: #ff6b35; padding: 15px 30px; font-size: 1.2em; font-weight: bold; border-radius: 8px; margin: 5px; }
     .api-cta .btn:hover { background: #f0f0f0; }
@@ -179,7 +191,7 @@
     form input, form textarea { display: block; width: 80%; max-width: 500px; margin: 10px auto; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 4px; resize: vertical; }
     form button { padding: 10px 20px; font-size: 1em; background-color: #007ACC; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease; }
     form button:hover { background-color: #005f99; }
-    @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; align-items: flex-start; } .header-left { gap: 15px; } header img { height: 60px; } .header-title { font-size: 1.4em; } .right { width: 100%; margin-top: 10px; gap: 10px; justify-content: flex-start; } .btn { padding: 8px 14px; font-size: 0.9em; } .slider { height: 250px; } .slider-text { font-size: 1.1em; } section, .slider-section { margin-top: 90px; padding-left: 10px; padding-right: 10px; } form input, form textarea { width: 95%; } .client-logos img { height: 40px; } .results-grid { grid-template-columns: 1fr; } .digital-features { grid-template-columns: 1fr; } .cta-buttons { flex-direction: column; align-items: center; } }
+    @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; align-items: flex-start; } .header-left { gap: 15px; } header img { height: 60px; } .header-title { font-size: 1.4em; } .right { width: 100%; margin-top: 10px; gap: 10px; justify-content: flex-start; } .btn { padding: 8px 14px; font-size: 0.9em; } .slider { height: 250px; } .slider-text { font-size: 1.1em; } section, .slider-section { margin-top: 90px; padding-left: 10px; padding-right: 10px; } form input, form textarea { width: 95%; } .client-logos img { height: 40px; } .results-grid { grid-template-columns: 1fr; } .digital-features, .hydranthub-features { grid-template-columns: 1fr; } .cta-buttons { flex-direction: column; align-items: center; } }
   </style>
 </head>
 <body>
@@ -198,6 +210,7 @@
       <a href="https://app.tridentsys.ca/login" class="btn btn-login" target="_blank" rel="noopener noreferrer">Client Login</a>
       <a href="#about" class="btn">About Us</a>
       <a href="#services" class="btn">Our Services</a>
+      <a href="hydrant-hub.html" class="btn btn-hydranthub">HydrantHub Software</a>
       <a href="api-services.html" class="btn btn-api">API Services</a>
       <a href="#results" class="btn">Sample Results</a>
       <a href="#contact" class="btn">Contact Us</a>
@@ -223,7 +236,7 @@
     <p>Ensure your hydrant systems meet fire code and insurance requirements. We provide certified fire flow testing with detailed NFPA-compliant reports and traffic control that adheres to Ontario Traffic Manual (OTM) Book 7 temporary conditions.</p>
     <div class="cta-buttons">
       <a href="#contact" class="btn">Request a Free Quote</a>
-      <a href="https://app.tridentsys.ca" class="btn btn-api" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
+      <a href="hydrant-hub.html" class="btn btn-hydranthub">Try HydrantHub Software</a>
     </div>
   </section>
 
@@ -239,6 +252,71 @@
         <li>5+ Years Municipal Water Distribution Experience</li>
         <li>Experience with Peel Region, Halton Region, Milton</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="hydranthub-section">
+    <h2>HydrantHub: Modern Hydrant Management Software</h2>
+    <p>Transform your fire hydrant management with our cloud-based platform. Built by water operators for municipalities, featuring NFPA 291 compliant flow testing, preventive maintenance scheduling, and automated compliance reporting.</p>
+    
+    <div class="hydranthub-features">
+      <div class="hydranthub-feature">
+        <div class="feature-icon">🧮</div>
+        <h3>NFPA 291 Flow Testing</h3>
+        <p>Automated calculations, real-time validation, and professional PDF reports that eliminate manual errors and ensure compliance.</p>
+      </div>
+      
+      <div class="hydranthub-feature">
+        <div class="feature-icon">🔧</div>
+        <h3>Preventive Maintenance</h3>
+        <p>Annual inspection scheduling, valve testing, condition assessments, and automated maintenance alerts to stay compliant.</p>
+      </div>
+      
+      <div class="hydranthub-feature">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile-First Design</h3>
+        <p>Work offline in the field with iOS/Android apps designed for water operators. Sync data when back online.</p>
+      </div>
+      
+      <div class="hydranthub-feature">
+        <div class="feature-icon">💰</div>
+        <h3>Affordable Pricing</h3>
+        <p>60-80% less expensive than enterprise solutions. Starting at $799/year for small municipalities.</p>
+      </div>
+    </div>
+    
+    <div class="hydranthub-cta">
+      <a href="hydrant-hub.html" class="btn">Learn More About HydrantHub</a>
+      <a href="https://app.tridentsys.ca" class="btn" target="_blank" rel="noopener noreferrer">Request Demo</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our NFPA 291 & OTM Book 7 Compliant Services</h2>
+    <p>We specialize in <strong>Fire Flow Testing following NFPA 291</strong> and implement <strong>OTM Book 7</strong> compliant traffic control for municipal and private hydrant systems. Our comprehensive testing ensures your water distribution system meets critical fire protection requirements and that public safety is maintained during testing operations.</p>
+    <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 30px 0; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h3 style="color: #004080; text-align: center;">Traffic Control & Safety (OTM Book 7)</h3>
+      <ul>
+        <li>Site-specific temporary traffic control layouts based on roadway type and posted speed</li>
+        <li>Use of approved signage, cones/drums, tapers and buffer space per OTM Book 7 tables</li>
+        <li>Competent worker setup/removal procedures and flagging as required</li>
+        <li>Coordination with road authorities for permits and lane impacts</li>
+      </ul>
+    </div>
+
+    <h3>Sample Fire Flow Test Calculation (NFPA 291 Method)</h3>
+    <div style="background: #004080; color: white; padding: 20px; border-radius: 8px; font-family: monospace; text-align: left; max-width: 600px; margin: 20px auto;">
+      <strong>Location:</strong> Milton Commercial Plaza<br>
+      <strong>Test Date:</strong> 2025-10-18<br>
+      <strong>Operator:</strong> Licensed WDO<br><br>
+      <strong>MEASUREMENTS:</strong><br>
+      Static Pressure: 72 PSI<br>
+      Residual Pressure: 48 PSI<br>
+      Flow Rate: 950 GPM<br><br>
+      <strong>NFPA 291 CALCULATION:</strong><br>
+      Available Flow at 20 PSI: <strong>1,442 GPM</strong><br>
+      Classification: <strong>GOOD - Commercial Grade</strong><br>
+      NFPA Compliance: <span style="background: #28a745; padding: 2px 8px; border-radius: 4px;">PASS</span>
     </div>
   </section>
 
@@ -275,35 +353,6 @@
     <div class="api-cta">
       <a href="api-services.html" class="btn">Explore API Services</a>
       <a href="https://app.tridentsys.ca" class="btn" target="_blank" rel="noopener noreferrer">Try HydrantHub</a>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2>Our NFPA 291 & OTM Book 7 Compliant Services</h2>
-    <p>We specialize in <strong>Fire Flow Testing following NFPA 291</strong> and implement <strong>OTM Book 7</strong> compliant traffic control for municipal and private hydrant systems. Our comprehensive testing ensures your water distribution system meets critical fire protection requirements and that public safety is maintained during testing operations.</p>
-    <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 30px 0; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <h3 style="color: #004080; text-align: center;">Traffic Control & Safety (OTM Book 7)</h3>
-      <ul>
-        <li>Site-specific temporary traffic control layouts based on roadway type and posted speed</li>
-        <li>Use of approved signage, cones/drums, tapers and buffer space per OTM Book 7 tables</li>
-        <li>Competent worker setup/removal procedures and flagging as required</li>
-        <li>Coordination with road authorities for permits and lane impacts</li>
-      </ul>
-    </div>
-
-    <h3>Sample Fire Flow Test Calculation (NFPA 291 Method)</h3>
-    <div style="background: #004080; color: white; padding: 20px; border-radius: 8px; font-family: monospace; text-align: left; max-width: 600px; margin: 20px auto;">
-      <strong>Location:</strong> Milton Commercial Plaza<br>
-      <strong>Test Date:</strong> 2025-10-18<br>
-      <strong>Operator:</strong> Licensed WDO<br><br>
-      <strong>MEASUREMENTS:</strong><br>
-      Static Pressure: 72 PSI<br>
-      Residual Pressure: 48 PSI<br>
-      Flow Rate: 950 GPM<br><br>
-      <strong>NFPA 291 CALCULATION:</strong><br>
-      Available Flow at 20 PSI: <strong>1,442 GPM</strong><br>
-      Classification: <strong>GOOD - Commercial Grade</strong><br>
-      NFPA Compliance: <span style="background: #28a745; padding: 2px 8px; border-radius: 4px;">PASS</span>
     </div>
   </section>
 
@@ -398,6 +447,7 @@
   <footer>
     <div class="footer-links">
       <a href="https://app.tridentsys.ca/login" target="_blank" rel="noopener noreferrer">Client Login</a>
+      <a href="hydrant-hub.html">HydrantHub Software</a>
       <a href="https://app.tridentsys.ca" target="_blank" rel="noopener noreferrer">HydrantHub Platform</a>
       <a href="api-services.html">API Services</a>
       <a href="data-portal.html">Data Portal</a>
