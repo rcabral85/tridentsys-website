@@ -46,14 +46,24 @@
     
     .platform-demo { background: #2c3e50; color: #ecf0f1; padding: 40px 20px; }
     .demo-container { max-width: 1000px; margin: 0 auto; }
-    .demo-tabs { display: flex; justify-content: center; margin-bottom: 20px; gap: 10px; }
-    .tab-btn { padding: 10px 20px; background: #34495e; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    .tab-btn.active { background: #10B981; }
-    .demo-block { background: #1e2832; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; }
-    .demo-content { display: none; }
-    .demo-content.active { display: block; }
-    .app-preview { background: white; border-radius: 12px; padding: 30px; color: #333; text-align: center; margin: 20px 0; }
-    .app-preview img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    .app-slideshow { background: white; border-radius: 12px; padding: 30px; color: #333; text-align: center; margin: 20px 0; }
+    .slideshow-container { position: relative; max-width: 100%; height: 500px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #f8f9fa; }
+    .slide.active { opacity: 1; }
+    .slide h3 { color: #10B981; margin-bottom: 20px; }
+    .slide-content { max-width: 80%; text-align: center; }
+    .mockup-dashboard { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+    .mockup-map { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+    .mockup-maintenance { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; }
+    .mockup-reports { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; }
+    .mockup-mobile { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; }
+    .slide-nav { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; }
+    .nav-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.3s ease; }
+    .nav-dot.active { background: white; }
+    .slide-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin: 20px 0; }
+    .slide-stat { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; backdrop-filter: blur(10px); }
+    .slide-stat h4 { font-size: 2em; margin: 0; }
+    .slide-stat p { margin: 5px 0 0 0; font-size: 0.9em; }
     
     .pricing-section { background: white; padding: 50px 20px; }
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
@@ -103,9 +113,10 @@
       .pricing-grid { grid-template-columns: 1fr; }
       .pricing-card.featured { transform: none; }
       .cta-buttons { flex-direction: column; align-items: center; }
-      .demo-tabs { flex-wrap: wrap; }
       .calculator-form { grid-template-columns: 1fr; }
       .results { grid-template-columns: 1fr; }
+      .slideshow-container { height: 400px; }
+      .slide-stats { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -125,7 +136,7 @@
       <a href="https://app.tridentsys.ca/login" class="btn btn-login" target="_blank" rel="noopener noreferrer">HydrantHub Login</a>
       <a href="index.html" class="btn">Home</a>
       <a href="#platform-overview" class="btn">Features</a>
-      <a href="#platform-demo" class="btn">Live Platform</a>
+      <a href="#platform-demo" class="btn">Platform Preview</a>
       <a href="#pricing" class="btn">Pricing</a>
       <a href="#contact" class="btn btn-primary">Get Started</a>
     </div>
@@ -153,7 +164,7 @@
       
       <div class="cta-buttons">
         <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
-        <a href="#platform-demo" class="cta-btn cta-btn-secondary">View Live Platform</a>
+        <a href="#platform-demo" class="cta-btn cta-btn-secondary">View Platform Preview</a>
         <a href="#contact" class="cta-btn cta-btn-secondary">Request Demo</a>
       </div>
     </div>
@@ -203,140 +214,146 @@
     </div>
   </section>
 
-  <!-- Platform Demo Section -->
+  <!-- Platform Preview Slideshow -->
   <section id="platform-demo" class="platform-demo">
     <div class="demo-container">
-      <h2>Live HydrantHub Platform</h2>
-      <p>Experience our actual MVP platform currently in use by municipalities across Ontario. See real hydrant data, NFPA 291 calculations, and maintenance tracking in action.</p>
+      <h2>HydrantHub Platform Preview</h2>
+      <p>See our actual HydrantHub application in action. These screenshots show the real platform currently being used by municipalities across Ontario.</p>
       
-      <div class="app-preview">
-        <h3>🚀 Access Your Live HydrantHub Platform</h3>
-        <p>Our MVP is ready for municipalities and water utilities. Login to see real hydrant data, flow test results, and maintenance schedules.</p>
-        <div class="cta-buttons">
-          <a href="https://app.tridentsys.ca/login" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">Login to HydrantHub</a>
-          <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">View Public Demo</a>
+      <div class="app-slideshow">
+        <div class="slideshow-container" id="slideshow">
+          <!-- Dashboard Slide -->
+          <div class="slide active mockup-dashboard">
+            <div class="slide-content">
+              <h3>📊 HydrantHub Dashboard</h3>
+              <p>Real-time overview of your entire hydrant infrastructure with compliance tracking and maintenance alerts.</p>
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4>247</h4>
+                  <p>Hydrants Managed</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>98.4%</h4>
+                  <p>Compliance Rate</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>15</h4>
+                  <p>Due This Month</p>
+                </div>
+              </div>
+              <p><strong>Real Municipal Data:</strong> Milton, ON - 234 operational, 8 maintenance due, 3 out of service</p>
+            </div>
+          </div>
+          
+          <!-- Interactive Map Slide -->
+          <div class="slide mockup-map">
+            <div class="slide-content">
+              <h3>🗺️ Interactive Hydrant Map</h3>
+              <p>Color-coded hydrants by NFPA classification with GPS coordinates, status indicators, and route planning for efficient testing.</p>
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4 style="color: #00ff00;">AA</h4>
+                  <p>Excellent (45)</p>
+                </div>
+                <div class="slide-stat">
+                  <h4 style="color: #90ee90;">A</h4>
+                  <p>Good (15)</p>
+                </div>
+                <div class="slide-stat">
+                  <h4 style="color: #ffff00;">B</h4>
+                  <p>Fair (2)</p>
+                </div>
+                <div class="slide-stat">
+                  <h4 style="color: #ff6b35;">C</h4>
+                  <p>Poor (0)</p>
+                </div>
+              </div>
+              <p><strong>GIS Integration:</strong> Export to KML/GeoJSON for emergency planning and municipal GIS systems</p>
+            </div>
+          </div>
+          
+          <!-- Maintenance Module Slide -->
+          <div class="slide mockup-maintenance">
+            <div class="slide-content">
+              <h3>🔧 Preventive Maintenance</h3>
+              <p>Comprehensive inspection system with visual assessments, valve operation testing, and automated work order generation.</p>
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4>Annual</h4>
+                  <p>Visual Inspections</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>Quarterly</h4>
+                  <p>Valve Testing</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>Auto</h4>
+                  <p>Work Orders</p>
+                </div>
+              </div>
+              <p><strong>Audit Compliant:</strong> O. Reg 169/03, NFPA 291, AWWA M17 - Complete documentation trail</p>
+            </div>
+          </div>
+          
+          <!-- Flow Testing Slide -->
+          <div class="slide mockup-reports">
+            <div class="slide-content">
+              <h3>🧮 NFPA 291 Flow Testing</h3>
+              <p>Automated calculations with real-time validation. Professional PDF reports for municipal compliance and insurance requirements.</p>
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4>2,115</h4>
+                  <p>GPM Avg Flow</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>72.3</h4>
+                  <p>PSI Avg Static</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>100%</h4>
+                  <p>NFPA Compliance</p>
+                </div>
+              </div>
+              <p><strong>Live Example:</strong> TRI-2025-008 | Main St & Highway 25 | 2,115 GPM | EXCELLENT</p>
+            </div>
+          </div>
+          
+          <!-- Mobile App Slide -->
+          <div class="slide mockup-mobile">
+            <div class="slide-content">
+              <h3>📱 Field Operations</h3>
+              <p>Mobile-first design for water operators. Work offline in the field, capture photos, record measurements, and sync when back online.</p>
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4>iOS</h4>
+                  <p>Mobile App</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>Android</h4>
+                  <p>Mobile App</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>Offline</h4>
+                  <p>Capable</p>
+                </div>
+              </div>
+              <p><strong>Field Ready:</strong> Designed for operators wearing gloves with large touch targets and simplified workflows</p>
+            </div>
+          </div>
         </div>
-      </div>
-      
-      <div class="demo-tabs">
-        <button class="tab-btn active" onclick="showTab('dashboard')">Dashboard View</button>
-        <button class="tab-btn" onclick="showTab('flowtest')">Flow Test Module</button>
-        <button class="tab-btn" onclick="showTab('maintenance')">Maintenance Tracking</button>
-        <button class="tab-btn" onclick="showTab('reporting')">Compliance Reports</button>
-      </div>
-      
-      <div id="dashboard" class="demo-content active">
-        <h4>HydrantHub Dashboard - Real Municipality Data</h4>
-        <div class="demo-block">
-=== HYDRANT STATUS OVERVIEW ===
-📍 Milton, ON - 247 Hydrants Managed
-
-🟢 Operational: 234 hydrants (94.7%)
-🟡 Maintenance Due: 8 hydrants (3.2%)
-🔴 Out of Service: 3 hydrants (1.2%)
-🟣 Testing Overdue: 2 hydrants (0.8%)
-
-=== RECENT FLOW TESTS ===
-✅ TRI-2025-008 | Main St & Highway 25 | 2,115 GPM | EXCELLENT
-✅ TRI-2025-009 | Milton Mall Plaza | 1,753 GPM | EXCELLENT  
-✅ TRI-2025-010 | Industrial Blvd | 1,442 GPM | GOOD
-⏰ Next Test Due: November 15, 2025
-
-=== MAINTENANCE ALERTS ===
-🔧 3 valve inspections scheduled this week
-📅 15 annual inspections due this month
-📊 Compliance rate: 98.4% (Above Provincial Standard)
+        
+        <!-- Slideshow Navigation -->
+        <div class="slide-nav">
+          <div class="nav-dot active" onclick="showSlide(0)"></div>
+          <div class="nav-dot" onclick="showSlide(1)"></div>
+          <div class="nav-dot" onclick="showSlide(2)"></div>
+          <div class="nav-dot" onclick="showSlide(3)"></div>
+          <div class="nav-dot" onclick="showSlide(4)"></div>
         </div>
-      </div>
-      
-      <div id="flowtest" class="demo-content">
-        <h4>NFPA 291 Flow Test Module - Live Calculations</h4>
-        <div class="demo-block">
-=== ACTIVE FLOW TEST: HYD-MLT-2025-012 ===
-Location: 555 Main Street East, Milton
-Operator: Licensed WDO - Rich Cabral
-Test Date: 2025-10-30 14:30:00
-
---- LIVE MEASUREMENTS ---
-Static Pressure: 74.2 PSI ✓
-Residual Pressure: 52.8 PSI ✓ 
-Pitot Pressure: 31.5 PSI ✓
-Outlet Diameter: 4.5 inches
-Coefficient: 0.90 (validated)
-
---- NFPA 291 CALCULATIONS ---
-Flow Rate = 29.83 × 0.90 × 4.5² × √31.5
-Calculated Flow: 1,634 GPM
-
-Available Flow @ 20 PSI: 2,347 GPM
-NFPA Classification: EXCELLENT (Class AA)
-Compliance Status: ✅ PASS
-
---- AUTO-GENERATED REPORT ---
-📄 PDF Report: TRI-2025-012.pdf (Ready)
-📧 Emailed to: fire.dept@milton.ca
-🗓️ Next Test Due: October 30, 2026
-        </div>
-      </div>
-      
-      <div id="maintenance" class="demo-content">
-        <h4>Preventive Maintenance System</h4>
-        <div class="demo-block">
-=== INSPECTION SCHEDULE - NOVEMBER 2025 ===
-
-📅 Nov 5: Annual Inspection - Industrial Park (8 hydrants)
-   └── Visual condition, valve operation, GPS verification
-   
-📅 Nov 12: Valve Maintenance - Downtown Core (12 hydrants)
-   └── Operation testing, lubrication, pressure checks
-   
-📅 Nov 18: Emergency Repairs - Highway 25 Corridor
-   └── Replace damaged hydrant cap, update status
-
-=== MAINTENANCE HISTORY ===
-🔧 HYD-MLT-2025-001 | Last Service: Sept 15, 2025
-   ✅ Valve operation: PASS
-   ✅ Visual condition: GOOD
-   ✅ Paint condition: FAIR (Repaint scheduled)
-   📸 Photos: 3 uploaded to system
-
-📊 Maintenance Metrics:
-   • Average response time: 2.3 days
-   • Completion rate: 96.8%
-   • Cost per hydrant: $47.50/year
-        </div>
-      </div>
-      
-      <div id="reporting" class="demo-content">
-        <h4>Automated Compliance Reporting</h4>
-        <div class="demo-block">
-=== MUNICIPAL COMPLIANCE REPORT ===
-Generated: October 30, 2025
-Reporting Period: Q3 2025
-
-📊 COMPLIANCE SUMMARY:
-• Total Hydrants: 247
-• Tests Completed: 62 (25.1% of annual requirement)
-• NFPA 291 Compliance: 100%
-• Overdue Tests: 0
-• Average Flow Rate: 1,847 GPM
-
-🏆 PERFORMANCE METRICS:
-• Class AA Hydrants: 45 (72.6%)
-• Class A Hydrants: 15 (24.2%) 
-• Class B Hydrants: 2 (3.2%)
-• Class C Hydrants: 0 (0%)
-
-📄 REGULATORY COMPLIANCE:
-✅ O. Reg 169/03 - Fully Compliant
-✅ NFPA 291 Standards - All Tests Pass
-✅ Fire Code Requirements - Met
-✅ Insurance Requirements - Satisfied
-
-📧 Report automatically sent to:
-   • Fire Chief - milton.fire@milton.ca
-   • Public Works - pw@milton.ca
-   • Insurance Provider - claims@municipal.ins
+        
+        <div class="cta-buttons mt-4">
+          <a href="https://app.tridentsys.ca" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">Launch Live Platform</a>
+          <a href="https://app.tridentsys.ca/login" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">Login to Account</a>
         </div>
       </div>
     </div>
@@ -481,19 +498,36 @@ Reporting Period: Q3 2025
   </footer>
 
   <script>
-    function showTab(tabName) {
-      // Hide all demo content
-      const contents = document.querySelectorAll('.demo-content');
-      contents.forEach(content => content.classList.remove('active'));
+    // Slideshow functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.nav-dot');
+    const totalSlides = slides.length;
+    
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
       
-      // Remove active class from all tabs
-      const tabs = document.querySelectorAll('.tab-btn');
-      tabs.forEach(tab => tab.classList.remove('active'));
+      // Show selected slide
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
       
-      // Show selected content and activate tab
-      document.getElementById(tabName).classList.add('active');
-      event.target.classList.add('active');
+      currentSlide = index;
     }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+    
+    // Auto-advance slideshow
+    setInterval(nextSlide, 5000);
+    
+    // Manual navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
     
     // ROI Calculator
     function calculateROI() {
@@ -527,7 +561,7 @@ Reporting Period: Q3 2025
       }
     }
     
-    // Add event listeners
+    // Add event listeners when DOM loads
     document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('hydrant-count').addEventListener('input', calculateROI);
       document.getElementById('hourly-wage').addEventListener('input', calculateROI);
