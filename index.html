@@ -115,9 +115,9 @@
   <style>
     /* HydrantHub App Colors - Match app.tridentsys.ca exactly */
     :root {
-      --hydranthub-blue: #0066CC;
-      --hydranthub-dark-blue: #0052A3;
-      --hydranthub-light-blue: #3385D9;
+      --hydranthub-blue: #667eea;
+      --hydranthub-dark-blue: #5a6fd8;
+      --hydranthub-light-blue: #7c8eec;
       --secondary-steel: #475569;
       --accent-silver: #64748b;
       --light-gray: #f8fafc;
@@ -140,7 +140,7 @@
     body, html { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: var(--text-primary); }
     
     /* Professional Header with HydrantHub Blue */
-    header { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 18px 40px; background: rgba(0, 102, 204, 0.95); backdrop-filter: blur(10px); color: white; flex-wrap: wrap; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 18px 40px; background: rgba(102, 126, 234, 0.95); backdrop-filter: blur(10px); color: white; flex-wrap: wrap; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
     .header-left { display: flex; align-items: center; gap: 20px; }
     header img { height: 75px; }
     .header-title { font-size: 1.9em; font-weight: 700; color: #ffffff; letter-spacing: -0.025em; }
@@ -149,7 +149,7 @@
     
     /* Professional Button System with HydrantHub Colors */
     .btn { display: inline-block; padding: 11px 22px; background: var(--hydranthub-blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; white-space: nowrap; transition: all 0.2s ease; border: 1px solid transparent; font-size: 0.9em; }
-    .btn:hover { background: var(--hydranthub-dark-blue); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4); }
+    .btn:hover { background: var(--hydranthub-dark-blue); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
     .btn-platform { background: #ffffff; color: var(--hydranthub-blue); border: 1px solid rgba(255,255,255,0.2); }
     .btn-platform:hover { background: #f1f5f9; color: var(--hydranthub-blue); }
     .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.6); color: white; }
@@ -235,7 +235,7 @@
     .calculator-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
     .form-group label { display: block; margin-bottom: 10px; color: var(--text-primary); font-weight: 600; font-size: 0.95em; }
     .form-group input, .form-group select { width: 100%; padding: 14px 16px; border: 2px solid var(--medium-gray); border-radius: 8px; font-size: 1em; transition: all 0.3s ease; background: white; }
-    .form-group input:focus, .form-group select:focus { border-color: var(--hydranthub-blue); outline: none; box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1); }
+    .form-group input:focus, .form-group select:focus { border-color: var(--hydranthub-blue); outline: none; box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); }
     .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; }
     .result-item { background: linear-gradient(135deg, var(--success-light) 0%, #ecfdf5 100%); padding: 30px 25px; border-radius: 16px; text-align: center; border: 2px solid #bbf7d0; transition: transform 0.3s ease; }
     .result-item:hover { transform: translateY(-3px); }
@@ -247,7 +247,7 @@
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 35px; max-width: 1200px; margin: 50px auto 0; }
     .pricing-card { border: 2px solid var(--medium-gray); border-radius: 20px; padding: 45px 35px; text-align: center; transition: all 0.3s ease; position: relative; background: white; }
     .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
-    .pricing-card.featured { border-color: var(--hydranthub-blue); transform: scale(1.02); box-shadow: 0 15px 50px rgba(0, 102, 204, 0.15); }
+    .pricing-card.featured { border-color: var(--hydranthub-blue); transform: scale(1.02); box-shadow: 0 15px 50px rgba(102, 126, 234, 0.15); }
     .pricing-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--hydranthub-blue); color: white; padding: 8px 20px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
     .pricing-card h3 { color: var(--hydranthub-blue); font-size: 1.7em; margin-bottom: 18px; font-weight: 700; }
     .price { font-size: 3.2em; color: var(--hydranthub-blue); font-weight: 800; margin: 25px 0; }
