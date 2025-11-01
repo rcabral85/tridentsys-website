@@ -1,203 +1,251 @@
-# 🔱 Trident Systems - NFPA 291 Certified Fire Flow Testing Services
+# 🚀 HydrantHub - Fire Hydrant Management Platform by Trident Systems
 
-[![Website](https://img.shields.io/badge/Website-tridentsys.ca-blue)](https://tridentsys.ca)
-[![Email](https://img.shields.io/badge/Email-info@tridentsys.ca-red)](mailto:info@tridentsys.ca)
-[![NFPA 291](https://img.shields.io/badge/NFPA%20291-Certified-orange)](https://tridentsys.ca)
-[![Service Areas](https://img.shields.io/badge/Service%20Areas-GTA%20|%20Hamilton%20|%20Niagara-green)](#service-areas)
+[![Platform](https://img.shields.io/badge/Platform-app.tridentsys.ca-success)](https://app.tridentsys.ca)
+[![Pricing](https://img.shields.io/badge/Starting%20Price-$799%2Fyear-blue)](https://tridentsys.ca/#pricing)
+[![Time Savings](https://img.shields.io/badge/Time%20Savings-83%25-green)](https://tridentsys.ca)
+[![NFPA 291](https://img.shields.io/badge/NFPA%20291-Compliant-orange)](https://tridentsys.ca)
+[![Service Areas](https://img.shields.io/badge/Service%20Areas-Ontario%20Municipalities-red)](#service-areas)
 
-## 🚒 About Trident Systems
+## 💡 Transform Your Fire Hydrant Management
 
-Trident Systems provides expert **NFPA 291 compliant fire flow testing**, **hydrant testing**, and **water distribution system** analysis services for municipalities, property managers, and contractors throughout the Greater Toronto Area (GTA), Hamilton, and Niagara regions.
+**HydrantHub** is the only fire hydrant management platform built by water operators for water operators. Eliminate spreadsheets, ensure NFPA 291 compliance, and save 83% of your time with automated workflows designed specifically for Canadian municipalities.
 
-**Operated by R. Cabral - Licensed Water Distribution Operator with 15+ years of experience and part-time firefighter expertise.**
+**Created by R. Cabral - Licensed Water Distribution Operator (15+ years) and Part-time Firefighter with deep municipal water system expertise.**
 
-## 🎯 NFPA 291 Certified Services
+### 🎯 Platform Impact
+- ⏰ **83% Time Savings** - Average 25 minutes saved per flow test
+- 💰 **$1,460+ Annual Cost Reduction** - ROI of 180%+ in Year 1
+- ✅ **100% NFPA 291 Compliance** - Automated calculations eliminate errors
+- 📱 **Mobile-First** - iOS/Android apps with offline capability
+- 🍁 **Built for Canada** - O. Reg 169/03 compliance integrated
 
-### 🔥 Fire Flow Testing (NFPA 291 Compliant)
-- Comprehensive fire flow testing following NFPA 291 standards
-- Flow calculations at 20 PSI residual pressure
-- Municipal hydrant system compliance verification
-- Professional reports suitable for regulatory review
+## 🏗️ HydrantHub Platform Features
 
-### 🚰 Hydrant Testing & Inspection
-- Fire hydrant flow testing with calibrated equipment
-- Hydrant pressure testing and performance assessment
-- Municipal hydrant inspection and documentation
-- Water distribution system capacity analysis
-- NFPA compliance reporting and recommendations
+### 🧮 NFPA 291 Flow Testing Module
+- **Automated Calculations**: Q = 29.83 × c × d² × √P with real-time validation
+- **Professional PDF Reports**: Eliminate manual errors and calculation mistakes
+- **Water Supply Curves**: Generate compliance documentation automatically
+- **Pitot Tube Database**: Built-in coefficient library for accurate testing
+- **Municipal Integration**: Export data to existing GIS and asset management systems
 
-### 📊 Water Distribution System Analysis
-- Expert system analysis for optimal fire protection
-- Municipal water supply reliability assessment
-- Infrastructure performance evaluation
-- Support for NFPA 13 sprinkler system design
+### 🔧 Preventive Maintenance System
+- **Annual Inspection Scheduling**: Automated calendar with compliance deadlines
+- **Visual Condition Assessments**: Photo documentation with standardized forms
+- **Valve Operation Testing**: Track quarterly tests with pass/fail documentation
+- **Work Order Generation**: Automatic creation of repair tickets and maintenance tasks
+- **Compliance Monitoring**: Real-time tracking of O. Reg 169/03 requirements
 
-## 📋 Sample Fire Flow Test Results
+### 🗺️ Interactive Mapping & GIS Integration
+- **Color-Coded Classification**: NFPA AA, A, B, C ratings with visual indicators
+- **GPS Coordinate Management**: Capture and verify hydrant locations
+- **Route Planning**: Optimize testing schedules for maximum efficiency
+- **GIS Export**: Seamless integration with municipal mapping systems (KML/GeoJSON)
+- **Emergency Planning**: Share real-time data with fire departments
 
-*Recent test results demonstrating NFPA 291 methodology:*
+### 📱 Mobile-First Field Operations
+- **Native Mobile Apps**: Purpose-built iOS and Android applications
+- **Offline Capability**: Work without internet, sync when connected
+- **Glove-Friendly Interface**: Large touch targets designed for field operators
+- **Photo Capture**: Document conditions with automatic GPS tagging
+- **Real-time Sync**: Instant data validation and cloud backup
 
-| Test ID | Location | Static PSI | Flow at 20 PSI | Classification |
-|---------|----------|------------|-----------------|----------------|
-| TRI-2025-006 | Milton Fire Station #1 | 68.7 | **2,281 GPM** | EXCELLENT |
-| TRI-2025-007 | Oakville Commercial | 72.3 | **2,115 GPM** | EXCELLENT |
-| TRI-2025-004 | Niagara Falls District | 75.4 | **1,753 GPM** | EXCELLENT |
+### 📊 Advanced Analytics & Reporting
+- **Compliance Dashboard**: Real-time overview of system health and requirements
+- **Trend Analysis**: Historical performance tracking and predictive insights
+- **Municipal Reporting**: Automated generation of regulatory documentation
+- **Custom Templates**: Create standardized reports for different stakeholders
+- **Audit Trail**: Complete documentation history for regulatory compliance
 
-*Full sample dataset available in `/assets/data/sample-fire-flow-tests.csv`*
+## 💼 Pricing & Plans
+
+### 🏢 Built for Every Municipality Size
+
+| Plan | Price/Year | Hydrants | Users | Best For |
+|------|------------|----------|-------|----------|
+| **Starter** | $799 | Up to 150 | 2 | Small municipalities (2K-10K pop) |
+| **Professional** | $1,590 | Up to 500 | 5 | Medium municipalities (10K-50K pop) |
+| **Enterprise** | $2,690 | Unlimited | Unlimited | Large municipalities (50K+ pop) |
+
+*All plans include NFPA 291 testing, mobile apps, PDF reports, and email support*
+
+### 💰 ROI Calculator Results
+**Example: 150 hydrants, $38/hour operator wage, annual testing**
+- Annual Time Savings: **62.5 hours**
+- Annual Cost Savings: **$2,375**
+- Platform Cost: **$799**
+- **Net Savings: $1,576** (197% ROI)
+
+## 🛠️ Professional Services (Add-On)
+
+In addition to our platform, we provide expert fire flow testing services when you need hands-on professional support:
+
+### 🔥 NFPA 291 Fire Flow Testing
+- On-site testing with calibrated equipment and certified operators
+- Complete compliance documentation suitable for regulatory review
+- Licensed Water Distribution Operator with 15+ years municipal experience
+- Professional reports integrated directly into HydrantHub platform
+
+### 🚰 Hydrant Maintenance & Inspection
+- Comprehensive visual inspections following NFPA standards
+- Valve operation testing and condition assessments
+- Work order recommendations and maintenance program development
+- Integration with platform for seamless data management
+
+### 🚦 Traffic Control (OTM Book 7 Compliant)
+- Professional setup following Ontario Traffic Manual Book 7
+- Public safety during testing operations with proper signage
+- Coordination with municipal road authorities and permits
 
 ## 📍 Service Areas
 
-We proudly serve the following regions with NFPA 291 compliant testing:
-- **🏙️ Toronto** and Greater Toronto Area (GTA)
-- **🏭 Hamilton** and surrounding areas
-- **🌊 Niagara** region
-- **🏛️ Peel Region** (Current employer - insider knowledge)
-- **🏘️ Halton Region**
-- **🏠 Milton** and area municipalities
+**Platform Available**: Across Canada with focus on Ontario municipalities
+**Professional Services**: Greater Toronto Area and surrounding regions
 
-## ✅ Why Choose Trident Systems?
+- 🏙️ **Greater Toronto Area (GTA)** - All municipalities
+- 🏭 **Hamilton** and surrounding areas
+- 🌊 **Niagara Region** - Complete coverage
+- 🏛️ **Peel Region** - Deep municipal knowledge (current employer)
+- 🏘️ **Halton Region** - Extensive experience
+- 🏠 **Milton** - Local headquarters and expertise
 
-- ✓ **NFPA 291 Certified Methodology** - Industry standard compliance
-- ✓ **Licensed Water Distribution Operator** (15+ years experience)
-- ✓ **Certified Part-time Firefighter** (Milton Fire Department)
-- ✓ **Dual Expertise** - Water distribution + fire suppression knowledge
-- ✓ **Municipal Experience** across Peel, Halton, and Milton systems
-- ✓ **Professional Reports** suitable for regulatory and insurance review
-- ✓ **Advanced Equipment** with calibration documentation
-- ✓ **OMERS Pension Plan Member** (professional credibility)
+## 🎖️ Why Municipalities Choose HydrantHub
 
-## 👥 Who We Serve
+### ✅ Built by Water Operators
+- **Real Municipal Experience** - Created by operators who understand daily challenges
+- **NFPA 291 Expertise** - Licensed Water Distribution Operator with 15+ years
+- **Fire Department Knowledge** - Part-time firefighter with Milton Fire Department
+- **Regulatory Understanding** - Deep knowledge of O. Reg 169/03 and NFPA standards
 
-### 🏛️ Municipalities
-- Fire flow testing for municipal water systems
-- Hydrant performance verification and marking
-- Infrastructure capacity planning support
-- Regulatory compliance documentation
+### 💡 Platform Advantages
+- ⚡ **60-80% Less Expensive** than enterprise solutions (Cartegraph, CityWorks)
+- 🚀 **Fast Implementation** - Live in 30 days with data migration support
+- 📞 **Expert Support** - Technical support from actual water distribution operators
+- 🔄 **No Vendor Lock-in** - Export your data anytime in standard formats
+- 🏗️ **Purpose-Built** - Designed specifically for hydrant management, not generic asset management
 
-### 🏢 Property Managers & Developers
-- Commercial property fire protection compliance
-- Development project water supply verification
-- Insurance requirement documentation
-- Building permit support services
+### 🛡️ Enterprise-Grade Security
+- 🔒 **Secure Authentication** - Multi-factor authentication and role-based access
+- 🔄 **Automated Backups** - Daily encrypted backups with 99.9% uptime SLA
+- 📋 **Audit Logging** - Complete activity tracking for regulatory compliance
+- 🔗 **API Integration** - RESTful API for seamless municipal system integration
 
-### 🚧 Contractors & Engineers
-- Fire protection system design support
-- Construction project water supply data
-- Sprinkler system hydraulic calculation inputs
-- Infrastructure upgrade planning
+## 🚀 Getting Started
 
-## 🛡️ NFPA Standards Integration
+### 1. **Start Free Trial**
+   - 30-day full access trial - no credit card required
+   - Personal onboarding call with water operations expert
+   - Data migration assistance from spreadsheets/legacy systems
 
-### Primary Standards We Follow:
-- **NFPA 291**: Fire Flow Testing and Marking of Hydrants (Primary)
-- **NFPA 1142**: Water Supplies for Suburban and Rural Fire Fighting
-- **NFPA 13**: Sprinkler System Design Support
-- **NFPA 20**: Fire Pump Installation and Testing
-- **NFPA 24**: Private Fire Service Mains
+### 2. **Platform Setup**
+   - Import existing hydrant data (CSV, Excel, GIS formats supported)
+   - Configure users and permissions for your team
+   - Set up automated maintenance schedules and compliance deadlines
 
-*Detailed NFPA reference guide available in `/assets/docs/nfpa-standards-guide.md`*
+### 3. **Field Deployment** 
+   - Install mobile apps on field devices (iOS/Android)
+   - Train operators on efficient workflows (1-hour training session)
+   - Begin capturing flow test data and maintenance activities
 
-## 🌐 Repository Structure
+### 4. **Advanced Features**
+   - Integrate with existing GIS and asset management systems
+   - Set up automated reporting for municipal management
+   - Configure API connections for SCADA or other municipal systems
 
-```
-tridentsys/
-├── assets/
-│   ├── data/
-│   │   └── sample-fire-flow-tests.csv    # Sample test dataset
-│   ├── docs/
-│   │   └── nfpa-standards-guide.md       # NFPA reference guide
-│   └── images/                        # Logos and assets
-├── templates/
-│   ├── fire-flow-proposal-template.md # Client proposal template
-│   ├── test-report-template.md        # NFPA 291 report template
-│   └── README-TEMPLATES.md            # Template usage guide
-├── index.html                      # Enhanced website with NFPA integration
-├── send_email.php                  # Secure contact form handler
-├── sitemap.xml                     # SEO optimization
-├── robots.txt                      # Search engine guidance
-├── CHANGELOG.md                    # Version history
-└── README.md                       # This documentation
-```
+## 📊 Platform Architecture
 
-## 🚀 Technology Stack
+### 🌐 Technology Stack
+- **Frontend**: React.js with responsive design
+- **Backend**: Node.js with PostgreSQL database
+- **Mobile**: Native iOS and Android applications
+- **Infrastructure**: Cloud-hosted with 99.9% uptime SLA
+- **Security**: Enterprise-grade encryption and authentication
+- **Integration**: RESTful API with comprehensive documentation
 
-- **Frontend:** HTML5, CSS3, JavaScript (Enhanced with NFPA content)
-- **Backend:** PHP (Secure contact form with validation)
-- **Data:** CSV datasets for sample results and templates
-- **Documentation:** Markdown with professional formatting
-- **Hosting:** Netlify with custom domain (tridentsys.ca)
-- **Version Control:** Git with comprehensive commit history
+### 🔗 System Integrations
+- **GIS Systems**: ArcGIS, QGIS, MapInfo (KML/GeoJSON export)
+- **Asset Management**: Cartegraph, CityWorks, Maximo (API connections)
+- **SCADA**: Real-time data feeds for operational awareness
+- **Municipal Software**: Property tax systems, work order management
+- **Emergency Services**: Fire department dashboards and reporting
 
-## 📋 Professional Templates
+## 💼 Business Model & Company
 
-### Available Templates:
-1. **Fire Flow Testing Proposal** - Client-ready proposals with NFPA 291 positioning
-2. **NFPA 291 Test Report** - Professional deliverable templates
-3. **NFPA Standards Guide** - Technical reference documentation
+### 🏢 Trident Systems Overview
+- **Founded**: 2025 as SaaS platform company
+- **Business Model**: Subscription software with professional services
+- **Target Market**: Canadian municipalities (2,000-100,000 population)
+- **Headquarters**: Milton, Ontario, Canada
+- **Team**: Water distribution operators, software developers, municipal experts
 
-*All templates integrate sample data, professional credentials, and NFPA compliance language.*
+### 📈 Growth & Vision
+- **Primary Revenue (80%)**: HydrantHub platform subscriptions
+- **Secondary Revenue (20%)**: Professional fire flow testing services
+- **Vision**: Become the leading hydrant management platform across North America
+- **Mission**: Eliminate manual hydrant management processes and improve public safety through technology
 
-## 📞 Contact Information
+## 🔄 Recent Platform Updates (v3.0 - November 2025)
 
-- **🌐 Website:** [tridentsys.ca](https://tridentsys.ca)
-- **📧 Email:** [info@tridentsys.ca](mailto:info@tridentsys.ca)
-- **📍 Location:** Milton, ON, Canada
-- **🎯 Service Areas:** GTA, Hamilton, Niagara Region
+### ✨ New Features
+- ✅ **Enhanced Mobile Apps** - Improved offline capability and photo management
+- ✅ **Advanced Analytics** - Predictive maintenance alerts and trend analysis
+- ✅ **GIS Integration** - Direct export to municipal GIS systems
+- ✅ **API Expansion** - New endpoints for SCADA and asset management integration
+- ✅ **Compliance Dashboard** - Real-time O. Reg 169/03 and NFPA 291 tracking
 
-## 🏆 Professional Credentials
+### 🔧 Technical Improvements
+- ✅ **Performance Optimization** - 40% faster data loading and synchronization
+- ✅ **Enhanced Security** - Multi-factor authentication and audit logging
+- ✅ **Backup & Recovery** - Automated daily backups with point-in-time restoration
+- ✅ **User Experience** - Simplified workflows based on municipal feedback
 
-### R. Cabral - Licensed Water Distribution Operator
-- **Water Distribution Operator License** (Ontario)
-- **15+ Years Municipal Water Distribution Experience**
-- **Part-time Firefighter** (Milton Fire Department)
-- **OMERS Pension Plan Member**
-- **Municipal Experience:** Peel Region (current), Halton Region, Milton
-- **NFPA 291 Methodology Certified**
+## 🎯 Next Quarter Roadmap (Q1 2026)
 
-### Professional Experience
-- **Current:** Water Distribution Operator, Peel Region
-- **Current:** Part-time Firefighter, Milton Fire Department  
-- **Previous:** Water distribution roles across multiple municipalities
-- **Expertise:** Municipal water systems, fire protection, infrastructure
+### 🚀 Platform Enhancements
+1. **🤖 AI-Powered Insights** - Predictive maintenance recommendations
+2. **📊 Advanced Reporting** - Custom dashboard builder for municipal management
+3. **🔄 Workflow Automation** - Advanced business rules and automated processes
+4. **🏗️ Asset Lifecycle Management** - Complete hydrant lifecycle tracking from installation to replacement
+5. **🌐 Multi-Language Support** - French language support for bilingual municipalities
 
-## 📈 Business Development
+### 🤝 Partnership Development
+1. **🏛️ Municipal Associations** - Partnerships with Ontario municipal organizations
+2. **🔧 Equipment Vendors** - Integration with pitot gauge and flow testing equipment manufacturers
+3. **🗺️ GIS Partners** - Deeper integration with Esri and other mapping platform providers
 
-- **Founded:** 2025
-- **Business Registration:** Ontario (in progress)
-- **Website:** [tridentsys.ca](https://tridentsys.ca) (fully operational)
-- **Focus:** NFPA 291 fire flow testing and water distribution consulting
-- **Target Market:** Municipalities, property managers, contractors, developers
+## 📞 Get Started Today
 
-## 🔄 Recent Updates (v2.0 - October 2025)
+### 🌐 **HydrantHub Platform**
+- **Website**: [app.tridentsys.ca](https://app.tridentsys.ca)
+- **Free Trial**: 30 days, no credit card required
+- **Support**: info@tridentsys.ca
+- **Phone**: Available for Enterprise customers
 
-### ✨ Website Enhancements
-- ✅ Integrated NFPA 291 content throughout site
-- ✅ Added "Sample Results" section with real test data
-- ✅ Enhanced professional credentials display
-- ✅ Improved contact form with project-specific fields
-- ✅ SEO optimization with sitemap.xml and robots.txt
+### 🛠️ **Professional Services** 
+- **Service Areas**: GTA, Hamilton, Niagara, Peel, Halton regions
+- **Lead Time**: Typically 2-3 weeks for scheduling
+- **Integration**: Services data automatically imports to platform
 
-### 💼 Professional Templates
-- ✅ Fire flow testing proposal template
-- ✅ NFPA 291 compliant test report template
-- ✅ Comprehensive NFPA standards reference guide
-- ✅ Template usage documentation and guidelines
-
-### 🔒 Security & Performance
-- ✅ Enhanced contact form with spam protection
-- ✅ Rate limiting and input validation
-- ✅ Professional error handling and user feedback
-- ✅ Security headers and XSS protection
-
-## 🎯 Next Steps for Business Development
-
-1. **💼 Business Registration** - Complete Ontario business registration
-2. **📧 Email Marketing** - Develop municipal outreach campaigns
-3. **🔗 Networking** - Connect with local contractors and developers
-4. **📊 Analytics** - Implement website tracking and conversion optimization
-5. **📋 Case Studies** - Document real client projects and testimonials
+### 📍 **Company Information**
+- **Address**: Milton, Ontario, Canada
+- **Business Registration**: Ontario Corporation (in progress)
+- **Insurance**: Professional liability and general liability coverage
+- **Certifications**: Water Distribution Operator License, NFPA 291 methodology
 
 ---
 
-**Keywords:** fire flow testing, hydrant testing, NFPA 291, water distribution, fire safety, municipal services, Toronto, Hamilton, Niagara, GTA, fire protection, property management, water systems, certified operators, Milton, Ontario, licensed operator, firefighter, professional testing
+## 🏷️ Keywords & Tags
 
-© 2025 Trident Systems. All rights reserved. | Professional Fire Flow Testing Services Following NFPA 291 Standards
+**Primary**: hydrant management software, NFPA 291 platform, municipal water software, fire hydrant tracking, preventive maintenance software, Ontario municipalities, water distribution platform
+
+**Secondary**: fire flow testing, hydrant testing software, municipal asset management, water operator tools, SCADA integration, GIS hydrant mapping, compliance tracking software
+
+**Technical**: React.js hydrant platform, PostgreSQL water management, mobile hydrant apps, API municipal integration, cloud water infrastructure
+
+---
+
+**© 2025 Trident Systems. All rights reserved.** 
+
+*Transform your hydrant management today. Built by water operators, for water operators.* 🚰💧
+
+[![Start Free Trial](https://img.shields.io/badge/Start%20Free%20Trial-30%20Days-success?style=for-the-badge)](https://app.tridentsys.ca)
+[![Schedule Demo](https://img.shields.io/badge/Schedule%20Demo-Live%20Platform-blue?style=for-the-badge)](mailto:info@tridentsys.ca)
