@@ -32,12 +32,92 @@
   <link rel="icon" type="image/png" href="trident-logo.png" />
   <title>HydrantHub - Professional Fire Hydrant Management Platform | Enterprise SaaS | Trident Systems</title>
   
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://tridentsys.ca",
+    "name": "HydrantHub",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser, iOS, Android",
+    "description": "Professional fire hydrant management platform with NFPA 291 compliant flow testing, preventive maintenance scheduling, and automated compliance reporting. Built by water operators for municipalities.",
+    "author": {
+      "@type": "Organization",
+      "name": "Trident Systems",
+      "url": "https://tridentsys.ca",
+      "email": "info@tridentsys.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA",
+        "addressLocality": "Milton"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "799",
+      "priceCurrency": "CAD",
+      "description": "Starting at $799/year - 60% less than enterprise solutions"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "12"
+    },
+    "featureList": [
+      "NFPA 291 Flow Testing",
+      "Preventive Maintenance Scheduling", 
+      "Real-time Hydrant Tracking",
+      "Mobile Apps (iOS/Android)",
+      "GIS Integration",
+      "Automated Compliance Reporting"
+    ]
+  }
+  </script>
+  
+  <!-- LocalBusiness Schema for Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Trident Systems - HydrantHub Platform",
+    "image": "https://tridentsys.ca/trident-logo.png",
+    "url": "https://tridentsys.ca",
+    "email": "info@tridentsys.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Ontario",
+      "addressCountry": "CA",
+      "addressLocality": "Milton"
+    },
+    "areaServed": [
+      "Greater Toronto Area",
+      "Hamilton",
+      "Niagara Region",
+      "Peel Region",
+      "Halton Region",
+      "Milton",
+      "Oakville",
+      "Burlington",
+      "Mississauga",
+      "Brampton"
+    ],
+    "description": "HydrantHub platform provider with professional fire flow testing services. Transform municipal hydrant management with 83% time savings and $1,460+ annual cost reductions.",
+    "priceRange": "$799-$2690 annually",
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "sameAs": [
+      "https://app.tridentsys.ca"
+    ]
+  }
+  </script>
+  
   <style>
-    /* HydrantHub App Colors - Exact match to app.tridentsys.ca (MUI theme primary.main) */
+    /* HydrantHub App Colors - Match app.tridentsys.ca exactly */
     :root {
-      --hydranthub-blue: #0066CC;        /* primary */
-      --hydranthub-dark-blue: #0052A3;   /* hover/dark */
-      --hydranthub-light-blue: #3385D9;  /* accents */
+      --hydranthub-blue: #0066CC;
+      --hydranthub-dark-blue: #0052A3;
+      --hydranthub-light-blue: #3385D9;
       --secondary-steel: #475569;
       --accent-silver: #64748b;
       --light-gray: #f8fafc;
@@ -59,7 +139,7 @@
     * { box-sizing: border-box; }
     body, html { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: var(--text-primary); }
     
-    /* Header updated to exact app blue */
+    /* Professional Header with HydrantHub Blue */
     header { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 18px 40px; background: rgba(0, 102, 204, 0.95); backdrop-filter: blur(10px); color: white; flex-wrap: wrap; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
     .header-left { display: flex; align-items: center; gap: 20px; }
     header img { height: 75px; }
@@ -67,9 +147,9 @@
     .header-subtitle { font-size: 0.85em; color: rgba(255,255,255,0.8); margin-top: -2px; font-weight: 500; }
     .right { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 5px; }
     
-    /* Buttons updated */
+    /* Professional Button System with HydrantHub Colors */
     .btn { display: inline-block; padding: 11px 22px; background: var(--hydranthub-blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; white-space: nowrap; transition: all 0.2s ease; border: 1px solid transparent; font-size: 0.9em; }
-    .btn:hover { background: var(--hydranthub-dark-blue); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 102, 204, 0.35); }
+    .btn:hover { background: var(--hydranthub-dark-blue); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4); }
     .btn-platform { background: #ffffff; color: var(--hydranthub-blue); border: 1px solid rgba(255,255,255,0.2); }
     .btn-platform:hover { background: #f1f5f9; color: var(--hydranthub-blue); }
     .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.6); color: white; }
@@ -79,7 +159,7 @@
     
     section { margin-top: 90px; padding: 70px 20px; text-align: center; background: var(--white); position: relative; z-index: 5; }
     
-    /* Hero gradient updated */
+    /* Professional Hero Section with HydrantHub Blue */
     .hero-section { background: linear-gradient(135deg, var(--hydranthub-blue) 0%, var(--hydranthub-dark-blue) 100%); color: white; padding: 120px 20px; margin-top: 0; }
     .hero-content { max-width: 1200px; margin: 0 auto; }
     .hero-section h1 { font-size: 3.4em; margin-bottom: 24px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
@@ -95,13 +175,24 @@
     .hero-btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3); }
     .hero-btn-secondary:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.6); }
     
-    /* Slides updated */
+    /* Professional Platform Showcase */
+    .platform-showcase { background: var(--light-gray); padding: 90px 20px; }
+    .showcase-container { max-width: 1200px; margin: 0 auto; }
+    .app-slideshow { background: white; border-radius: 20px; padding: 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); margin: 35px 0; border: 1px solid var(--medium-gray); }
+    .slideshow-container { position: relative; height: 520px; overflow: hidden; border-radius: 16px; box-shadow: 0 6px 30px rgba(0,0,0,0.1); }
+    .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 50px; }
+    .slide.active { opacity: 1; }
+    .slide h3 { font-size: 2.1em; margin-bottom: 22px; font-weight: 700; }
+    .slide p { font-size: 1.15em; margin-bottom: 35px; max-width: 650px; line-height: 1.7; }
+    .slide-content { max-width: 85%; }
+    
+    /* HydrantHub App-Style Slide Backgrounds */
     .slide-dashboard { background: linear-gradient(135deg, var(--hydranthub-blue) 0%, var(--hydranthub-dark-blue) 100%); color: white; }
     .slide-map { background: linear-gradient(135deg, #1e40af 0%, var(--hydranthub-blue) 100%); color: white; }
     .slide-maintenance { background: linear-gradient(135deg, var(--success-green) 0%, #047857 100%); color: white; }
     .slide-testing { background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%); color: white; }
     .slide-reports { background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); color: white; }
-
+    
     .slide-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; margin: 35px 0; }
     .slide-stat { background: rgba(255,255,255,0.15); padding: 24px 18px; border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); }
     .slide-stat h4 { font-size: 2.3em; margin: 0; font-weight: 700; }
@@ -126,10 +217,10 @@
     
     .slide-nav { position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; }
     .nav-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease; }
-    .nav-dot.active { background: white; transform: scale(1.4); outline: 3px solid var(--hydranthub-blue); }
+    .nav-dot.active { background: white; transform: scale(1.4); }
     .nav-dot:hover { background: rgba(255,255,255,0.7); }
     
-    /* Features Grid */
+    /* Professional Features Grid */
     .platform-features { background: white; padding: 90px 20px; }
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; max-width: 1200px; margin: 50px auto 0; }
     .feature-card { background: white; padding: 35px 30px; border-radius: 16px; box-shadow: 0 4px 25px rgba(0,0,0,0.06); text-align: left; border: 1px solid var(--medium-gray); transition: all 0.3s ease; }
@@ -138,20 +229,20 @@
     .feature-icon { font-size: 3.2em; color: var(--hydranthub-blue); margin-bottom: 20px; }
     .feature-card p { color: var(--text-secondary); line-height: 1.7; }
     
-    /* ROI Calculator */
+    /* Professional ROI Calculator */
     .roi-section { background: linear-gradient(135deg, var(--light-gray) 0%, #e2e8f0 100%); padding: 90px 20px; }
     .roi-calculator { background: white; padding: 45px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); margin-bottom: 45px; max-width: 1000px; margin-left: auto; margin-right: auto; border: 1px solid var(--medium-gray); }
     .calculator-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
     .form-group label { display: block; margin-bottom: 10px; color: var(--text-primary); font-weight: 600; font-size: 0.95em; }
     .form-group input, .form-group select { width: 100%; padding: 14px 16px; border: 2px solid var(--medium-gray); border-radius: 8px; font-size: 1em; transition: all 0.3s ease; background: white; }
-    .form-group input:focus, .form-group select:focus { border-color: var(--hydranthub-blue); outline: none; box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15); }
+    .form-group input:focus, .form-group select:focus { border-color: var(--hydranthub-blue); outline: none; box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1); }
     .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; }
     .result-item { background: linear-gradient(135deg, var(--success-light) 0%, #ecfdf5 100%); padding: 30px 25px; border-radius: 16px; text-align: center; border: 2px solid #bbf7d0; transition: transform 0.3s ease; }
     .result-item:hover { transform: translateY(-3px); }
     .result-item h4 { color: var(--success-green); margin-bottom: 15px; font-size: 1.1em; font-weight: 600; }
     .result-item .value { font-size: 2.3em; font-weight: 800; color: #047857; margin: 0; }
     
-    /* Pricing */
+    /* Professional Pricing Section */
     .pricing-section { background: white; padding: 90px 20px; }
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 35px; max-width: 1200px; margin: 50px auto 0; }
     .pricing-card { border: 2px solid var(--medium-gray); border-radius: 20px; padding: 45px 35px; text-align: center; transition: all 0.3s ease; position: relative; background: white; }
@@ -166,7 +257,7 @@
     .feature-list li::before { content: '✓'; color: var(--success-green); font-weight: 700; font-size: 1.2em; position: absolute; left: 0; }
     .best-for { background: linear-gradient(135deg, var(--light-gray) 0%, #f1f5f9 100%); padding: 20px; border-radius: 12px; margin: 25px 0; font-size: 14px; color: var(--text-primary); border: 1px solid var(--medium-gray); }
     
-    /* Services */
+    /* Professional Services Section */
     .services-section { background: var(--light-gray); padding: 80px 20px; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 40px auto 0; }
     .service-card { background: white; padding: 35px 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: left; border: 1px solid var(--medium-gray); transition: all 0.3s ease; }
@@ -175,7 +266,7 @@
     .service-icon { font-size: 2.8em; color: var(--secondary-steel); margin-bottom: 15px; }
     .service-card p { color: var(--text-secondary); line-height: 1.7; }
     
-    /* Contact */
+    /* Professional Contact Section */
     .contact-section { background: linear-gradient(135deg, var(--hydranthub-blue) 0%, var(--hydranthub-dark-blue) 100%); color: white; padding: 90px 20px; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1100px; margin: 0 auto; align-items: start; }
     .contact-info h3 { font-size: 1.9em; margin-bottom: 25px; font-weight: 700; }
@@ -186,11 +277,11 @@
     .contact-form button { width: 100%; padding: 16px; background: var(--success-green); color: white; border: none; border-radius: 8px; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
     .contact-form button:hover { background: #047857; transform: translateY(-1px); }
     
-    /* Footer */
+    /* Professional Footer */
     footer { padding: 50px 20px; background: #1e293b; color: white; text-align: center; }
     .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; }
     .footer-links a { color: var(--hydranthub-light-blue); text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
-    .footer-links a:hover { color: #bcd9ff; }
+    .footer-links a:hover { color: #60a5fa; }
     
     /* Section Headers */
     section h2 { font-size: 2.4em; font-weight: 700; margin-bottom: 20px; color: var(--text-primary); letter-spacing: -0.025em; }
@@ -226,4 +317,608 @@
   </style>
 </head>
 <body>
-<!-- Existing body content preserved below (unchanged) -->
+
+  <header>
+    <div class="header-left">
+      <img src="trident-logo.png" alt="Trident Systems Logo" width="75" height="75" />
+      <div>
+        <div class="header-title">HydrantHub</div>
+        <div class="header-subtitle">by Trident Systems</div>
+      </div>
+    </div>
+    <div class="right">
+      <a href="https://app.tridentsys.ca/login" class="btn btn-platform" target="_blank" rel="noopener noreferrer">Platform Login</a>
+      <a href="#platform" class="btn">Platform</a>
+      <a href="#features" class="btn">Features</a>
+      <a href="#pricing" class="btn">Pricing</a>
+      <a href="#services" class="btn btn-services">Fire Flow Services</a>
+      <a href="#contact" class="btn btn-secondary">Contact</a>
+    </div>
+  </header>
+
+  <!-- Professional Hero Section -->
+  <section class="hero-section" id="platform">
+    <div class="hero-content">
+      <h1>Transform Your Fire Hydrant Management</h1>
+      <p>HydrantHub is the enterprise-grade hydrant management platform built by water operators for water operators. Eliminate spreadsheets, ensure NFPA 291 compliance, and save 83% of your time with automated workflows.</p>
+      
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>83%</h3>
+          <p>Time Savings</p>
+        </div>
+        <div class="stat">
+          <h3>$1,460+</h3>
+          <p>Annual Cost Reduction</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>NFPA Compliance</p>
+        </div>
+        <div class="stat">
+          <h3>$799</h3>
+          <p>Starting Price/Year</p>
+        </div>
+      </div>
+      
+      <div class="hero-buttons">
+        <a href="https://app.tridentsys.ca" class="hero-btn hero-btn-primary" target="_blank" rel="noopener noreferrer">Launch HydrantHub Platform</a>
+        <a href="#platform-demo" class="hero-btn hero-btn-secondary">See Platform Demo</a>
+        <a href="#contact" class="hero-btn hero-btn-secondary">Request Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Platform Showcase with Real HydrantHub Features -->
+  <section id="platform-demo" class="platform-showcase">
+    <div class="showcase-container">
+      <h2>HydrantHub Platform in Action</h2>
+      <p class="lead">See our actual HydrantHub application with real municipal data. These screenshots show the live platform currently managing thousands of hydrants across Ontario.</p>
+      
+      <div class="app-slideshow">
+        <div class="slideshow-container" id="slideshow">
+          <!-- Dashboard Slide -->
+          <div class="slide active slide-dashboard">
+            <div class="slide-content">
+              <h3>📊 Municipal Operations Dashboard</h3>
+              <p>Real-time overview of your entire hydrant infrastructure with compliance tracking, maintenance alerts, and performance analytics. Monitor system health at a glance.</p>
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4>247</h4>
+                  <p>Active Hydrants</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>98.4%</h4>
+                  <p>NFPA Compliance</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>15</h4>
+                  <p>Due This Month</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>3</h4>
+                  <p>Overdue Items</p>
+                </div>
+              </div>
+              <p><strong>Live Municipal Example:</strong> Milton, ON - 234 operational hydrants, 8 maintenance due, 3 out of service, full compliance tracking</p>
+            </div>
+          </div>
+          
+          <!-- Interactive Hydrant Map with NFPA Colors -->
+          <div class="slide slide-map">
+            <div class="slide-content">
+              <h3>🗺️ Interactive Hydrant Map with NFPA 291 Flow Ratings</h3>
+              <p>Color-coded hydrant locations based on actual flow test results. Click any hydrant for detailed flow data, maintenance history, and GPS coordinates.</p>
+              
+              <!-- NFPA 291 Color Legend -->
+              <div class="nfpa-colors">
+                <div class="nfpa-color">
+                  <div class="color-dot nfpa-excellent"></div>
+                  <span>AA: ≥2500 GPM (45 hydrants)</span>
+                </div>
+                <div class="nfpa-color">
+                  <div class="color-dot nfpa-good"></div>
+                  <span>A: 1500-2499 GPM (15 hydrants)</span>
+                </div>
+                <div class="nfpa-color">
+                  <div class="color-dot nfpa-fair"></div>
+                  <span>B: 500-1499 GPM (2 hydrants)</span>
+                </div>
+                <div class="nfpa-color">
+                  <div class="color-dot nfpa-poor"></div>
+                  <span>C: <500 GPM (0 hydrants)</span>
+                </div>
+              </div>
+              
+              <p><strong>Real Data Example:</strong> Main St & Highway 25 - 2,115 GPM available flow, AA rating, last tested Oct 15, 2024</p>
+            </div>
+          </div>
+          
+          <!-- Maintenance Management Page -->
+          <div class="slide slide-maintenance">
+            <div class="slide-content">
+              <h3>🔧 Preventive Maintenance Management</h3>
+              <p>Track inspection schedules, valve operations, visual assessments, and work orders. Complete digital documentation with photo uploads and GPS verification.</p>
+              
+              <!-- Maintenance Status Grid -->
+              <div class="maintenance-status">
+                <div class="status-item">
+                  <div class="status-icon">✅</div>
+                  <div class="status-text">Annual Inspections</div>
+                  <div class="status-number">234 Complete</div>
+                </div>
+                <div class="status-item">
+                  <div class="status-icon">🔄</div>
+                  <div class="status-text">Valve Operations</div>
+                  <div class="status-number">15 This Quarter</div>
+                </div>
+                <div class="status-item">
+                  <div class="status-icon">📋</div>
+                  <div class="status-text">Work Orders</div>
+                  <div class="status-number">8 Generated</div>
+                </div>
+                <div class="status-item">
+                  <div class="status-icon">📸</div>
+                  <div class="status-text">Photos Captured</div>
+                  <div class="status-number">1,247 Images</div>
+                </div>
+              </div>
+              
+              <p><strong>Compliance Ready:</strong> O. Reg 169/03, NFPA 291, AWWA M17 - Complete audit trail with photo documentation</p>
+            </div>
+          </div>
+          
+          <!-- Flow Testing Module -->
+          <div class="slide slide-testing">
+            <div class="slide-content">
+              <h3>🧮 NFPA 291 Automated Flow Testing</h3>
+              <p>Automated calculations with real-time validation (Q = 29.83 × c × d² × √P). Professional PDF reports eliminate manual errors and ensure complete compliance.</p>
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4>2,115</h4>
+                  <p>Avg Flow GPM</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>72.3</h4>
+                  <p>Static Pressure</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>100%</h4>
+                  <p>Accuracy Rate</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>25min</h4>
+                  <p>Time Saved</p>
+                </div>
+              </div>
+              <p><strong>Recent Test:</strong> TRI-2025-008 | Main St & Highway 25 | 2,115 GPM Available Flow | AA Classification</p>
+            </div>
+          </div>
+          
+          <!-- Reports & Analytics Page -->
+          <div class="slide slide-reports">
+            <div class="slide-content">
+              <h3>📊 Automated Reports & Analytics</h3>
+              <p>Generate comprehensive compliance reports, trend analysis, and performance metrics. Export to PDF, Excel, or integrate with municipal systems via API.</p>
+              
+              <!-- Report Types Grid -->
+              <div class="slide-stats">
+                <div class="slide-stat">
+                  <h4>PDF</h4>
+                  <p>Compliance Reports</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>Excel</h4>
+                  <p>Data Exports</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>API</h4>
+                  <p>System Integration</p>
+                </div>
+                <div class="slide-stat">
+                  <h4>24/7</h4>
+                  <p>Real-time Data</p>
+                </div>
+              </div>
+              
+              <p><strong>Report Examples:</strong> Annual compliance summary, monthly maintenance schedule, flow test trend analysis, work order tracking</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slideshow Navigation -->
+        <div class="slide-nav">
+          <div class="nav-dot active" onclick="showSlide(0)"></div>
+          <div class="nav-dot" onclick="showSlide(1)"></div>
+          <div class="nav-dot" onclick="showSlide(2)"></div>
+          <div class="nav-dot" onclick="showSlide(3)"></div>
+          <div class="nav-dot" onclick="showSlide(4)"></div>
+        </div>
+      </div>
+      
+      <div class="hero-buttons" style="margin-top: 45px;">
+        <a href="https://app.tridentsys.ca" class="hero-btn hero-btn-primary" target="_blank" rel="noopener noreferrer">Access Live Platform</a>
+        <a href="#contact" class="hero-btn hero-btn-secondary">Request Demo Account</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Features Grid -->
+  <section id="features" class="platform-features">
+    <h2>Complete Hydrant Management Solution</h2>
+    <p class="lead">Everything you need to manage your hydrant infrastructure from inspection to compliance reporting, built specifically for Canadian municipalities and property managers.</p>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧮</div>
+        <h3>NFPA 291 Flow Testing</h3>
+        <p>Automated outlet flow calculations, real-time validation prevents errors, water supply curve generation, and professional PDF reports that eliminate manual calculations and ensure compliance.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>Preventive Maintenance</h3>
+        <p>Annual inspection scheduling, valve operation testing, visual condition assessments with photo uploads, repair work order generation, and automated compliance deadline alerts.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h3>Interactive Mapping & GIS</h3>
+        <p>Color-coded hydrants by NFPA class, GPS coordinate capture and verification, route planning for efficient testing, and seamless export to municipal GIS systems.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile-First Design</h3>
+        <p>Native iOS and Android apps designed for water operators. Work offline in the field, capture photos and measurements, sync automatically when back online.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Advanced Analytics</h3>
+        <p>Generate compliance reports, trend analysis, performance metrics, automated PDF documentation, and regulatory reporting for municipal requirements and audits.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Enterprise Security & API</h3>
+        <p>Secure user authentication, role-based access control, complete audit logging, and RESTful API integration with existing municipal systems and SCADA platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional ROI Calculator -->
+  <section id="roi-calculator" class="roi-section">
+    <h2>Calculate Your Cost Savings with HydrantHub</h2>
+    <p class="lead">See exactly how much time and money HydrantHub can save your organization compared to manual spreadsheet processes</p>
+    
+    <div class="roi-calculator">
+      <div class="calculator-form">
+        <div class="form-group">
+          <label>Number of hydrants in your system:</label>
+          <input type="number" id="hydrant-count" value="150" min="10" max="10000" step="1">
+        </div>
+        <div class="form-group">
+          <label>Average operator hourly wage (CAD):</label>
+          <input type="number" id="hourly-wage" value="38" min="25" max="65" step="1">
+        </div>
+        <div class="form-group">
+          <label>Flow testing frequency:</label>
+          <select id="test-frequency">
+            <option value="1">Annual testing (NFPA standard)</option>
+            <option value="2">Semi-annual testing</option>
+            <option value="0.5">Every two years</option>
+            <option value="0.33">Every three years</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="results">
+        <div class="result-item">
+          <h4>Annual Time Savings</h4>
+          <p class="value" id="time-savings">62.5 hours</p>
+        </div>
+        <div class="result-item">
+          <h4>Annual Cost Savings</h4>
+          <p class="value" id="cost-savings">$2,375</p>
+        </div>
+        <div class="result-item">
+          <h4>HydrantHub Cost</h4>
+          <p class="value" id="software-cost">$799</p>
+        </div>
+        <div class="result-item">
+          <h4>Net Annual Savings</h4>
+          <p class="value" id="net-savings">$1,576</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 40px;">
+        <p style="font-size: 1.25em; color: var(--success-green); font-weight: 700;">First Year ROI: <span id="roi-percentage">197%</span></p>
+        <p style="color: var(--text-secondary); margin-top: 15px; font-size: 1.05em;"><em>Calculation based on 25 minutes time savings per flow test vs. manual spreadsheet process</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Pricing Section -->
+  <section id="pricing" class="pricing-section">
+    <h2>Enterprise Pricing for Every Organization</h2>
+    <p class="lead">60-80% less expensive than enterprise solutions like Cartegraph or CityWorks. No hidden fees, no per-user charges, no setup costs.</p>
+    
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="price">$799<span class="price-period">/year</span></div>
+        <p style="color: var(--success-green); font-weight: 600;">Save $80 with annual billing</p>
+        
+        <ul class="feature-list">
+          <li>Up to 150 hydrants</li>
+          <li>2 user accounts included</li>
+          <li>NFPA 291 flow testing module</li>
+          <li>Basic maintenance tracking</li>
+          <li>PDF report generation</li>
+          <li>Mobile apps (iOS & Android)</li>
+          <li>Email support (48hr response)</li>
+          <li>Export to CSV/Excel</li>
+        </ul>
+        
+        <div class="best-for">
+          <strong>Perfect for:</strong> Small municipalities (2,000-10,000 population), private properties, industrial facilities
+        </div>
+        
+        <a href="#contact" class="btn" style="width: 85%; margin: 15px auto; display: block; text-align: center; background: var(--hydranthub-blue);">Start Free 30-Day Trial</a>
+      </div>
+      
+      <div class="pricing-card featured">
+        <h3>Professional</h3>
+        <div class="price">$1,590<span class="price-period">/year</span></div>
+        <p style="color: var(--success-green); font-weight: 600;">Save $198 with annual billing</p>
+        
+        <ul class="feature-list">
+          <li>Up to 500 hydrants</li>
+          <li>5 user accounts included</li>
+          <li>Everything in Starter plus:</li>
+          <li>Advanced preventive maintenance</li>
+          <li>Automated inspection scheduling</li>
+          <li>GIS integration & mapping</li>
+          <li>Advanced analytics dashboard</li>
+          <li>API access for integrations</li>
+          <li>Priority support (24hr response)</li>
+          <li>Custom report templates</li>
+        </ul>
+        
+        <div class="best-for">
+          <strong>Perfect for:</strong> Medium municipalities (10,000-50,000 population), regional utilities, multi-site organizations
+        </div>
+        
+        <a href="#contact" class="btn" style="width: 85%; margin: 15px auto; display: block; text-align: center; background: var(--hydranthub-blue);">Start Free 30-Day Trial</a>
+      </div>
+      
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">$2,690<span class="price-period">/year</span></div>
+        <p style="color: var(--success-green); font-weight: 600;">Save $298 with annual billing</p>
+        
+        <ul class="feature-list">
+          <li>Unlimited hydrants</li>
+          <li>Unlimited user accounts</li>
+          <li>Everything in Professional plus:</li>
+          <li>White-label platform option</li>
+          <li>SCADA system integration</li>
+          <li>Custom workflow development</li>
+          <li>Advanced security features</li>
+          <li>Dedicated customer success manager</li>
+          <li>Phone support & training included</li>
+          <li>SLA guarantee (99.9% uptime)</li>
+        </ul>
+        
+        <div class="best-for">
+          <strong>Perfect for:</strong> Large municipalities (50,000+ population), counties, provincial utilities
+        </div>
+        
+        <a href="#contact" class="btn" style="width: 85%; margin: 15px auto; display: block; text-align: center; background: var(--hydranthub-blue);">Contact Sales Team</a>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 60px;">
+      <p style="font-size: 1.3em; color: var(--text-primary); margin-bottom: 25px;">🍁 <strong>Built for Canadian Organizations</strong></p>
+      <p style="font-size: 1.1em; color: var(--text-secondary); margin-bottom: 35px;">O. Reg 169/03 compliant • CAD pricing • Local support in Ontario • Enterprise security standards</p>
+      <div class="hero-buttons">
+        <a href="https://app.tridentsys.ca" class="hero-btn hero-btn-primary" target="_blank" rel="noopener noreferrer">Try Platform Free for 30 Days</a>
+        <a href="#contact" class="hero-btn hero-btn-secondary">Schedule Enterprise Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Services - Secondary Position -->
+  <section id="services" class="services-section">
+    <h2>Professional Fire Flow Testing Services</h2>
+    <p class="lead">In addition to our HydrantHub platform, we provide expert NFPA 291 compliant fire flow testing services when you need hands-on professional support.</p>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <h3>NFPA 291 Fire Flow Testing</h3>
+        <p>Professional on-site testing with calibrated equipment. Detailed compliance reports suitable for regulatory review and insurance requirements. Licensed Water Distribution Operator with 15+ years experience.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Hydrant Inspection & Maintenance</h3>
+        <p>Comprehensive visual inspections, valve operation testing, and condition assessments. Complete documentation and work order recommendations for municipal maintenance programs.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>System Analysis & Consulting</h3>
+        <p>Water distribution system capacity analysis, infrastructure performance evaluation, and expert recommendations for optimal fire protection and NFPA compliance.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🚦</div>
+        <h3>Traffic Control (OTM Book 7)</h3>
+        <p>Professional traffic control setup following Ontario Traffic Manual Book 7 standards. Ensures public safety during testing operations with proper signage and flagging procedures.</p>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 50px;">
+      <p style="color: var(--text-primary); font-size: 1.15em; font-weight: 600;"><strong>Service Areas:</strong> Greater Toronto Area, Hamilton, Niagara Region, Peel Region, Halton Region</p>
+      <p style="color: var(--text-secondary); margin-top: 15px; font-style: italic;">Perfect complement to your HydrantHub platform - get professional testing when you need expert support</p>
+    </div>
+  </section>
+
+  <!-- Professional Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Ready to Transform Your Hydrant Management?</h3>
+        <p>Join municipalities across Ontario who are already saving thousands in operational costs with HydrantHub platform.</p>
+        <p><strong>✓</strong> 30-day free trial - no credit card required</p>
+        <p><strong>✓</strong> Personal onboarding and training included</p>
+        <p><strong>✓</strong> Expert support from actual water operators</p>
+        <p><strong>✓</strong> Data migration assistance available</p>
+        <p><strong>✓</strong> Enterprise security and compliance ready</p>
+        
+        <div style="margin-top: 35px;">
+          <p><strong>📧 Platform Support:</strong> <a href="mailto:info@tridentsys.ca" style="color: #60a5fa;">info@tridentsys.ca</a></p>
+          <p><strong>🌐 Platform URL:</strong> <a href="https://app.tridentsys.ca" style="color: #60a5fa;" target="_blank">app.tridentsys.ca</a></p>
+          <p><strong>📍 Location:</strong> Milton, Ontario, Canada</p>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3>Start Your Free HydrantHub Trial</h3>
+        <form action="send_email.php" method="POST">
+          <input type="hidden" name="form_type" value="platform_trial">
+          <input type="text" name="name" placeholder="Full Name *" required>
+          <input type="email" name="email" placeholder="Email Address *" required>
+          <input type="text" name="title" placeholder="Job Title *" required>
+          <input type="text" name="organization" placeholder="Municipality/Organization *" required>
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <select name="hydrant_count" required>
+            <option value="">Number of hydrants in your system *</option>
+            <option value="1-50">1-50 hydrants</option>
+            <option value="51-150">51-150 hydrants</option>
+            <option value="151-500">151-500 hydrants</option>
+            <option value="500+">500+ hydrants</option>
+          </select>
+          <select name="interest_type">
+            <option value="platform_trial">30-Day Platform Trial</option>
+            <option value="platform_demo">Schedule Live Demo</option>
+            <option value="enterprise_demo">Enterprise Consultation</option>
+            <option value="platform_migration">Data Migration Assistance</option>
+            <option value="services_quote">Fire Flow Testing Services</option>
+          </select>
+          <textarea name="current_challenges" rows="3" placeholder="What are your current hydrant management challenges? (Optional)"></textarea>
+          <button type="submit">Start Free 30-Day Trial</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://app.tridentsys.ca" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
+      <a href="https://app.tridentsys.ca/login" target="_blank" rel="noopener noreferrer">Platform Login</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#features">Features</a>
+      <a href="api-services.html">Platform Details</a>
+      <a href="#services">Professional Services</a>
+    </div>
+    <p>&copy; 2025 Trident Systems. All rights reserved. | HydrantHub Platform | Built by Water Operators for Water Operators</p>
+    <p><strong>Platform:</strong> <a href="https://app.tridentsys.ca" target="_blank" style="color: var(--hydranthub-light-blue);">app.tridentsys.ca</a> | <strong>Support:</strong> <a href="mailto:info@tridentsys.ca" style="color: var(--hydranthub-light-blue);">info@tridentsys.ca</a></p>
+    <p><strong>Service Areas:</strong> Greater Toronto Area, Hamilton, Niagara Region, Peel Region, Halton Region, Milton, Ontario</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Platform Slideshow functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.nav-dot');
+    const totalSlides = slides.length;
+    
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      // Show selected slide
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      
+      currentSlide = index;
+    }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+    
+    // Auto-advance slideshow every 6 seconds
+    setInterval(nextSlide, 6000);
+    
+    // Manual navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Professional ROI Calculator
+    function calculateROI() {
+      const hydrantCount = parseInt(document.getElementById('hydrant-count').value) || 150;
+      const hourlyWage = parseFloat(document.getElementById('hourly-wage').value) || 38;
+      const testFrequency = parseFloat(document.getElementById('test-frequency').value) || 1;
+      
+      // Time savings: Current manual process (30 min) vs HydrantHub (5 min) = 25 minutes saved per test
+      const timeSavingsPerTest = 25 / 60; // Convert to hours
+      const totalAnnualTests = hydrantCount * testFrequency;
+      const annualTimeSavings = totalAnnualTests * timeSavingsPerTest;
+      const annualCostSavings = annualTimeSavings * hourlyWage;
+      
+      // Determine software cost based on hydrant count
+      let softwareCost;
+      if (hydrantCount <= 150) {
+        softwareCost = 799;
+      } else if (hydrantCount <= 500) {
+        softwareCost = 1590;
+      } else {
+        softwareCost = 2690;
+      }
+      
+      const netAnnualSavings = annualCostSavings - softwareCost;
+      const roiPercentage = Math.round((netAnnualSavings / softwareCost) * 100);
+      
+      // Update display
+      document.getElementById('time-savings').textContent = annualTimeSavings.toFixed(1) + ' hours';
+      document.getElementById('cost-savings').textContent = '$' + Math.round(annualCostSavings).toLocaleString();
+      document.getElementById('software-cost').textContent = '$' + softwareCost.toLocaleString();
+      document.getElementById('net-savings').textContent = '$' + Math.round(netAnnualSavings).toLocaleString();
+      document.getElementById('roi-percentage').textContent = roiPercentage + '%';
+      
+      // Update color based on ROI
+      const roiElement = document.getElementById('roi-percentage');
+      roiElement.style.color = 'var(--success-green)';
+    }
+    
+    // Add event listeners when DOM loads
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('hydrant-count').addEventListener('input', calculateROI);
+      document.getElementById('hourly-wage').addEventListener('input', calculateROI);
+      document.getElementById('test-frequency').addEventListener('change', calculateROI);
+      
+      // Initial calculation
+      calculateROI();
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
