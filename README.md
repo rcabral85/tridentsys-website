@@ -9,7 +9,7 @@
 
 <div align="center">
 
-![Field Operations](https://images.unsplash.com/photo-1606992476431-4ad49c0a3ee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=400&q=80)
+![Field Operations](https://user-images.githubusercontent.com/78968791/280000001-field-operations.jpg)
 
 *Field operators using mobile technology for real-time data collection and infrastructure management*
 
@@ -28,7 +28,7 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 <div align="center">
 
-![Mobile Data Collection](https://images.unsplash.com/photo-1606992476450-da8b9c7f2e42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+![Mobile Data Collection](https://user-images.githubusercontent.com/78968791/280000002-mobile-data-collection.jpg)
 
 *Field technicians using tablets for hydrant inspection and flow testing documentation*
 
@@ -47,7 +47,7 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 <div align="center">
 
-![Infrastructure Management](https://images.unsplash.com/photo-1606992476504-77d3eda11849?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+![Infrastructure Management](https://user-images.githubusercontent.com/78968791/280000003-infrastructure-management.jpg)
 
 *Water utility operators managing pipeline assets with digital tools*
 
@@ -77,7 +77,7 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 <div align="center">
 
-![Utility Worker with Tablet](https://images.unsplash.com/photo-1606992476459-5d8eeecf1b43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+![Utility Worker with Tablet](https://user-images.githubusercontent.com/78968791/280000004-fieldkit-mobile.jpg)
 
 *Construction and utility workers using rugged tablets for field data collection*
 
@@ -131,7 +131,7 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 <div align="center">
 
-![Professional Testing Services](https://images.unsplash.com/photo-1606992476478-e0ed7f7b7c96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+![Professional Testing Services](https://user-images.githubusercontent.com/78968791/280000005-professional-testing.jpg)
 
 *Professional fire flow testing with digital documentation and real-time data capture*
 
