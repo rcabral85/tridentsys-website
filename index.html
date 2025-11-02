@@ -118,6 +118,10 @@
       --hydranthub-blue: #667eea;
       --hydranthub-dark-blue: #5a6fd8;
       --hydranthub-light-blue: #7c8eec;
+      /* HydrantHub App Header Colors - Match the Navigation component exactly */
+      --app-header-primary: #1e3c72;
+      --app-header-light: #4a6bb5;
+      --app-header-dark: #0a1929;
       --secondary-steel: #475569;
       --accent-silver: #64748b;
       --light-gray: #f8fafc;
@@ -139,25 +143,97 @@
     * { box-sizing: border-box; }
     body, html { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: var(--text-primary); }
     
-    /* Professional Header with HydrantHub Blue */
-    header { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 18px 40px; background: rgba(102, 126, 234, 0.95); backdrop-filter: blur(10px); color: white; flex-wrap: wrap; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
-    .header-left { display: flex; align-items: center; gap: 20px; }
-    header img { height: 75px; }
-    .header-title { font-size: 1.9em; font-weight: 700; color: #ffffff; letter-spacing: -0.025em; }
-    .header-subtitle { font-size: 0.85em; color: rgba(255,255,255,0.8); margin-top: -2px; font-weight: 500; }
-    .right { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 5px; }
+    /* HydrantHub App Header - Exact Match to Navigation Component */
+    header { 
+      position: fixed; 
+      top: 0; 
+      width: 100%; 
+      z-index: 1000; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 16px 24px; 
+      background: var(--app-header-primary);
+      color: white; 
+      flex-wrap: wrap; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      min-height: 64px;
+    }
+    .header-left { 
+      display: flex; 
+      align-items: center; 
+      gap: 12px;
+      flex-grow: 1;
+    }
+    header img { 
+      height: 32px; 
+      width: 32px;
+      border-radius: 50%;
+      background: transparent;
+    }
+    .header-title { 
+      font-size: 1.25rem; 
+      font-weight: 700; 
+      color: #ffffff; 
+      letter-spacing: -0.025em;
+      text-decoration: none;
+    }
+    .header-subtitle { 
+      display: none;
+    }
+    .right { 
+      display: flex; 
+      gap: 8px; 
+      flex-wrap: wrap;
+      align-items: center;
+    }
     
-    /* Professional Button System with HydrantHub Colors */
-    .btn { display: inline-block; padding: 11px 22px; background: var(--hydranthub-blue); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; white-space: nowrap; transition: all 0.2s ease; border: 1px solid transparent; font-size: 0.9em; }
-    .btn:hover { background: var(--hydranthub-dark-blue); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
-    .btn-platform { background: #ffffff; color: var(--hydranthub-blue); border: 1px solid rgba(255,255,255,0.2); }
-    .btn-platform:hover { background: #f1f5f9; color: var(--hydranthub-blue); }
-    .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.6); color: white; }
-    .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: white; }
-    .btn-services { background: var(--secondary-steel); }
-    .btn-services:hover { background: var(--dark-gray); }
+    /* HydrantHub App Button System - Match Material-UI AppBar buttons */
+    .btn { 
+      display: inline-block; 
+      padding: 8px 16px; 
+      background: transparent; 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
+      font-weight: 500; 
+      white-space: nowrap; 
+      transition: all 0.2s ease; 
+      border: none;
+      font-size: 0.875rem;
+      text-transform: none;
+      cursor: pointer;
+      min-height: 36px;
+      line-height: 1.5;
+    }
+    .btn:hover { 
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+    }
+    .btn-platform { 
+      background: #ffffff; 
+      color: var(--app-header-primary); 
+      font-weight: 600;
+    }
+    .btn-platform:hover { 
+      background: #f5f5f5; 
+      color: var(--app-header-primary); 
+    }
+    .btn-secondary { 
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .btn-secondary:hover { 
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+    }
+    .btn-services { 
+      background: transparent;
+    }
+    .btn-services:hover { 
+      background: rgba(255, 255, 255, 0.08);
+    }
     
-    section { margin-top: 90px; padding: 70px 20px; text-align: center; background: var(--white); position: relative; z-index: 5; }
+    section { margin-top: 64px; padding: 70px 20px; text-align: center; background: var(--white); position: relative; z-index: 5; }
     
     /* Professional Hero Section with HydrantHub Blue */
     .hero-section { background: linear-gradient(135deg, var(--hydranthub-blue) 0%, var(--hydranthub-dark-blue) 100%); color: white; padding: 120px 20px; margin-top: 0; }
@@ -288,12 +364,24 @@
     section p.lead { font-size: 1.2em; color: var(--text-secondary); max-width: 800px; margin: 0 auto 40px; line-height: 1.7; }
     
     @media (max-width: 768px) {
-      header { padding: 15px 20px; flex-direction: column; align-items: flex-start; }
-      .header-left { gap: 15px; }
-      header img { height: 65px; }
-      .header-title { font-size: 1.5em; }
-      .right { width: 100%; margin-top: 12px; gap: 10px; justify-content: flex-start; }
-      .btn { padding: 9px 16px; font-size: 0.85em; }
+      header { 
+        padding: 16px 20px; 
+        flex-direction: row;
+        align-items: center;
+        min-height: 56px;
+      }
+      .header-left { gap: 8px; }
+      header img { height: 28px; width: 28px; }
+      .header-title { font-size: 1.125rem; }
+      .right { 
+        gap: 4px;
+        flex-shrink: 0;
+      }
+      .btn { 
+        padding: 6px 12px; 
+        font-size: 0.8rem;
+        min-height: 32px;
+      }
       .hero-section { padding: 80px 20px; }
       .hero-section h1 { font-size: 2.4em; }
       .hero-section p { font-size: 1.15em; }
@@ -320,11 +408,8 @@
 
   <header>
     <div class="header-left">
-      <img src="trident-logo.png" alt="Trident Systems Logo" width="75" height="75" />
-      <div>
-        <div class="header-title">HydrantHub</div>
-        <div class="header-subtitle">by Trident Systems</div>
-      </div>
+      <img src="trident-logo.png" alt="Trident Systems Logo" width="32" height="32" />
+      <a href="/" class="header-title">HydrantHub</a>
     </div>
     <div class="right">
       <a href="https://app.tridentsys.ca/login" class="btn btn-platform" target="_blank" rel="noopener noreferrer">Platform Login</a>
