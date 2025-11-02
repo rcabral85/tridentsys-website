@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Flow Testing Services | Trident Systems</title>
+  <meta name="description" content="Professional NFPA 291 fire flow testing services for municipalities and property managers in Ontario. PDF report, water supply curve, and GIS deliverables." />
+  <style>
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif; margin:0; color:#0f172a }
+    header, footer { padding:14px 20px; background:#1e3c72; color:#fff }
+    a { color:#1e3c72 }
+    main { max-width:1100px; margin:0 auto; padding:30px 20px }
+    h1 { margin:12px 0 4px }
+    .lead { color:#475569; margin:8px 0 20px }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px }
+    .card { border:1px solid #e2e8f0; border-radius:12px; padding:18px; background:#fff }
+    .cta { margin-top:18px; display:flex; gap:10px; flex-wrap:wrap }
+    .btn { padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700 }
+    .btn-primary { background:#1e3c72; color:#fff }
+    .btn-ghost { border:2px solid #1e3c72; color:#1e3c72 }
+    ul { margin:10px 0 0 18px }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Trident Systems</strong>
+  </header>
+
+  <main>
+    <h1>NFPA 291 Fire Flow Testing</h1>
+    <p class="lead">Professional on‑site testing with calibrated equipment. Deliverables include a PDF compliance report, water supply curve, and GIS exports (GeoJSON/KML).</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Site safety and OTM Book 7 traffic control (as required)</li>
+          <li>Static, residual, and pitot pressure measurements</li>
+          <li>Orifice coefficient application (C) and outlet size (d) validation</li>
+          <li>Available flow at 20 psi (Q20) and hydrant classification per NFPA 291</li>
+          <li>GPS and photos for documentation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Deliverables</h3>
+        <ul>
+          <li>PDF report with water supply curve and test details</li>
+          <li>CSV data export for records</li>
+          <li>GIS deliverables: GeoJSON/KML for Esri/QGIS</li>
+          <li>Optional: Summary memo for council/insurance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Turnaround</h3>
+        <ul>
+          <li>Standard: 2–3 business days after site work</li>
+          <li>Rush: 24 hours (subject to availability)</li>
+          <li>Multi‑site projects scoped with timeline</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px">Pricing (Guidance)</h2>
+    <p class="lead">Transparent and project‑based. Final quote depends on hydrant count, locations, and traffic control needs.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Single Test</h3>
+        <ul>
+          <li>1–3 hydrants: per‑site rate</li>
+          <li>PDF + CSV + GIS deliverables</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Project Bundle</h3>
+        <ul>
+          <li>4–25 hydrants: bundled discount</li>
+          <li>Ideal for new developments</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Annual Program</h3>
+        <ul>
+          <li>Recurring testing/inspection</li>
+          <li>Preferred scheduling and pricing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="/">Back to Home</a>
+      <a class="btn btn-ghost" href="#contact">Request quote</a>
+    </div>
+
+    <h2 id="samples" style="margin-top:28px">Sample Deliverables</h2>
+    <p class="lead">Redacted examples. Replace with your real files when available.</p>
+    <ul>
+      <li><a href="assets/samples/sample-fire-flow-report.pdf">Sample PDF Report (placeholder)</a></li>
+      <li><a href="assets/samples/sample-water-supply-curve.png">Water Supply Curve (placeholder)</a></li>
+      <li><a href="assets/samples/sample-hydrants.geojson">GIS Export (GeoJSON, placeholder)</a></li>
+      <li><a href="assets/samples/sample-hydrants.kml">GIS Export (KML, placeholder)</a></li>
+    </ul>
+
+    <h2 id="contact" style="margin-top:28px">Request a Quote</h2>
+    <form action="send_email.php" method="POST" class="card" style="max-width:720px">
+      <input type="hidden" name="form_type" value="services_quote" />
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px">
+        <input name="name" required placeholder="Full name" />
+        <input type="email" name="email" required placeholder="Email" />
+        <input name="organization" placeholder="Municipality/Organization" />
+        <input name="locations" placeholder="Locations (city/area)" />
+        <input name="count" placeholder="Hydrant count (approx.)" />
+        <input name="timeline" placeholder="Timeline (e.g., 2 weeks)" />
+      </div>
+      <textarea name="message" rows="5" placeholder="Any additional details (traffic control, developer, consultant, etc.)"></textarea>
+      <div class="cta" style="justify-content:flex-start">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <a class="btn btn-ghost" href="mailto:info@tridentsys.ca">Email instead</a>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 Trident Systems — Milton, Ontario
+  </footer>
+</body>
+</html>
