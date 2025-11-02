@@ -1,0 +1,54 @@
+<!-- Add this div inside your <header> element, preferably at the end of header -->
+<div id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" role="button" tabindex="0" style="display:none; cursor:pointer; flex-direction: column; gap: 6px; width: 30px;">
+  <div style="height: 3px; background: white; border-radius: 2px;"></div>
+  <div style="height: 3px; background: white; border-radius: 2px;"></div>
+  <div style="height: 3px; background: white; border-radius: 2px;"></div>
+</div>
+
+<script>
+  const menuToggle = document.getElementById('mobile-menu-toggle');
+  const navLinks = document.querySelector('.right');  // Existing desktop menu container
+
+  function toggleMenu() {
+    const isOpen = navLinks.style.display === 'flex';
+    if (isOpen) {
+      navLinks.style.display = 'none';
+      menuToggle.setAttribute('aria-expanded', 'false');
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      menuToggle.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+  menuToggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Show hamburger only on mobile
+  function checkWidth() {
+    if(window.innerWidth < 768) {
+      menuToggle.style.display = 'flex';
+      navLinks.style.display = 'none';
+    } else {
+      menuToggle.style.display = 'none';
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'row';
+    }
+  }
+
+  window.addEventListener('resize', checkWidth);
+  document.addEventListener('DOMContentLoaded', checkWidth);
+</script>
+
+<style>
+  @media (max-width: 767px) {
+    .right {
+      display: none !important;
+    }
+  }
+</style>
