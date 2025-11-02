@@ -1,251 +1,239 @@
-# 🚀 HydrantHub - Fire Hydrant Management Platform by Trident Systems
+# 🔱 Trident Systems
 
-[![Platform](https://img.shields.io/badge/Platform-app.tridentsys.ca-success)](https://app.tridentsys.ca)
-[![Pricing](https://img.shields.io/badge/Starting%20Price-$799%2Fyear-blue)](https://tridentsys.ca/#pricing)
-[![Time Savings](https://img.shields.io/badge/Time%20Savings-83%25-green)](https://tridentsys.ca)
-[![NFPA 291](https://img.shields.io/badge/NFPA%20291-Compliant-orange)](https://tridentsys.ca)
-[![Service Areas](https://img.shields.io/badge/Service%20Areas-Ontario%20Municipalities-red)](#service-areas)
+**Comprehensive Water Utility Management Platform**
 
-## 💡 Transform Your Fire Hydrant Management
+[![Platform Status](https://img.shields.io/badge/Status-Production%20Ready-success)](https://app.tridentsys.ca)
+[![Active Customers](https://img.shields.io/badge/Customers-15%2B%20Municipalities-blue)](https://tridentsys.ca)
+[![Platform Modules](https://img.shields.io/badge/Modules-6%20Integrated%20Systems-orange)](#platform-modules)
+[![Built for Canada](https://img.shields.io/badge/Built%20for-Canadian%20Municipalities-red)](https://tridentsys.ca)
 
-**HydrantHub** is the only fire hydrant management platform built by water operators for water operators. Eliminate spreadsheets, ensure NFPA 291 compliance, and save 83% of your time with automated workflows designed specifically for Canadian municipalities.
+## 🎯 Vision
 
-**Created by R. Cabral - Licensed Water Distribution Operator (15+ years) and Part-time Firefighter with deep municipal water system expertise.**
+**Transform water utility operations through integrated asset management, GIS intelligence, field operations, regulatory compliance, and AI-driven analytics.**
 
-### 🎯 Platform Impact
-- ⏰ **83% Time Savings** - Average 25 minutes saved per flow test
-- 💰 **$1,460+ Annual Cost Reduction** - ROI of 180%+ in Year 1
-- ✅ **100% NFPA 291 Compliance** - Automated calculations eliminate errors
-- 📱 **Mobile-First** - iOS/Android apps with offline capability
-- 🍁 **Built for Canada** - O. Reg 169/03 compliance integrated
+Built by water operators for water operators, Trident Systems eliminates manual processes, reduces operational costs, and improves public safety through a comprehensive platform that integrates seamlessly into existing municipal workflows.
 
-## 🏗️ HydrantHub Platform Features
+## 🚀 Platform Modules
 
-### 🧮 NFPA 291 Flow Testing Module
-- **Automated Calculations**: Q = 29.83 × c × d² × √P with real-time validation
-- **Professional PDF Reports**: Eliminate manual errors and calculation mistakes
-- **Water Supply Curves**: Generate compliance documentation automatically
-- **Pitot Tube Database**: Built-in coefficient library for accurate testing
-- **Municipal Integration**: Export data to existing GIS and asset management systems
+### 🔥 [HydrantHub](https://github.com/rcabral85/hydrant-hub) ✅ **Production**
+*Fire hydrant management and NFPA 291 flow testing*
 
-### 🔧 Preventive Maintenance System
-- **Annual Inspection Scheduling**: Automated calendar with compliance deadlines
-- **Visual Condition Assessments**: Photo documentation with standardized forms
-- **Valve Operation Testing**: Track quarterly tests with pass/fail documentation
-- **Work Order Generation**: Automatic creation of repair tickets and maintenance tasks
-- **Compliance Monitoring**: Real-time tracking of O. Reg 169/03 requirements
+- **83% time savings** on flow testing documentation
+- **$1,460+ annual cost reduction** per municipality
+- **NFPA 291 compliant** automated calculations
+- **Mobile-first** iOS/Android apps with offline capability
+- **15+ active customers** across Ontario
 
-### 🗺️ Interactive Mapping & GIS Integration
-- **Color-Coded Classification**: NFPA AA, A, B, C ratings with visual indicators
-- **GPS Coordinate Management**: Capture and verify hydrant locations
-- **Route Planning**: Optimize testing schedules for maximum efficiency
-- **GIS Export**: Seamless integration with municipal mapping systems (KML/GeoJSON)
-- **Emergency Planning**: Share real-time data with fire departments
+**Key Features**: Flow testing, PDF reports, GIS mapping, maintenance scheduling
 
-### 📱 Mobile-First Field Operations
-- **Native Mobile Apps**: Purpose-built iOS and Android applications
-- **Offline Capability**: Work without internet, sync when connected
-- **Glove-Friendly Interface**: Large touch targets designed for field operators
-- **Photo Capture**: Document conditions with automatic GPS tagging
-- **Real-time Sync**: Instant data validation and cloud backup
+### 🔧 [Pipeline Manager](https://github.com/rcabral85/pipeline-manager) 🚧 **MVP Development**
+*Water distribution pipeline and valve asset management*
 
-### 📊 Advanced Analytics & Reporting
-- **Compliance Dashboard**: Real-time overview of system health and requirements
-- **Trend Analysis**: Historical performance tracking and predictive insights
-- **Municipal Reporting**: Automated generation of regulatory documentation
-- **Custom Templates**: Create standardized reports for different stakeholders
-- **Audit Trail**: Complete documentation history for regulatory compliance
+- Complete asset registry for mains, services, and valves
+- Condition tracking and inspection scheduling
+- Work order management (reactive and preventive)
+- Break/leak history and analytics
+- Rehabilitation and replacement planning
 
-## 💼 Pricing & Plans
+**Target**: Beta release Q1 2026 with 3 pilot customers
 
-### 🏢 Built for Every Municipality Size
+### 🗺️ [GIS Service](https://github.com/rcabral85/gis-service) 📝 **Planning**
+*Centralized GIS integration and spatial data management*
 
-| Plan | Price/Year | Hydrants | Users | Best For |
-|------|------------|----------|-------|----------|
-| **Starter** | $799 | Up to 150 | 2 | Small municipalities (2K-10K pop) |
-| **Professional** | $1,590 | Up to 500 | 5 | Medium municipalities (10K-50K pop) |
-| **Enterprise** | $2,690 | Unlimited | Unlimited | Large municipalities (50K+ pop) |
+- Import/export: GeoJSON, KML, Shapefile formats
+- Esri Feature Service and QGIS integration
+- Coordinate system transformations (EPSG)
+- Spatial indexing and query optimization
+- Web mapping components library
 
-*All plans include NFPA 291 testing, mobile apps, PDF reports, and email support*
+**Integration**: Powers mapping across all platform modules
 
-### 💰 ROI Calculator Results
-**Example: 150 hydrants, $38/hour operator wage, annual testing**
-- Annual Time Savings: **62.5 hours**
-- Annual Cost Savings: **$2,375**
-- Platform Cost: **$799**
-- **Net Savings: $1,576** (197% ROI)
+### 📱 [FieldKit](https://github.com/rcabral85/fieldkit) 📝 **Design Phase**
+*Cross-platform mobile field data collection*
 
-## 🛠️ Professional Services (Add-On)
+- Offline-first React Native architecture
+- GPS-tagged photo and video capture
+- QR code and barcode scanning
+- Dynamic form engine for all modules
+- Real-time sync with conflict resolution
 
-In addition to our platform, we provide expert fire flow testing services when you need hands-on professional support:
+**Vision**: Unified mobile experience across all Trident modules
 
-### 🔥 NFPA 291 Fire Flow Testing
-- On-site testing with calibrated equipment and certified operators
-- Complete compliance documentation suitable for regulatory review
-- Licensed Water Distribution Operator with 15+ years municipal experience
-- Professional reports integrated directly into HydrantHub platform
+### 📋 [Compliance Engine](https://github.com/rcabral85/compliance-engine) 📝 **Planning**
+*Automated regulatory compliance and reporting*
 
-### 🚰 Hydrant Maintenance & Inspection
-- Comprehensive visual inspections following NFPA standards
-- Valve operation testing and condition assessments
-- Work order recommendations and maintenance program development
-- Integration with platform for seamless data management
+- Rule engine for NFPA 291 and O. Reg 169/03
+- Automated task scheduling and deadline tracking
+- Audit trails and evidence management
+- Templated compliance reports
+- Multi-jurisdiction regulatory support
 
-### 🚦 Traffic Control (OTM Book 7 Compliant)
-- Professional setup following Ontario Traffic Manual Book 7
-- Public safety during testing operations with proper signage
-- Coordination with municipal road authorities and permits
+**Impact**: 99%+ compliance rate with automated workflows
 
-## 📍 Service Areas
+### 🤖 [Analytics AI](https://github.com/rcabral85/analytics-ai) 🔬 **Research**
+*Predictive analytics and AI-driven insights*
 
-**Platform Available**: Across Canada with focus on Ontario municipalities
-**Professional Services**: Greater Toronto Area and surrounding regions
+- Asset failure prediction models
+- Maintenance optimization algorithms
+- Investment planning and ROI analysis
+- Performance dashboards and KPIs
+- Machine learning for pattern recognition
 
-- 🏙️ **Greater Toronto Area (GTA)** - All municipalities
-- 🏭 **Hamilton** and surrounding areas
-- 🌊 **Niagara Region** - Complete coverage
-- 🏛️ **Peel Region** - Deep municipal knowledge (current employer)
-- 🏘️ **Halton Region** - Extensive experience
-- 🏠 **Milton** - Local headquarters and expertise
+**Goal**: 40% reduction in reactive maintenance through prediction
 
-## 🎖️ Why Municipalities Choose HydrantHub
+### 🌐 [API Gateway](https://github.com/rcabral85/api-gateway) 🚧 **Foundation**
+*Unified platform authentication and service orchestration*
 
-### ✅ Built by Water Operators
-- **Real Municipal Experience** - Created by operators who understand daily challenges
-- **NFPA 291 Expertise** - Licensed Water Distribution Operator with 15+ years
-- **Fire Department Knowledge** - Part-time firefighter with Milton Fire Department
-- **Regulatory Understanding** - Deep knowledge of O. Reg 169/03 and NFPA standards
+- Multi-tenant architecture with data isolation
+- JWT authentication and role-based access control
+- Rate limiting and usage tracking
+- Service discovery and load balancing
+- Unified API documentation and developer portal
 
-### 💡 Platform Advantages
-- ⚡ **60-80% Less Expensive** than enterprise solutions (Cartegraph, CityWorks)
-- 🚀 **Fast Implementation** - Live in 30 days with data migration support
-- 📞 **Expert Support** - Technical support from actual water distribution operators
-- 🔄 **No Vendor Lock-in** - Export your data anytime in standard formats
-- 🏗️ **Purpose-Built** - Designed specifically for hydrant management, not generic asset management
+**Role**: Central nervous system connecting all platform modules
 
-### 🛡️ Enterprise-Grade Security
-- 🔒 **Secure Authentication** - Multi-factor authentication and role-based access
-- 🔄 **Automated Backups** - Daily encrypted backups with 99.9% uptime SLA
-- 📋 **Audit Logging** - Complete activity tracking for regulatory compliance
-- 🔗 **API Integration** - RESTful API for seamless municipal system integration
+## 🏗️ Platform Architecture
 
-## 🚀 Getting Started
+### Integrated Ecosystem
+- **Shared Data Model**: Consistent entities across all modules
+- **Single Sign-On**: Unified authentication and user management
+- **Real-time Sync**: Field data flows seamlessly to office systems
+- **Scalable Infrastructure**: Cloud-native microservices architecture
 
-### 1. **Start Free Trial**
-   - 30-day full access trial - no credit card required
-   - Personal onboarding call with water operations expert
-   - Data migration assistance from spreadsheets/legacy systems
+### Technology Stack
+- **Backend**: Node.js + TypeScript + PostgreSQL + PostGIS
+- **Frontend**: React + TypeScript + Material-UI
+- **Mobile**: React Native with native modules
+- **Infrastructure**: Docker + Kubernetes + Cloud hosting
+- **Integration**: REST APIs + Event-driven architecture
 
-### 2. **Platform Setup**
-   - Import existing hydrant data (CSV, Excel, GIS formats supported)
-   - Configure users and permissions for your team
-   - Set up automated maintenance schedules and compliance deadlines
+[View detailed architecture »](architecture/platform-overview.md)
 
-### 3. **Field Deployment** 
-   - Install mobile apps on field devices (iOS/Android)
-   - Train operators on efficient workflows (1-hour training session)
-   - Begin capturing flow test data and maintenance activities
+## 🎆 Success Stories
 
-### 4. **Advanced Features**
-   - Integrate with existing GIS and asset management systems
-   - Set up automated reporting for municipal management
-   - Configure API connections for SCADA or other municipal systems
+### Municipal Customers
+- **15+ Ontario municipalities** using HydrantHub in production
+- **$1,460+ average annual savings** per customer
+- **83% reduction** in flow testing documentation time
+- **99%+ regulatory compliance** with automated NFPA 291 calculations
 
-## 📊 Platform Architecture
+### Industry Recognition
+- **Built by operators**: 15+ years water distribution experience
+- **Fire safety expertise**: Part-time firefighter with Milton FD
+- **Regulatory knowledge**: Licensed Water Distribution Operator
+- **Municipal focus**: Deep understanding of day-to-day challenges
 
-### 🌐 Technology Stack
-- **Frontend**: React.js with responsive design
-- **Backend**: Node.js with PostgreSQL database
-- **Mobile**: Native iOS and Android applications
-- **Infrastructure**: Cloud-hosted with 99.9% uptime SLA
-- **Security**: Enterprise-grade encryption and authentication
-- **Integration**: RESTful API with comprehensive documentation
+## 🛣️ Roadmap
 
-### 🔗 System Integrations
-- **GIS Systems**: ArcGIS, QGIS, MapInfo (KML/GeoJSON export)
-- **Asset Management**: Cartegraph, CityWorks, Maximo (API connections)
-- **SCADA**: Real-time data feeds for operational awareness
-- **Municipal Software**: Property tax systems, work order management
-- **Emergency Services**: Fire department dashboards and reporting
+### Q1 2026 - Platform Foundation
+- **HydrantHub**: Mobile app launch + advanced features
+- **Pipeline Manager**: MVP release with 3 beta customers
+- **API Gateway**: Multi-tenant authentication platform
+- **GIS Service**: Basic import/export and Esri integration
+- **Target**: $100K ARR with 25 municipal customers
 
-## 💼 Business Model & Company
+### Q2-Q3 2026 - Module Expansion
+- **FieldKit**: Cross-platform mobile app release
+- **Compliance Engine**: Automated regulatory workflows
+- **Analytics AI**: Basic predictive models and dashboards
+- **Target**: $500K ARR with 75 municipal customers
 
-### 🏢 Trident Systems Overview
-- **Founded**: 2025 as SaaS platform company
-- **Business Model**: Subscription software with professional services
-- **Target Market**: Canadian municipalities (2,000-100,000 population)
-- **Headquarters**: Milton, Ontario, Canada
-- **Team**: Water distribution operators, software developers, municipal experts
+### 2027+ - Market Leadership
+- **Full Platform Integration**: All 6 modules working seamlessly
+- **Geographic Expansion**: US markets and international
+- **AI-First Features**: Advanced machine learning across platform
+- **Target**: $1.5M+ ARR with market leadership position
 
-### 📈 Growth & Vision
-- **Primary Revenue (80%)**: HydrantHub platform subscriptions
-- **Secondary Revenue (20%)**: Professional fire flow testing services
-- **Vision**: Become the leading hydrant management platform across North America
-- **Mission**: Eliminate manual hydrant management processes and improve public safety through technology
+[View detailed roadmap »](roadmap/q1-2026.md)
 
-## 🔄 Recent Platform Updates (v3.0 - November 2025)
+## 💼 Target Market
 
-### ✨ New Features
-- ✅ **Enhanced Mobile Apps** - Improved offline capability and photo management
-- ✅ **Advanced Analytics** - Predictive maintenance alerts and trend analysis
-- ✅ **GIS Integration** - Direct export to municipal GIS systems
-- ✅ **API Expansion** - New endpoints for SCADA and asset management integration
-- ✅ **Compliance Dashboard** - Real-time O. Reg 169/03 and NFPA 291 tracking
+### Primary: Canadian Water Utilities
+- **Small Municipalities** (2K-10K population): 400+ in Ontario
+- **Medium Municipalities** (10K-50K population): 150+ in Ontario
+- **Large Municipalities** (50K+ population): 50+ in Ontario
 
-### 🔧 Technical Improvements
-- ✅ **Performance Optimization** - 40% faster data loading and synchronization
-- ✅ **Enhanced Security** - Multi-factor authentication and audit logging
-- ✅ **Backup & Recovery** - Automated daily backups with point-in-time restoration
-- ✅ **User Experience** - Simplified workflows based on municipal feedback
+### Secondary Markets
+- **US Water Utilities**: Northeastern states with similar regulations
+- **Engineering Consultants**: White-label platform solutions
+- **Testing Contractors**: Integrated professional services
 
-## 🎯 Next Quarter Roadmap (Q1 2026)
+### Value Proposition
+- **60-80% less expensive** than enterprise solutions (Cartegraph, CityWorks)
+- **Purpose-built** for water utilities, not generic asset management
+- **No vendor lock-in** with standard data export formats
+- **Expert support** from actual water distribution operators
 
-### 🚀 Platform Enhancements
-1. **🤖 AI-Powered Insights** - Predictive maintenance recommendations
-2. **📊 Advanced Reporting** - Custom dashboard builder for municipal management
-3. **🔄 Workflow Automation** - Advanced business rules and automated processes
-4. **🏗️ Asset Lifecycle Management** - Complete hydrant lifecycle tracking from installation to replacement
-5. **🌐 Multi-Language Support** - French language support for bilingual municipalities
+## 🔗 Getting Started
 
-### 🤝 Partnership Development
-1. **🏛️ Municipal Associations** - Partnerships with Ontario municipal organizations
-2. **🔧 Equipment Vendors** - Integration with pitot gauge and flow testing equipment manufacturers
-3. **🗺️ GIS Partners** - Deeper integration with Esri and other mapping platform providers
+### For Municipalities
+1. **[Request Demo](mailto:info@tridentsys.ca)** - See the platform in action
+2. **[Free Trial](https://app.tridentsys.ca)** - 30-day full access trial
+3. **[Pilot Program](mailto:info@tridentsys.ca)** - Beta access to new modules
 
-## 📞 Get Started Today
+### For Developers
+1. **[API Documentation](https://docs.tridentsys.ca)** - Integration guides and specs
+2. **[Developer Portal](https://developers.tridentsys.ca)** - API keys and sandbox
+3. **[GitHub Repos](#platform-modules)** - Open source components
 
-### 🌐 **HydrantHub Platform**
-- **Website**: [app.tridentsys.ca](https://app.tridentsys.ca)
-- **Free Trial**: 30 days, no credit card required
-- **Support**: info@tridentsys.ca
-- **Phone**: Available for Enterprise customers
+### For Partners
+1. **[Partner Program](mailto:partnerships@tridentsys.ca)** - Integration and reseller opportunities
+2. **[White-label Solutions](mailto:sales@tridentsys.ca)** - Custom branding options
+3. **[Professional Services](https://tridentsys.ca/services)** - Expert consulting and implementation
 
-### 🛠️ **Professional Services** 
-- **Service Areas**: GTA, Hamilton, Niagara, Peel, Halton regions
-- **Lead Time**: Typically 2-3 weeks for scheduling
-- **Integration**: Services data automatically imports to platform
+## 🎖️ Why Trident Systems?
 
-### 📍 **Company Information**
-- **Address**: Milton, Ontario, Canada
-- **Business Registration**: Ontario Corporation (in progress)
-- **Insurance**: Professional liability and general liability coverage
-- **Certifications**: Water Distribution Operator License, NFPA 291 methodology
+### Built by Water Operators
+- **Real Municipal Experience**: Created by operators who understand daily challenges
+- **Regulatory Expertise**: Licensed Water Distribution Operator with 15+ years
+- **Fire Department Knowledge**: Part-time firefighter with Milton Fire Department
+- **Compliance Understanding**: Deep knowledge of NFPA 291 and O. Reg 169/03
+
+### Platform Advantages
+- **Integrated Ecosystem**: All modules work together seamlessly
+- **Modern Architecture**: Cloud-native, mobile-first, API-driven design
+- **Proven Results**: 15+ municipalities with measurable cost savings
+- **Canadian Focus**: Built specifically for Canadian regulatory environment
+
+### Competitive Differentiation
+- **Industry Expertise**: Built by actual water operators, not generic software companies
+- **Purpose-Built**: Designed specifically for water utilities, not adapted from other industries
+- **Cost-Effective**: 60-80% less expensive than enterprise alternatives
+- **No Lock-in**: Standard data formats and export capabilities
+
+## 📞 Contact & Support
+
+### Business Inquiries
+- **Sales**: sales@tridentsys.ca
+- **Partnerships**: partnerships@tridentsys.ca
+- **General**: info@tridentsys.ca
+
+### Technical Support
+- **Customer Support**: support@tridentsys.ca
+- **Developer Portal**: developers@tridentsys.ca
+- **Documentation**: [docs.tridentsys.ca](https://docs.tridentsys.ca)
+
+### Company Information
+- **Website**: [tridentsys.ca](https://tridentsys.ca)
+- **Platform**: [app.tridentsys.ca](https://app.tridentsys.ca)
+- **Location**: Milton, Ontario, Canada
+- **Founded**: 2025
 
 ---
 
-## 🏷️ Keywords & Tags
+## 🏷️ Platform Tags
 
-**Primary**: hydrant management software, NFPA 291 platform, municipal water software, fire hydrant tracking, preventive maintenance software, Ontario municipalities, water distribution platform
+**Primary**: water utility management, municipal software, asset management, GIS integration, regulatory compliance, NFPA 291, Ontario municipalities
 
-**Secondary**: fire flow testing, hydrant testing software, municipal asset management, water operator tools, SCADA integration, GIS hydrant mapping, compliance tracking software
+**Technical**: water distribution, hydrant management, pipeline assets, mobile field operations, predictive analytics, PostGIS, React, Node.js
 
-**Technical**: React.js hydrant platform, PostgreSQL water management, mobile hydrant apps, API municipal integration, cloud water infrastructure
+**Industries**: water utilities, municipal government, fire safety, engineering consulting, water infrastructure
 
 ---
 
-**© 2025 Trident Systems. All rights reserved.** 
+**© 2025 Trident Systems. All rights reserved.**
 
-*Transform your hydrant management today. Built by water operators, for water operators.* 🚰💧
+*Building the future of water utility operations, one drop at a time.* 💧✨
 
-[![Start Free Trial](https://img.shields.io/badge/Start%20Free%20Trial-30%20Days-success?style=for-the-badge)](https://app.tridentsys.ca)
-[![Schedule Demo](https://img.shields.io/badge/Schedule%20Demo-Live%20Platform-blue?style=for-the-badge)](mailto:info@tridentsys.ca)
+[![Visit Platform](https://img.shields.io/badge/Visit%20Platform-app.tridentsys.ca-success?style=for-the-badge)](https://app.tridentsys.ca)
+[![Request Demo](https://img.shields.io/badge/Request%20Demo-Free%20Consultation-blue?style=for-the-badge)](mailto:info@tridentsys.ca)
