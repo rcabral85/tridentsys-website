@@ -7,6 +7,14 @@
 [![Platform Modules](https://img.shields.io/badge/Modules-6%20Integrated%20Systems-orange)](#platform-modules)
 [![Built for Canada](https://img.shields.io/badge/Built%20for-Canadian%20Municipalities-red)](https://tridentsys.ca)
 
+<div align="center">
+
+![Field Operations](https://images.unsplash.com/photo-1606992476431-4ad49c0a3ee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=400&q=80)
+
+*Field operators using mobile technology for real-time data collection and infrastructure management*
+
+</div>
+
 ## 🎯 Vision
 
 **Transform water utility operations through integrated asset management, GIS intelligence, field operations, regulatory compliance, and AI-driven analytics.**
@@ -18,6 +26,14 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 ### 🔥 [HydrantHub](https://github.com/rcabral85/hydrant-hub) ✅ **Production**
 *Fire hydrant management and NFPA 291 flow testing*
 
+<div align="center">
+
+![Mobile Data Collection](https://images.unsplash.com/photo-1606992476450-da8b9c7f2e42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+
+*Field technicians using tablets for hydrant inspection and flow testing documentation*
+
+</div>
+
 - **83% time savings** on flow testing documentation
 - **$1,460+ annual cost reduction** per municipality
 - **NFPA 291 compliant** automated calculations
@@ -28,6 +44,14 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 ### 🔧 [Pipeline Manager](https://github.com/rcabral85/pipeline-manager) 🚧 **MVP Development**
 *Water distribution pipeline and valve asset management*
+
+<div align="center">
+
+![Infrastructure Management](https://images.unsplash.com/photo-1606992476504-77d3eda11849?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+
+*Water utility operators managing pipeline assets with digital tools*
+
+</div>
 
 - Complete asset registry for mains, services, and valves
 - Condition tracking and inspection scheduling
@@ -50,6 +74,14 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 ### 📱 [FieldKit](https://github.com/rcabral85/fieldkit) 📝 **Design Phase**
 *Cross-platform mobile field data collection*
+
+<div align="center">
+
+![Utility Worker with Tablet](https://images.unsplash.com/photo-1606992476459-5d8eeecf1b43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+
+*Construction and utility workers using rugged tablets for field data collection*
+
+</div>
 
 - Offline-first React Native architecture
 - GPS-tagged photo and video capture
@@ -96,6 +128,14 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 ### 🔥 [Fire Flow Services](https://github.com/rcabral85/fire-flow-services)
 *Professional NFPA 291 fire flow testing — on-site testing, calibrated equipment, compliant reports, GIS deliverables.*
+
+<div align="center">
+
+![Professional Testing Services](https://images.unsplash.com/photo-1606992476478-e0ed7f7b7c96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300&q=80)
+
+*Professional fire flow testing with digital documentation and real-time data capture*
+
+</div>
 
 - NFPA 291 methodology and documentation
 - OTM Book 7 traffic control available
@@ -246,5 +286,9 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 *Building the future of water utility operations, one drop at a time.* 💧✨
 
+<div align="center">
+
 [![Visit Platform](https://img.shields.io/badge/Visit%20Platform-app.tridentsys.ca-success?style=for-the-badge)](https://app.tridentsys.ca)
 [![Request Demo](https://img.shields.io/badge/Request%20Demo-Free%20Consultation-blue?style=for-the-badge)](mailto:info@tridentsys.ca)
+
+</div>
