@@ -92,6 +92,17 @@ Built by water operators for water operators, Trident Systems eliminates manual 
 
 **Role**: Central nervous system connecting all platform modules
 
+## 🧑‍🚒 Services
+
+### 🔥 [Fire Flow Services](https://github.com/rcabral85/fire-flow-services)
+*Professional NFPA 291 fire flow testing — on-site testing, calibrated equipment, compliant reports, GIS deliverables.*
+
+- NFPA 291 methodology and documentation
+- OTM Book 7 traffic control available
+- PDF reports, water supply curves, GIS exports (GeoJSON/KML)
+- Data imported directly into HydrantHub
+- Service areas: GTA, Peel, Halton, Hamilton, Niagara
+
 ## 🏗️ Platform Architecture
 
 ### Integrated Ecosystem
