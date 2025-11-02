@@ -181,11 +181,90 @@
     .header-subtitle { 
       display: none;
     }
-    .right { 
+    
+    /* Desktop Navigation */
+    .nav-desktop { 
       display: flex; 
       gap: 8px; 
       flex-wrap: wrap;
       align-items: center;
+    }
+    
+    /* Mobile Hamburger Menu */
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+    
+    .hamburger-line {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    /* Hamburger animation when active */
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Mobile Navigation Menu */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--app-header-primary);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-mobile.active {
+      display: block;
+    }
+    
+    .nav-mobile a {
+      display: block;
+      padding: 16px 24px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background-color 0.2s ease;
+      font-weight: 500;
+    }
+    
+    .nav-mobile a:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+    
+    .nav-mobile .btn-platform {
+      background: #ffffff;
+      color: var(--app-header-primary);
+      margin: 16px 24px;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 600;
+      border-bottom: none;
+    }
+    
+    .nav-mobile .btn-platform:hover {
+      background: #f5f5f5;
+      color: var(--app-header-primary);
     }
     
     /* HydrantHub App Button System - Match Material-UI AppBar buttons */
@@ -373,15 +452,22 @@
       .header-left { gap: 8px; }
       header img { height: 28px; width: 28px; }
       .header-title { font-size: 1.125rem; }
-      .right { 
-        gap: 4px;
-        flex-shrink: 0;
+      
+      /* Show hamburger menu on mobile */
+      .hamburger-menu {
+        display: flex;
       }
-      .btn { 
-        padding: 6px 12px; 
-        font-size: 0.8rem;
-        min-height: 32px;
+      
+      /* Hide desktop navigation on mobile */
+      .nav-desktop {
+        display: none;
       }
+      
+      /* Mobile navigation adjustments */
+      .nav-mobile {
+        top: 56px; /* Match mobile header height */
+      }
+      
       .hero-section { padding: 80px 20px; }
       .hero-section h1 { font-size: 2.4em; }
       .hero-section p { font-size: 1.15em; }
@@ -411,7 +497,9 @@
       <img src="trident-logo.png" alt="Trident Systems Logo" width="32" height="32" />
       <a href="/" class="header-title">HydrantHub</a>
     </div>
-    <div class="right">
+    
+    <!-- Desktop Navigation -->
+    <div class="nav-desktop">
       <a href="https://app.tridentsys.ca/login" class="btn btn-platform" target="_blank" rel="noopener noreferrer">Platform Login</a>
       <a href="#platform" class="btn">Platform</a>
       <a href="#features" class="btn">Features</a>
@@ -419,7 +507,24 @@
       <a href="#services" class="btn btn-services">Fire Flow Services</a>
       <a href="#contact" class="btn btn-secondary">Contact</a>
     </div>
+    
+    <!-- Mobile Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </div>
   </header>
+  
+  <!-- Mobile Navigation Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="https://app.tridentsys.ca/login" class="btn-platform" target="_blank" rel="noopener noreferrer">Platform Login</a>
+    <a href="#platform">Platform</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#services">Fire Flow Services</a>
+    <a href="#contact">Contact</a>
+  </div>
 
   <!-- Professional Hero Section -->
   <section class="hero-section" id="platform">
@@ -916,6 +1021,34 @@
 
   <!-- JavaScript -->
   <script>
+    // Mobile hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const navMobile = document.getElementById('nav-mobile');
+      
+      hamburgerMenu.addEventListener('click', function() {
+        hamburgerMenu.classList.toggle('active');
+        navMobile.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking on navigation links
+      const mobileNavLinks = navMobile.querySelectorAll('a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          hamburgerMenu.classList.remove('active');
+          navMobile.classList.remove('active');
+        });
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!hamburgerMenu.contains(event.target) && !navMobile.contains(event.target)) {
+          hamburgerMenu.classList.remove('active');
+          navMobile.classList.remove('active');
+        }
+      });
+    });
+    
     // Platform Slideshow functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
