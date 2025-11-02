@@ -474,12 +474,94 @@
       .hero-stats { gap: 25px; }
       .stat { min-width: 140px; }
       .hero-buttons { flex-direction: column; align-items: center; }
-      .slideshow-container { height: 450px; }
-      .slide h3 { font-size: 1.8em; }
-      .slide p { font-size: 1em; }
-      .slide-stats { grid-template-columns: repeat(2, 1fr); }
-      .nfpa-colors { grid-template-columns: repeat(2, 1fr); }
-      .maintenance-status { grid-template-columns: repeat(2, 1fr); }
+      
+      /* Mobile Slideshow Fixes */
+      .platform-showcase { padding: 60px 15px; }
+      .app-slideshow { 
+        padding: 20px 15px; 
+        margin: 25px 0;
+        border-radius: 16px;
+      }
+      .slideshow-container { 
+        height: auto;
+        min-height: 500px;
+        border-radius: 12px;
+      }
+      .slide { 
+        position: relative;
+        height: auto;
+        min-height: 500px;
+        padding: 30px 20px;
+        overflow-y: auto;
+      }
+      .slide-content { 
+        max-width: 100%;
+        height: auto;
+      }
+      .slide h3 { 
+        font-size: 1.6em; 
+        margin-bottom: 16px;
+        line-height: 1.3;
+      }
+      .slide p { 
+        font-size: 0.95em; 
+        margin-bottom: 25px;
+        line-height: 1.6;
+      }
+      .slide-stats { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        margin: 25px 0;
+      }
+      .slide-stat {
+        padding: 18px 12px;
+      }
+      .slide-stat h4 { 
+        font-size: 1.8em; 
+      }
+      .slide-stat p { 
+        font-size: 0.8em; 
+        margin: 6px 0 0 0;
+      }
+      .nfpa-colors { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .nfpa-color {
+        padding: 10px 12px;
+        font-size: 0.85em;
+      }
+      .nfpa-color span {
+        font-size: 0.8em;
+      }
+      .maintenance-status { 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 20px 0;
+      }
+      .status-item {
+        padding: 12px 8px;
+      }
+      .status-item .status-icon {
+        font-size: 1.5em;
+      }
+      .status-item .status-text {
+        font-size: 0.75em;
+      }
+      .status-item .status-number {
+        font-size: 0.65em;
+      }
+      .slide-nav {
+        bottom: 15px;
+        gap: 8px;
+      }
+      .nav-dot {
+        width: 10px;
+        height: 10px;
+      }
+      
       .features-grid, .pricing-grid, .services-grid { grid-template-columns: 1fr; }
       .pricing-card.featured { transform: none; }
       .calculator-form { grid-template-columns: 1fr; }
@@ -487,6 +569,42 @@
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       section { padding: 60px 15px; }
       section h2 { font-size: 2em; }
+    }
+    
+    /* Additional mobile portrait fixes for very small screens */
+    @media (max-width: 480px) {
+      .platform-showcase { padding: 40px 10px; }
+      .app-slideshow { 
+        padding: 15px 10px;
+        margin: 20px 0;
+      }
+      .slideshow-container {
+        min-height: 480px;
+      }
+      .slide { 
+        min-height: 480px;
+        padding: 25px 15px;
+      }
+      .slide h3 { 
+        font-size: 1.4em; 
+        margin-bottom: 14px;
+      }
+      .slide p { 
+        font-size: 0.9em; 
+        margin-bottom: 20px;
+      }
+      .slide-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+      .slide-stat h4 { 
+        font-size: 1.6em; 
+      }
+      .nfpa-colors {
+        grid-template-columns: 1fr;
+      }
+      .maintenance-status {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
