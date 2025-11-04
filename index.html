@@ -4,34 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://tridentsys.ca/" />
-  <meta name="description" content="Professional NFPA 291 fire flow testing services. HydrantHub — hydrant management software designed by an OWWCO-licensed operator and part-time firefighter. Services available now; platform beta launching Q1 2026." />
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 20h60v60H20z' fill='%231e3c72'/%3E%3Cpath d='M30 30h40v40H30z' fill='%23667eea'/%3E%3Ccircle cx='50' cy='50' r='15' fill='%23fff'/%3E%3C/svg%3E" />
+  <meta name="description" content="Professional NFPA 291 fire flow testing services and HydrantHub hydrant management platform by an OWWCO-licensed operator and part-time firefighter." />
   <meta name="keywords" content="fire flow testing, NFPA 291, hydrant testing Ontario, hydrant management software, municipal water distribution, OWWCO operator" />
   <meta name="author" content="Trident Systems" />
   <meta name="language" content="en-CA" />
-  <title>Trident Systems — Fire Flow Testing & HydrantHub (Beta Q1 2026)</title>
+  <title>Trident Systems — Fire Flow Testing & HydrantHub Platform</title>
   <style>
-    body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif; margin:0; color:#0f172a; }
-    header { position:sticky; top:0; background:#1e3c72; color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; z-index:10 }
-    header a { color:#fff; text-decoration:none; margin-left:14px }
-    .hero { background:linear-gradient(135deg,#667eea,#5a6fd8); color:#fff; padding:96px 20px; text-align:center }
-    .hero h1 { font-size:2.2rem; margin:0 0 12px }
-    .hero p { font-size:1.15rem; margin:0 auto; max-width:800px; opacity:.95 }
-    .badges { margin:18px 0 0; font-weight:600; opacity:.95 }
-    .cta { margin-top:26px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
-    .btn { padding:12px 18px; border-radius:8px; text-decoration:none; font-weight:700 }
-    .btn-primary { background:#fff; color:#1e3c72 }
-    .btn-ghost { border:2px solid rgba(255,255,255,.6); color:#fff }
-    section { padding:70px 20px; max-width:1100px; margin:0 auto }
-    h2 { font-size:1.8rem; margin:0 0 8px }
-    .lead { color:#475569; margin:0 0 22px }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px }
-    .card { border:1px solid #e2e8f0; border-radius:12px; padding:22px; background:#fff }
-    footer { padding:36px 20px; text-align:center; background:#0f172a; color:#94a3b8 }
+    body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif; margin:0; color:#0f172a; line-height:1.6 }
+    
+    header { position:sticky; top:0; background:#1e3c72; color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; z-index:10; box-shadow:0 2px 10px rgba(0,0,0,0.1) }
+    .header-left { display:flex; align-items:center; gap:12px }
+    .logo { width:32px; height:32px; background:#667eea; border-radius:4px; position:relative }
+    .logo::after { content:''; position:absolute; top:50%; left:50%; width:12px; height:12px; background:#fff; border-radius:50%; transform:translate(-50%,-50%) }
+    header a { color:#fff; text-decoration:none; margin-left:20px; font-weight:500; transition:opacity 0.2s }
+    header a:hover { opacity:0.8 }
+    
+    .hero { background:linear-gradient(135deg, rgba(30,60,114,0.95), rgba(102,126,234,0.95)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover; color:#fff; padding:120px 20px; text-align:center; position:relative }
+    .hero::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(30,60,114,0.1) }
+    .hero-content { position:relative; z-index:2 }
+    .hero h1 { font-size:2.4rem; margin:0 0 16px; font-weight:700; text-shadow:0 2px 4px rgba(0,0,0,0.3) }
+    .hero p { font-size:1.2rem; margin:0 auto; max-width:800px; opacity:.95; text-shadow:0 1px 2px rgba(0,0,0,0.3) }
+    .badges { margin:24px 0 0; font-weight:600; opacity:.95; text-shadow:0 1px 2px rgba(0,0,0,0.3) }
+    .cta { margin-top:32px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap }
+    .btn { padding:14px 24px; border-radius:8px; text-decoration:none; font-weight:600; transition:all 0.3s; border:none; cursor:pointer; display:inline-block }
+    .btn-primary { background:#fff; color:#1e3c72; box-shadow:0 4px 14px rgba(0,0,0,0.15) }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.2) }
+    .btn-ghost { border:2px solid rgba(255,255,255,.8); color:#fff; background:rgba(255,255,255,0.1) }
+    .btn-ghost:hover { background:rgba(255,255,255,0.2) }
+    
+    section { padding:80px 20px; max-width:1200px; margin:0 auto }
+    h2 { font-size:2rem; margin:0 0 12px; font-weight:700; color:#1e3c72 }
+    .lead { color:#475569; margin:0 0 32px; font-size:1.1rem }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; margin-top:32px }
+    .card { border:1px solid #e2e8f0; border-radius:12px; padding:28px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.05); transition:transform 0.3s, box-shadow 0.3s }
+    .card:hover { transform:translateY(-4px); box-shadow:0 8px 25px rgba(0,0,0,0.15) }
+    .card h3 { margin:0 0 12px; color:#1e3c72; font-weight:600 }
+    
+    .services-section { background:#f8fafc }
+    .services-hero { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-bottom:40px }
+    .services-image { background:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; height:300px; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,0.15) }
+    .report-preview { background:#fff; border:2px solid #e2e8f0; border-radius:8px; padding:20px; margin-top:20px; font-family:monospace; font-size:0.85rem; color:#475569 }
+    
+    .platform-showcase { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin:32px 0 }
+    .app-preview { background:#f1f5f9; border-radius:8px; padding:16px; text-align:center; border:1px solid #e2e8f0 }
+    .app-preview img { width:100%; max-width:200px; border-radius:4px; box-shadow:0 4px 12px rgba(0,0,0,0.1) }
+    .app-preview h4 { margin:12px 0 4px; color:#1e3c72; font-size:0.9rem; font-weight:600 }
+    
+    .contact-section { background:linear-gradient(135deg,#f8fafc,#e2e8f0) }
+    .contact-form { background:#fff; border-radius:16px; padding:40px; box-shadow:0 8px 32px rgba(0,0,0,0.1); max-width:600px; margin:0 auto }
+    .form-group { margin-bottom:20px }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px }
+    .contact-form input, .contact-form textarea { width:100%; padding:12px 16px; border:2px solid #e2e8f0; border-radius:8px; font-size:1rem; transition:border-color 0.3s; box-sizing:border-box }
+    .contact-form input:focus, .contact-form textarea:focus { outline:none; border-color:#667eea }
+    .contact-form textarea { resize:vertical; min-height:100px }
+    
+    footer { padding:40px 20px; text-align:center; background:#0f172a; color:#94a3b8 }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size:2rem }
+      .hero p { font-size:1.1rem }
+      .services-hero, .form-row { grid-template-columns:1fr }
+      .services-image { height:200px }
+      section { padding:60px 20px }
+      .contact-form { padding:24px }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div><strong>Trident Systems</strong></div>
+    <div class="header-left">
+      <div class="logo"></div>
+      <strong>Trident Systems</strong>
+    </div>
     <nav>
       <a href="#services">Services</a>
       <a href="#platform">HydrantHub</a>
@@ -41,72 +86,172 @@
 
   <main>
     <section class="hero">
-      <h1>Fire flow testing services now. HydrantHub software in Q1 2026.</h1>
-      <p>Professional NFPA 291 fire flow testing for municipalities and property managers. HydrantHub, a hydrant management platform, is being built by an <strong>OWWCO‑licensed water operator (5+ years)</strong> and <strong>part‑time firefighter</strong> — based on real field workflows.</p>
-      <div class="badges">NFPA 291 • OTM Book 7 awareness • GIS exports • PDF reports</div>
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact">Request fire flow testing quote</a>
-        <a class="btn btn-ghost" href="#beta">Join HydrantHub beta list</a>
+      <div class="hero-content">
+        <h1>Professional fire flow testing services and hydrant management platform</h1>
+        <p>NFPA 291 fire flow testing for municipalities and property managers. HydrantHub hydrant management platform built by an <strong>OWWCO‑licensed water operator (5+ years)</strong> and <strong>part‑time firefighter</strong> — designed from real field experience.</p>
+        <div class="badges">NFPA 291 • OTM Book 7 • GIS exports • PDF reports • Mobile-first platform</div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Get fire flow testing quote</a>
+          <a class="btn btn-ghost" href="#platform">Explore HydrantHub</a>
+        </div>
       </div>
     </section>
 
-    <section id="services">
-      <h2>Professional Services (Available Now)</h2>
-      <p class="lead">Hands‑on NFPA 291 fire flow testing with calibrated equipment and compliant deliverables.</p>
+    <section id="services" class="services-section">
+      <h2>Professional Services</h2>
+      <p class="lead">On-site NFPA 291 fire flow testing with calibrated equipment and compliant deliverables.</p>
+      
+      <div class="services-hero">
+        <div>
+          <h3>Field Testing & Reporting</h3>
+          <p>Professional on-site testing with calibrated equipment, static/residual pressure measurements, pitot readings, and comprehensive PDF reports suitable for regulatory and insurance requirements.</p>
+          
+          <div class="report-preview">
+            <strong>SAMPLE FIRE FLOW TEST REPORT</strong><br/>
+            Location: Municipal Hydrant #H-245<br/>
+            Date: 2025-11-03 | Time: 14:30<br/>
+            Static Pressure: 65 psi<br/>
+            Residual Pressure: 58 psi (@ 750 GPM)<br/>
+            Available Flow: 1,200 GPM @ 20 psi<br/>
+            NFPA Color Class: Blue (>1500 GPM)<br/>
+            Status: ✓ COMPLIANT
+          </div>
+        </div>
+        <div class="services-image"></div>
+      </div>
+      
       <div class="grid">
         <div class="card">
-          <h3>NFPA 291 Fire Flow Testing</h3>
-          <p>On‑site testing (static, residual, pitot), water supply curve, and PDF report suitable for regulatory and insurance needs.</p>
+          <h3>🔥 NFPA 291 Fire Flow Testing</h3>
+          <p>Complete on‑site testing including static pressure, residual pressure, pitot readings, and flow calculations with detailed PDF reports.</p>
         </div>
         <div class="card">
-          <h3>Hydrant Inspection</h3>
-          <p>Visual condition assessment, GPS and photos, maintenance flags, and recommendations for follow‑up work orders.</p>
+          <h3>🔍 Hydrant Inspection</h3>
+          <p>Visual condition assessment, GPS coordinates, high-resolution photos, maintenance flags, and actionable recommendations.</p>
         </div>
         <div class="card">
-          <h3>Deliverables</h3>
-          <p>PDF report, CSV, and GIS exports (GeoJSON/KML). Optional OTM Book 7 traffic control available.</p>
+          <h3>📊 Professional Deliverables</h3>
+          <p>PDF reports, CSV data exports, and GIS formats (GeoJSON/KML). Optional OTM Book 7 traffic control coordination.</p>
         </div>
       </div>
     </section>
 
     <section id="platform">
-      <h2>HydrantHub (Beta Q1 2026)</h2>
-      <p class="lead">A mobile‑first hydrant management platform designed by an OWWCO‑licensed operator and part‑time firefighter. Built from real field experience — not generic asset software.</p>
-      <div class="grid">
-        <div class="card"><strong>Flow testing</strong> with automated NFPA 291 calculations and water supply curves.</div>
-        <div class="card"><strong>Mobile data capture</strong> with photos, GPS, notes, and offline mode.</div>
-        <div class="card"><strong>Mapping & GIS</strong> with NFPA color classes and direct Esri/QGIS exports.</div>
-        <div class="card"><strong>Maintenance & scheduling</strong> for inspections, work orders, and reminders.</div>
+      <h2>HydrantHub Platform</h2>
+      <p class="lead">Mobile‑first hydrant management platform designed by water industry professionals. Built from real field workflows — not generic asset software.</p>
+      
+      <div class="platform-showcase">
+        <div class="app-preview">
+          <div style="background:#1e3c72; color:#fff; padding:20px; border-radius:4px; margin-bottom:8px">
+            <strong>HydrantHub Login</strong><br/>
+            <small>Secure municipal access</small>
+          </div>
+          <h4>Secure Login Portal</h4>
+        </div>
+        <div class="app-preview">
+          <div style="background:#667eea; color:#fff; padding:20px; border-radius:4px; margin-bottom:8px">
+            <strong>📍 Interactive Map</strong><br/>
+            <small>•••• ••• •• hydrants mapped</small>
+          </div>
+          <h4>GIS Dashboard</h4>
+        </div>
+        <div class="app-preview">
+          <div style="background:#4ade80; color:#fff; padding:20px; border-radius:4px; margin-bottom:8px">
+            <strong>📱 Mobile Data</strong><br/>
+            <small>Field capture + offline mode</small>
+          </div>
+          <h4>Mobile Field App</h4>
+        </div>
+        <div class="app-preview">
+          <div style="background:#f59e0b; color:#fff; padding:20px; border-radius:4px; margin-bottom:8px">
+            <strong>📈 Analytics</strong><br/>
+            <small>Flow curves + compliance</small>
+          </div>
+          <h4>Reporting Suite</h4>
+        </div>
       </div>
-      <div class="cta" id="beta">
-        <a class="btn btn-primary" href="#contact">Join beta waitlist</a>
-        <a class="btn btn-ghost" href="#contact">Request a platform demo</a>
+      
+      <div class="grid">
+        <div class="card">
+          <h3>🌊 Flow Testing Suite</h3>
+          <p>Automated NFPA 291 calculations, water supply curves, and instant color classification with field-tested accuracy.</p>
+        </div>
+        <div class="card">
+          <h3>📱 Mobile Data Capture</h3>
+          <p>Offline-capable mobile app with GPS, photos, voice notes, and seamless sync when connectivity returns.</p>
+        </div>
+        <div class="card">
+          <h3>🗺️ Advanced GIS Integration</h3>
+          <p>NFPA color-coded mapping with direct exports to Esri ArcGIS, QGIS, and other municipal GIS systems.</p>
+        </div>
+        <div class="card">
+          <h3>⚙️ Maintenance Management</h3>
+          <p>Inspection scheduling, work order tracking, preventive maintenance alerts, and compliance monitoring.</p>
+        </div>
+      </div>
+      
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Start free trial</a>
+        <a class="btn btn-ghost" href="#contact">Request platform demo</a>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="lead">Tell us about your hydrant inventory and testing needs. We’ll reply with next steps and timeline.</p>
-      <form action="send_email.php" method="POST" class="card" style="max-width:720px; margin:0 auto">
-        <input type="hidden" name="form_type" value="website_contact" />
-        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px">
-          <input required name="name" placeholder="Full name" />
-          <input required type="email" name="email" placeholder="Email" />
-          <input name="organization" placeholder="Municipality/Organization" />
-          <input name="hydrants" placeholder="Approx. hydrant count" />
+    <section id="contact" class="contact-section">
+      <h2>Get Started Today</h2>
+      <p class="lead">Ready to modernize your hydrant testing and management? Let's discuss your specific needs and timeline.</p>
+      
+      <div class="contact-form">
+        <form action="mailto:info@tridentsys.ca" method="POST" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <input required name="name" placeholder="Full Name" type="text" />
+            </div>
+            <div class="form-group">
+              <input required type="email" name="email" placeholder="Email Address" />
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <input name="organization" placeholder="Municipality/Organization" type="text" />
+            </div>
+            <div class="form-group">
+              <input name="hydrants" placeholder="Approximate Hydrant Count" type="text" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <select name="service" style="width:100%; padding:12px 16px; border:2px solid #e2e8f0; border-radius:8px; font-size:1rem; box-sizing:border-box">
+              <option value="">Select Primary Interest</option>
+              <option value="fire-flow-testing">Fire Flow Testing Services</option>
+              <option value="hydrant-inspection">Hydrant Inspection</option>
+              <option value="hydranthub-platform">HydrantHub Platform</option>
+              <option value="both">Both Services & Platform</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <textarea name="message" rows="4" placeholder="Tell us about your current hydrant management challenges, testing requirements, or timeline..."></textarea>
+          </div>
+          
+          <div class="cta" style="justify-content:center; margin-top:24px">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <a class="btn btn-ghost" href="mailto:info@tridentsys.ca">Email Directly</a>
+          </div>
+        </form>
+        
+        <div style="text-align:center; margin-top:24px; padding-top:24px; border-top:1px solid #e2e8f0; color:#64748b">
+          <p><strong>Quick Response Guarantee</strong><br/>
+          We respond to all inquiries within 24 hours with next steps and timeline estimates.</p>
         </div>
-        <textarea name="message" rows="5" placeholder="Message (e.g., location, timelines, deliverables)"></textarea>
-        <div class="cta" style="justify-content:flex-start; margin-top:10px">
-          <button class="btn btn-primary" type="submit">Submit</button>
-          <a class="btn btn-ghost" href="mailto:info@tridentsys.ca">Email instead</a>
-        </div>
-      </form>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div>© 2025 Trident Systems — Milton, Ontario</div>
-    <div style="margin-top:6px">Built by an OWWCO‑licensed water operator (5+ years) and part‑time firefighter</div>
+    <div><strong>© 2025 Trident Systems</strong> — Professional hydrant services in Ontario</div>
+    <div style="margin-top:8px">Built by OWWCO‑licensed water operator (5+ years) and part‑time firefighter</div>
+    <div style="margin-top:4px; opacity:0.7">Milton, Ontario • <a href="mailto:info@tridentsys.ca" style="color:#94a3b8">info@tridentsys.ca</a></div>
   </footer>
 </body>
 </html>
