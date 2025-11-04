@@ -17,38 +17,50 @@
     "name": "Trident Systems",
     "image": "https://tridentsys.ca/trident-logo.png",
     "url": "https://tridentsys.ca/",
-    "telephone": "",
     "email": "info@tridentsys.ca",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Milton",
-      "addressRegion": "ON",
-      "addressCountry": "CA"
-    },
+    "address": {"@type": "PostalAddress","addressLocality": "Milton","addressRegion": "ON","addressCountry": "CA"},
     "areaServed": ["GTA","Halton","Peel","Hamilton","Niagara"],
-    "sameAs": [],
     "priceRange": "$$",
-    "makesOffer": [{
-      "@type": "Offer",
-      "name": "NFPA 291 Fire Flow Testing",
-      "category": "Service"
-    }],
-    "brand": {
-      "@type": "Brand",
-      "name": "HydrantHub"
-    }
+    "makesOffer": [{"@type": "Offer","name": "NFPA 291 Fire Flow Testing","category": "Service"}],
+    "brand": {"@type": "Brand","name": "HydrantHub"}
   }
   </script>
+  <!-- Restore full styling via stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    /* existing styles preserved, with minor adjustments */
+    /* Critical tweaks only (keep bulk in styles.css) */
+    .header-left{display:flex;align-items:center;gap:12px}
+    .header-logo{width:32px;height:32px;border-radius:4px}
+    .hydrant-showcase{display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:center;margin:40px 0}
+    .hydrant-image{background:url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;height:300px;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15)}
+    .report-preview{background:#fff;border:2px solid #e2e8f0;border-radius:8px;padding:20px;margin-top:20px;font-family:monospace;font-size:.85rem;color:#475569;position:relative}
+    .report-preview:before{content:'📋 SAMPLE REPORT';position:absolute;top:-12px;left:16px;background:#fff;padding:0 8px;font-size:.75rem;font-weight:600;color:#1e3c72}
+    .platform-showcase{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:32px 0}
+    .app-preview{background:#fff;border:2px solid #e2e8f0;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s}
+    .app-preview:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+    .app-preview img{width:100%;height:180px;object-fit:cover}
+    .app-preview-content{padding:20px}
+    .contact-container{position:relative;z-index:2}
+    .contact-header{text-align:center;margin-bottom:32px}
+    .form-label{display:block;margin-bottom:6px;font-weight:600;color:#374151;font-size:.9rem}
+    @media(max-width:768px){.hydrant-showcase{grid-template-columns:1fr}.hydrant-image{height:250px}}
   </style>
 </head>
 <body>
-  <!-- existing header preserved -->
+  <header>
+    <div class="header-left">
+      <img src="trident-logo.png" alt="Trident Systems Logo" class="header-logo" />
+      <strong>Trident Systems</strong>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#platform">HydrantHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <main>
-    <!-- hero: add location/service terms -->
-    <section class="hero">
+    <section class="hero" style="background:linear-gradient(135deg, rgba(30,60,114,.85), rgba(102,126,234,.85)), url('https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;">
       <div class="hero-content">
         <h1>NFPA 291 Fire Flow Testing in Ontario and Hydrant Management Platform</h1>
         <p>Serving GTA, Halton, Peel, Hamilton, and Niagara. On‑site calibrated testing and compliant PDF reports. HydrantHub platform designed by an <strong>OWWCO‑licensed operator (5+ years)</strong> and <strong>part‑time firefighter</strong>.</p>
@@ -60,55 +72,133 @@
       </div>
     </section>
 
-    <!-- services heading tweaked -->
     <section id="services" class="services-section">
       <h2>Fire Flow Testing Services for Small Municipalities in Ontario</h2>
       <p class="lead">On‑site NFPA 291 testing with calibrated equipment and compliant deliverables. Discounted programs for municipalities under 500 hydrants.</p>
-
-      <!-- existing content retained -->
-
-      <!-- FAQ block -->
-      <div class="grid" style="margin-top:40px">
-        <div class="card">
-          <h3>FAQ: What is NFPA 291 fire flow testing?</h3>
-          <p>Standardized hydrant testing to determine available flow at 20 psi, using static/residual pressure and pitot readings to verify supply and classify hydrants.</p>
+      <div class="services-hero">
+        <div>
+          <h3>Field Testing & Reporting</h3>
+          <p>Professional on-site testing with calibrated equipment, static/residual pressure measurements, pitot readings, and comprehensive PDF reports suitable for regulatory and insurance requirements.</p>
+          <div class="report-preview">
+            <strong>FIRE FLOW TEST REPORT</strong><br/>
+            Location: Municipal Hydrant #H-245<br/>
+            Date: 2025-11-03 | Time: 14:30<br/>
+            Static Pressure: 65 psi<br/>
+            Residual Pressure: 58 psi (@ 750 GPM)<br/>
+            Available Flow: 1,200 GPM @ 20 psi<br/>
+            NFPA Color Class: Blue (>1500 GPM)<br/>
+            Compliance: ✓ PASSES NFPA 291<br/>
+            Inspector: R. Cabral, OWWCO Licensed
+          </div>
         </div>
-        <div class="card">
-          <h3>FAQ: How much does testing cost in Ontario?</h3>
-          <p>Pricing depends on volume and travel. Programs start from per‑hydrant rates with volume discounts for small municipalities. Request a quote for an exact estimate.</p>
-        </div>
-        <div class="card">
-          <h3>FAQ: What’s included in the report?</h3>
-          <p>PDF report with location details, pressures, calculated available flow at 20 psi, NFPA color class, notes/photos, and optional GIS/CSV exports.</p>
-        </div>
-        <div class="card">
-          <h3>FAQ: How long per hydrant?</h3>
-          <p>Typical tests take 20–40 minutes per hydrant depending on site conditions, traffic control, and coordination needs.</p>
+        <div class="services-image" style="background:url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;height:350px;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15)"></div>
+      </div>
+      <div class="hydrant-showcase">
+        <div class="hydrant-image"></div>
+        <div>
+          <h3>Comprehensive Hydrant Services</h3>
+          <p>From flow testing to full inspections, we provide complete hydrant management services for municipalities, property managers, and contractors across Ontario.</p>
+          <ul style="color:#475569; margin-top:16px">
+            <li><strong>NFPA 291 Fire Flow Testing</strong> — Complete pressure and flow analysis</li>
+            <li><strong>Visual Inspections</strong> — Condition assessment with photos and GPS</li>
+            <li><strong>Maintenance Flagging</strong> — Identify repair needs and priorities</li>
+            <li><strong>Regulatory Compliance</strong> — Meet municipal and insurance requirements</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- platform section: tweak CTA copy for signup -->
     <section id="platform">
       <h2>HydrantHub Platform</h2>
       <p class="lead">Built from real field workflows. Ideal for small municipal teams needing simple, affordable hydrant management with GIS and reporting.</p>
-      <!-- existing cards retained -->
+      <div class="platform-showcase">
+        <div class="app-preview">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HydrantHub Login Dashboard" />
+          <div class="app-preview-content">
+            <h4>Secure Login Portal</h4>
+            <p>Municipal-grade security with role-based access control</p>
+          </div>
+        </div>
+        <div class="app-preview">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Interactive GIS Map Dashboard" />
+          <div class="app-preview-content">
+            <h4>Interactive Map Dashboard</h4>
+            <p>NFPA color-coded hydrants with real-time status updates</p>
+          </div>
+        </div>
+        <div class="app-preview">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mobile Field Data Collection" />
+          <div class="app-preview-content">
+            <h4>Mobile Field App</h4>
+            <p>Offline-capable data capture with GPS and photo sync</p>
+          </div>
+        </div>
+        <div class="app-preview">
+          <img src="https://images.unsplash.com/photo-1551808525-71a94da548ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Analytics and Reporting Suite" />
+          <div class="app-preview-content">
+            <h4>Analytics & Reports</h4>
+            <p>Flow curves, compliance tracking, and automated reports</p>
+          </div>
+        </div>
+      </div>
       <div class="cta">
         <a class="btn btn-primary" href="#contact">Start your free trial</a>
         <a class="btn btn-ghost" href="#contact">Request platform demo</a>
       </div>
     </section>
 
-    <!-- contact: add small municipality program highlight -->
     <section id="contact" class="contact-section">
       <div class="contact-container">
         <h2>Get Started Today</h2>
         <p class="lead">Small Municipality Program: discounted per‑hydrant pricing, fast turnaround, GIS exports included.</p>
-        <!-- existing form preserved -->
+        <div class="contact-form">
+          <div class="contact-header">
+            <h3>Request a Quote or Demo</h3>
+            <p>We respond to all inquiries within 24 hours with next steps and timeline estimates.</p>
+          </div>
+          <form action="mailto:info@tridentsys.ca" method="POST" enctype="text/plain">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="name">Full Name *</label><input required name="name" id="name" placeholder="Your full name" type="text" /></div>
+              <div class="form-group"><label class="form-label" for="email">Email Address *</label><input required type="email" name="email" id="email" placeholder="your.email@municipality.ca" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="organization">Organization</label><input name="organization" id="organization" placeholder="Municipality or Company Name" type="text" /></div>
+              <div class="form-group"><label class="form-label" for="phone">Phone Number</label><input name="phone" id="phone" placeholder="(xxx) xxx-xxxx" type="tel" /></div>
+            </div>
+            <div class="form-group"><label class="form-label" for="service">Primary Interest *</label>
+              <select required name="service" id="service">
+                <option value="">Select your primary need</option>
+                <option value="fire-flow-testing">🔥 Fire Flow Testing Services</option>
+                <option value="hydrant-inspection">🔍 Hydrant Inspection & Assessment</option>
+                <option value="hydranthub-platform">💻 HydrantHub Platform Trial</option>
+                <option value="both">🔧 Both Services & Platform</option>
+                <option value="consultation">📞 Initial Consultation</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="hydrants">Hydrant Count (Approximate)</label><input name="hydrants" id="hydrants" placeholder="e.g., 150 hydrants" type="text" /></div>
+              <div class="form-group"><label class="form-label" for="timeline">Timeline</label>
+                <select name="timeline" id="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="immediate">Immediate (Within 2 weeks)</option>
+                  <option value="month">Within 1 month</option>
+                  <option value="quarter">This quarter</option>
+                  <option value="planning">Planning for next year</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group"><label class="form-label" for="message">Project Details</label><textarea name="message" id="message" rows="4" placeholder="Tell us about your hydrant management challenges, testing requirements, compliance needs, or any specific questions..."></textarea></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">Send My Request</button></div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- existing footer preserved -->
+  <footer>
+    <div><strong>© 2025 Trident Systems</strong> — Professional hydrant services in Ontario</div>
+    <div style="margin-top:8px">Built by OWWCO‑licensed water operator (5+ years) and part‑time firefighter</div>
+    <div style="margin-top:4px; opacity:.7">Milton, Ontario • <a href="mailto:info@tridentsys.ca" style="color:#94a3b8">info@tridentsys.ca</a></div>
+  </footer>
 </body>
 </html>
