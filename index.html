@@ -14,9 +14,9 @@
     body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif; margin:0; color:#0f172a; }
     header { position:sticky; top:0; background:#1e3c72; color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; z-index:10 }
     header a { color:#fff; text-decoration:none; margin-left:14px }
-    .hero { background:linear-gradient(135deg,#667eea,#5a6fd8); color:#fff; padding:96px 20px; text-align:center }
-    .hero h1 { font-size:2.2rem; margin:0 0 12px }
-    .hero p { font-size:1.15rem; margin:0 auto; max-width:800px; opacity:.95 }
+    .hero { background:url('hydrant.jpg') center/cover, linear-gradient(135deg,#667eea,#5a6fd8); color:#fff; padding:96px 20px; text-align:center; position:relative; }
+    .hero h1 { font-size:2.2rem; margin:0 0 12px; background:rgba(30,60,114,0.85); display:inline-block; padding:8px 20px; border-radius:8px; }
+    .hero p { font-size:1.15rem; margin:0 auto; max-width:800px; opacity:.97; background:rgba(30,60,114,0.67); display:inline-block; padding:7px 15px; border-radius:8px; }
     .badges { margin:18px 0 0; font-weight:600; opacity:.95 }
     .cta { margin-top:26px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
     .btn { padding:12px 18px; border-radius:8px; text-decoration:none; font-weight:700 }
@@ -28,11 +28,11 @@
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px }
     .card { border:1px solid #e2e8f0; border-radius:12px; padding:22px; background:#fff }
     .services-hero { display:grid; grid-template-columns:1fr 350px; gap:40px; align-items:center; margin:40px 0 }
-    .services-image { background:url('/hydrant.jpg') center/cover; height:350px; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,.15) }
+    .services-image { display:none; }
     .report-preview { background:#fff; border:2px solid #e2e8f0; border-radius:8px; padding:20px; margin-top:20px; font-family:monospace; font-size:.85rem; color:#475569; position:relative }
     .report-preview:before { content:'📋 SAMPLE REPORT'; position:absolute; top:-12px; left:16px; background:#fff; padding:0 8px; font-size:.75rem; font-weight:600; color:#1e3c72 }
     footer { padding:36px 20px; text-align:center; background:#0f172a; color:#94a3b8 }
-    @media(max-width:768px) { .services-hero { grid-template-columns:1fr } .services-image { height:250px } }
+    @media(max-width:768px) { .services-hero { grid-template-columns:1fr } .services-image { display:none; } }
   </style>
 </head>
 <body>
@@ -61,7 +61,6 @@
     <section id="services">
       <h2>Professional Services</h2>
       <p class="lead">On‑site NFPA 291 fire flow testing with calibrated equipment and compliant deliverables.</p>
-      
       <div class="services-hero">
         <div>
           <h3>Field Testing & Reporting</h3>
@@ -80,7 +79,6 @@
         </div>
         <div class="services-image"></div>
       </div>
-      
       <div class="grid">
         <div class="card">
           <h3>🔥 NFPA 291 Fire Flow Testing</h3>
@@ -127,7 +125,6 @@
     <section id="contact">
       <h2>Get Started Today</h2>
       <p class="lead">Ready to modernize your hydrant testing and management? Let's discuss your specific needs and timeline.</p>
-      
       <div class="grid" style="grid-template-columns:1fr 1fr; gap:40px; align-items:start">
         <div>
           <h3>Request a Quote or Demo</h3>
@@ -138,7 +135,6 @@
             <p><strong>👨‍🔧 Certified Professional</strong><br/>OWWCO Licensed Operator<br/>Part-time Firefighter</p>
           </div>
         </div>
-        
         <form action="send_email.php" method="POST" class="card">
           <input type="hidden" name="form_type" value="website_contact" />
           <div style="display:grid; gap:12px">
@@ -155,7 +151,6 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div><strong>© 2025 Trident Systems</strong> — Professional hydrant services in Ontario</div>
     <div style="margin-top:8px">Built by OWWCO‑licensed water operator (5+ years) and part‑time firefighter</div>
