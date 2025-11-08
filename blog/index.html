@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L9CP3BK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-69L9CP3BK0');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Insights, guides, and best practices for fire hydrant management, NFPA 291 compliance, and municipal water system maintenance from Trident Systems experts." />
+  <link rel="canonical" href="https://tridentsys.ca/blog/" />
+  <link rel="icon" type="image/png" href="../trident-logo.png" />
+  <title>Blog - Fire Hydrant Management Insights | Trident Systems</title>
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="../trident-logo.png" alt="Trident Systems Logo" width="32" height="32" />
+      <a href="/" class="header-title">HydrantHub</a>
+    </div>
+    
+    <div class="nav-desktop">
+      <a href="https://app.tridentsys.ca/login" class="btn btn-platform" target="_blank" rel="noopener noreferrer">Platform Login</a>
+      <a href="/#platform" class="btn">Platform</a>
+      <a href="/#features" class="btn">Features</a>
+      <a href="/#pricing" class="btn">Pricing</a>
+      <a href="/blog/" class="btn">Blog</a>
+      <a href="/#contact" class="btn btn-secondary">Contact</a>
+    </div>
+    
+    <div class="hamburger-menu" id="hamburger-menu">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </div>
+  </header>
+  
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="https://app.tridentsys.ca/login" class="btn-platform" target="_blank" rel="noopener noreferrer">Platform Login</a>
+    <a href="/#platform">Platform</a>
+    <a href="/#features">Features</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#contact">Contact</a>
+  </div>
+
+  <section class="blog-hero">
+    <div class="blog-hero-content">
+      <h1>Hydrant Management Insights</h1>
+      <p>Expert guidance on fire hydrant testing, maintenance, compliance, and municipal water system best practices</p>
+    </div>
+  </section>
+
+  <section class="blog-posts">
+    <div class="blog-container">
+      
+      <article class="blog-card">
+        <div class="blog-tag">Compliance</div>
+        <h2><a href="nfpa-291-compliance-guide-ontario.html">NFPA 291 Compliance Guide for Ontario Municipalities</a></h2>
+        <p class="blog-meta">November 8, 2025 • 8 min read</p>
+        <p class="blog-excerpt">Complete guide to understanding and implementing NFPA 291 fire flow testing standards in Ontario. Learn testing procedures, frequency requirements, documentation standards, and how to maintain full compliance.</p>
+        <a href="nfpa-291-compliance-guide-ontario.html" class="read-more">Read Full Guide →</a>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-tag">Cost Savings</div>
+        <h2><a href="hydrant-hub-saves-municipal-budgets.html">5 Ways HydrantHub Saves Municipal Budgets</a></h2>
+        <p class="blog-meta">November 8, 2025 • 6 min read</p>
+        <p class="blog-excerpt">Discover how municipalities across Ontario are reducing hydrant management costs by $1,460+ annually with HydrantHub. Real-world examples of time savings, eliminated manual errors, and optimized maintenance scheduling.</p>
+        <a href="hydrant-hub-saves-municipal-budgets.html" class="read-more">Read Full Article →</a>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-tag">Regulations</div>
+        <h2><a href="ontario-reg-169-03-requirements.html">O. Reg 169/03 Requirements Simplified</a></h2>
+        <p class="blog-meta">November 8, 2025 • 7 min read</p>
+        <p class="blog-excerpt">Breaking down Ontario Regulation 169/03 fire hydrant maintenance requirements into clear, actionable steps. Understanding inspection frequency, testing protocols, record-keeping, and municipal responsibilities.</p>
+        <a href="ontario-reg-169-03-requirements.html" class="read-more">Read Full Article →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="blog-cta">
+    <h2>Ready to Streamline Your Hydrant Management?</h2>
+    <p>Join Ontario municipalities saving time and money with HydrantHub</p>
+    <div class="hero-buttons">
+      <a href="https://app.tridentsys.ca" class="hero-btn hero-btn-primary" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+      <a href="/#contact" class="hero-btn hero-btn-secondary">Contact Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://app.tridentsys.ca" target="_blank" rel="noopener noreferrer">Launch HydrantHub</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#features">Features</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <p>&copy; 2025 Trident Systems. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const navMobile = document.getElementById('nav-mobile');
+      
+      if (hamburgerMenu && navMobile) {
+        hamburgerMenu.addEventListener('click', function() {
+          hamburgerMenu.classList.toggle('active');
+          navMobile.classList.toggle('active');
+        });
+        
+        const mobileNavLinks = navMobile.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            hamburgerMenu.classList.remove('active');
+            navMobile.classList.remove('active');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
