@@ -53,7 +53,7 @@ header {
 header img { 
   height: 32px; 
   width: 32px;
-  border-radius: 50%;
+  border-radius: 0;
   background: transparent;
 }
 .header-title { 
