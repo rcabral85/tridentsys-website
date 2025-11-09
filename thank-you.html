@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="trident-logo.png" />
+    <title>Thank You | Trident Systems</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .thank-you-container {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        .thank-you-content {
+            max-width: 700px;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .success-icon {
+            font-size: 80px;
+            color: #10b981;
+            margin-bottom: 20px;
+        }
+        .thank-you-content h1 {
+            color: var(--text-primary);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .thank-you-content p {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .next-steps {
+            margin-top: 40px;
+            text-align: left;
+            background: rgba(37, 99, 235, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+        }
+        .next-steps h2 {
+            color: var(--text-primary);
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+        }
+        .next-steps li {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .next-steps li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="/">
+                    <img src="trident-logo.png" alt="Trident Systems Logo" class="logo-image" />
+                    <span class="header-title">Trident Systems</span>
+                </a>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Thank You Content -->
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <div class="success-icon">✓</div>
+            <h1>Thank You!</h1>
+            <p><strong>Your request has been successfully submitted.</strong></p>
+            <p>We've received your free trial request for HydrantHub and will be in touch within 24 hours to get you started.</p>
+            <p>A confirmation email has been sent to the address you provided.</p>
+            
+            <div class="next-steps">
+                <h2>What Happens Next?</h2>
+                <ul>
+                    <li>Our team will review your information and prepare your custom demo environment</li>
+                    <li>You'll receive an email with your login credentials and onboarding schedule</li>
+                    <li>We'll set up a personalized training session to help you get the most out of HydrantHub</li>
+                    <li>Your 30-day free trial will begin as soon as you're ready</li>
+                </ul>
+            </div>
+
+            <a href="/" class="cta-button">Return to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Trident Systems. All rights reserved.</p>
+        <p>Professional fire hydrant management solutions for municipalities.</p>
+    </footer>
+</body>
+</html>
