@@ -10,6 +10,26 @@
 [build.processing.html]
   pretty_urls = true
 
+# Redirects for HydrantHub app URL migration
+[[redirects]]
+  from = "/hydrant-hub.html"
+  to = "https://hydranthub.tridentsys.ca"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hydrant-hub"
+  to = "https://hydranthub.tridentsys.ca"
+  status = 301
+  force = true
+
+# Redirect old app.tridentsys.ca references (if accessed directly from this site)
+[[redirects]]
+  from = "/app/*"
+  to = "https://hydranthub.tridentsys.ca/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
