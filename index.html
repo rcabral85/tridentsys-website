@@ -42,55 +42,168 @@
   <link rel="icon" type="image/png" href="trident-logo.png" />
   <title>HydrantHub | Fire Hydrant Management Software | Trident Systems</title>
   
-  <!-- JSON-LD Structured Data -->
+  <!-- Enhanced Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "@id": "https://tridentsys.ca",
-    "name": "HydrantHub",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web Browser, iOS, Android",
-    "description": "Professional fire hydrant management platform with NFPA 291 compliant flow testing, preventive maintenance scheduling, and automated compliance reporting. Built by water operators for municipalities.",
-    "author": {
-      "@type": "Organization",
-      "name": "Trident Systems",
-      "url": "https://tridentsys.ca",
-      "email": "info@tridentsys.ca",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Ontario",
-        "addressCountry": "CA",
-        "addressLocality": "Milton"
+    "@type": "Organization",
+    "@id": "https://tridentsys.ca/#organization",
+    "name": "Trident Systems",
+    "url": "https://tridentsys.ca",
+    "logo": "https://tridentsys.ca/trident-logo.png",
+    "email": "info@tridentsys.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Ontario",
+      "addressCountry": "CA",
+      "addressLocality": "Milton"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Toronto"
+      },
+      {
+        "@type": "City",
+        "name": "Hamilton"
+      },
+      {
+        "@type": "City",
+        "name": "Milton"
+      },
+      {
+        "@type": "City",
+        "name": "Oakville"
+      },
+      {
+        "@type": "City",
+        "name": "Burlington"
+      },
+      {
+        "@type": "City",
+        "name": "Mississauga"
+      },
+      {
+        "@type": "City",
+        "name": "Brampton"
       }
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "799",
-      "priceCurrency": "CAD",
-      "description": "Starting at $799/year - 60% less than enterprise solutions"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "12"
-    },
-    "featureList": [
-      "NFPA 291 Flow Testing",
-      "Preventive Maintenance Scheduling", 
-      "Real-time Hydrant Tracking",
-      "Mobile Apps (iOS/Android)",
-      "GIS Integration",
-      "Automated Compliance Reporting"
+    ],
+    "sameAs": [
+      "https://app.tridentsys.ca"
     ]
   }
   </script>
   
-  <!-- LocalBusiness Schema for Services -->
+  <!-- Enhanced Product/SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://tridentsys.ca/#product",
+    "name": "HydrantHub",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Asset Management Software",
+    "operatingSystem": "Web Browser, iOS, Android",
+    "description": "Professional fire hydrant management platform with NFPA 291 compliant flow testing, preventive maintenance scheduling, and automated compliance reporting. Built by water operators for municipalities.",
+    "url": "https://tridentsys.ca",
+    "screenshot": "https://tridentsys.ca/trident-logo.png",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://tridentsys.ca/#organization"
+    },
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://tridentsys.ca/#organization"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Plan",
+        "price": "799",
+        "priceCurrency": "CAD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://tridentsys.ca/#pricing",
+        "description": "Up to 150 hydrants, 2 users, NFPA 291 flow testing, mobile apps"
+      },
+      {
+        "@type": "Offer",
+        "name": "Professional Plan",
+        "price": "1590",
+        "priceCurrency": "CAD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://tridentsys.ca/#pricing",
+        "description": "Up to 500 hydrants, 5 users, GIS integration, API access"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise Plan",
+        "price": "2690",
+        "priceCurrency": "CAD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://tridentsys.ca/#pricing",
+        "description": "Unlimited hydrants, unlimited users, white-label, SCADA integration"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Michael Chen"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "HydrantHub transformed our hydrant testing program. We've reduced testing time by 75% and eliminated all manual calculation errors. The automated NFPA 291 reports are perfect for our annual compliance audits.",
+        "datePublished": "2025-09-15"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Thompson"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "As a Water Operations Manager, HydrantHub has been invaluable. The mobile apps work perfectly in the field, and the preventive maintenance scheduling ensures we never miss inspection deadlines.",
+        "datePublished": "2025-08-22"
+      }
+    ],
+    "featureList": [
+      "NFPA 291 compliant flow testing with automated calculations",
+      "Preventive maintenance scheduling and tracking", 
+      "Real-time GIS mapping with NFPA color coding",
+      "Mobile apps for iOS and Android",
+      "Automated compliance reporting",
+      "API integration with municipal systems",
+      "Work order generation",
+      "Photo documentation",
+      "Excel and PDF export"
+    ]
+  }
+  </script>
+  
+  <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://tridentsys.ca/#localbusiness",
     "name": "Trident Systems - HydrantHub Platform",
     "image": "https://tridentsys.ca/trident-logo.png",
     "url": "https://tridentsys.ca",
@@ -118,6 +231,114 @@
     "openingHours": "Mo-Fr 08:00-17:00",
     "sameAs": [
       "https://hydranthub.tridentsys.ca"
+    ]
+  }
+  </script>
+  
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://tridentsys.ca"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Platform",
+        "item": "https://tridentsys.ca/#platform"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Features",
+        "item": "https://tridentsys.ca/#features"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Pricing",
+        "item": "https://tridentsys.ca/#pricing"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is HydrantHub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HydrantHub is a professional fire hydrant management platform designed for municipalities, property managers, and water utilities. It provides NFPA 291 compliant flow testing, preventive maintenance scheduling, GIS mapping, and automated compliance reporting. Built by water operators with 15+ years experience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HydrantHub NFPA 291 compliant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HydrantHub is fully NFPA 291 compliant. The platform uses the standard flow calculation formula (Q = 29.83 × c × d² × √P) with real-time validation to ensure accuracy. All flow test reports meet NFPA 291 requirements and are suitable for regulatory compliance and insurance reviews."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does HydrantHub cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HydrantHub pricing starts at $799/year for up to 150 hydrants (Starter plan), $1,590/year for up to 500 hydrants (Professional plan), and $2,690/year for unlimited hydrants (Enterprise plan). All plans include mobile apps, NFPA 291 testing, and email support. No setup fees or per-user charges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does HydrantHub work on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HydrantHub includes native mobile apps for both iOS and Android. The mobile apps work offline in the field, allowing operators to capture photos, record measurements, and complete inspections without internet connectivity. Data automatically syncs when back online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can HydrantHub integrate with our existing GIS or SCADA systems?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HydrantHub Professional and Enterprise plans include API access for integration with municipal GIS systems, SCADA platforms, and work order management systems. The platform supports data export to CSV, Excel, and GIS formats. Enterprise plans include dedicated integration support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas does Trident Systems serve for fire flow testing services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trident Systems provides professional fire flow testing services throughout the Greater Toronto Area, Hamilton, Niagara Region, Peel Region, and Halton Region. Service areas include Milton, Oakville, Burlington, Mississauga, and Brampton. All testing is performed by certified water operators with OTM Book 7 traffic control compliance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free trial available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HydrantHub offers a 30-day free trial with no credit card required. The trial includes full access to all features, personal onboarding, training, and expert support. Data migration assistance is available for organizations switching from spreadsheets or other systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does HydrantHub save time compared to manual processes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HydrantHub saves an average of 25 minutes per flow test compared to manual spreadsheet processes. This translates to 83% time savings through automated NFPA 291 calculations, instant report generation, and elimination of data entry errors. Organizations typically save 60+ hours annually and reduce costs by $1,460+ per year."
+        }
+      }
     ]
   }
   </script>
@@ -165,7 +386,7 @@
   <!-- Professional Hero Section -->
   <section class="hero-section" id="platform">
     <div class="hero-content">
-      <h1>Transform Your Fire Hydrant Management</h1>
+      <h1>Transform Your Fire Hydrant Management – Save Time, Ensure Compliance</h1>
       <p>HydrantHub is the enterprise-grade hydrant management platform built by water operators for water operators. Eliminate spreadsheets, ensure NFPA 291 compliance, and save 83% of your time with automated workflows.</p>
       
       <div class="hero-stats">
@@ -784,5 +1005,10 @@
       });
     });
   </script>
+
+    <!-- Sticky Mobile CTA Banner -->
+    <div class="mobile-sticky-cta">
+    <a href="#contact" class="sticky-cta-btn">Start Free Trial</a>
+  </div>
 </body>
 </html>
